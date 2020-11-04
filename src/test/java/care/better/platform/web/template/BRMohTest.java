@@ -15,23 +15,21 @@
 
 package care.better.platform.web.template;
 
+import care.better.platform.web.template.context.CompositionBuilderContextKey;
 import care.better.platform.web.template.extension.WebTemplateTestExtension;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.joda.JodaModule;
+import com.google.common.collect.ImmutableMap;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import java.util.Collections;
-import java.util.Map;
-
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.entry;
 
 @ExtendWith(WebTemplateTestExtension.class)
-public class GelBuilderTest extends AbstractWebTemplateTest {
+public class BRMohTest extends AbstractWebTemplateTest {
 
     private ObjectMapper objectMapper;
 
@@ -45,28 +43,18 @@ public class GelBuilderTest extends AbstractWebTemplateTest {
     }
 
     @Test
-    public void missingNameMapping() throws Exception {
+    public void brMohTest() throws Exception {
+        String template = getFileContent("/br-moh1.xml");
+        String flatCompositionString = getFileContent("/br-moh.json");
 
-        String template = getFileContent("/GEL_-_Generic_Lab_Report_import.v0.opt");
-        String flatCompositionString = getFileContent("/GenericLabReport.json");
-
-        JsonNode structuredComposition = getCompositionConverter().convertFlatToStructured(
+        JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
                 template,
-                "sl",
+                "en",
                 flatCompositionString,
-                Collections.emptyMap(),
+                ImmutableMap.of(CompositionBuilderContextKey.LANGUAGE.getKey(), "en"),
                 objectMapper);
 
-        Map<String, Object> flatComposition = getCompositionConverter().convertStructuredToFlat(
-                template,
-                "sl",
-                structuredComposition.toString(),
-                Collections.emptyMap(),
-                objectMapper);
-
-        assertThat(flatComposition).contains(
-                entry("laboratory_result_report/laboratory_test:0/laboratory_test_panel:0/laboratory_result:0/result_value/_name/_mapping:0/target|code",
-                      "5195-3"));
-
+        assertThat(rawComposition).isNotNull();
+        assertThat(getCompositionValidator().validate(template, rawComposition.toString())).isEmpty();
     }
 }

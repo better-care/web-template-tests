@@ -1,0 +1,76 @@
+// Copyright 2020-2021 Better Ltd (www.better.care)
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+{
+  "encounter/_link:0|meaning": "Follow up to",
+  "encounter/_link:0|type": "Problem",
+  "encounter/_link:0|target": "ehr://4e928dab-cd68-4ce6-8a6a-80db23ddd2e4",
+  "encounter/_uid": "5a6c10b2-08d5-4c62-8405-d7c8b3b2f739::example::1",
+  "encounter/context/start_time": "2020-11-09T08:32:47.356+01:00",
+  "encounter/context/setting|code": "238",
+  "encounter/context/setting|value": "other care",
+  "encounter/context/setting|terminology": "openehr",
+  "encounter/testing:0/_uid": "13dbcae3-2b5b-4736-b8e0-669446ebb8f5",
+  "encounter/testing:0/_other_participation:0|function": "performer",
+  "encounter/testing:0/_other_participation:0|mode": "not specified",
+  "encounter/testing:0/_other_participation:0|name": "Nurse Bailey",
+  "encounter/testing:0/_other_participation:1|function": "requester",
+  "encounter/testing:0/_other_participation:1|mode": "not specified",
+  "encounter/testing:0/_other_participation:1|name": "Dr. Stiles",
+  "encounter/testing:0/text": "hello world!",
+  "encounter/testing:0/quantity|magnitude": 23.0,
+  "encounter/testing:0/quantity|unit": "mm[Hg]",
+  "encounter/testing:0/count": 3,
+  "encounter/testing:0/datetime": "2020-11-09T08:32:47.374+01:00",
+  "encounter/testing:0/duration": "P2M",
+  "encounter/testing:0/ordinal|code": "at0030",
+  "encounter/testing:0/ordinal|value": "World",
+  "encounter/testing:0/ordinal|ordinal": 2,
+  "encounter/testing:0/boolean": true,
+  "encounter/testing:0/intervalquantity/upper|magnitude": 180.0,
+  "encounter/testing:0/intervalquantity/upper|unit": "mm[Hg]",
+  "encounter/testing:0/intervalquantity/lower|magnitude": 120.0,
+  "encounter/testing:0/intervalquantity/lower|unit": "mm[Hg]",
+  "encounter/testing:0/intervalcount/upper": 4,
+  "encounter/testing:0/intervalcount/lower": 10,
+  "encounter/testing:0/intervaldatetime/upper": "2020-11-09T08:32:47.378+01:00",
+  "encounter/testing:0/intervaldatetime/lower": "2020-11-09T08:32:47.378+01:00",
+  "encounter/testing:0/multimedia": "http://med.tube.com/sample",
+  "encounter/testing:0/multimedia|mediatype": "image/jpeg",
+  "encounter/testing:0/multimedia|alternatetext": "alternate text",
+  "encounter/testing:0/multimedia|size": 504903212,
+  "encounter/testing:0/uri": "http://example.com/path/resource",
+  "encounter/testing:0/ehruri": "ehr://3d4aaf11-c570-4553-9747-1be6e8cde78e",
+  "encounter/testing:0/proportion|numerator": 33.0,
+  "encounter/testing:0/proportion|denominator": 100.0,
+  "encounter/testing:0/proportion|type": 2,
+  "encounter/testing:0/proportion": 0.33,
+  "encounter/testing:0/identifier": "b557b329-6ae6-419e-876a-1839afbf97f9",
+  "encounter/testing:0/identifier|issuer": "Issuer",
+  "encounter/testing:0/identifier|assigner": "Assigner",
+  "encounter/testing:0/identifier|type": "Prescription",
+  "encounter/testing:0/parsable": "Formal instructions on carrying out the procedure...",
+  "encounter/testing:0/parsable|formalism": "text/html",
+  "encounter/testing:0/language|code": "en",
+  "encounter/testing:0/language|terminology": "ISO_639-1",
+  "encounter/testing:0/encoding|code": "UTF-8",
+  "encounter/testing:0/encoding|terminology": "IANA_character-sets",
+  "encounter/category|code": "433",
+  "encounter/category|value": "event",
+  "encounter/category|terminology": "openehr",
+  "encounter/language|code": "en",
+  "encounter/language|terminology": "ISO_639-1",
+  "encounter/territory|code": "SI",
+  "encounter/territory|terminology": "ISO_3166-1"
+}

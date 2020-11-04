@@ -1,0 +1,57 @@
+// Copyright 2020-2021 Better Ltd (www.better.care)
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+{
+"medication_error_report/medication_error/actual_patient_outcome": "at0053",
+"medication_error_report/medication_error/adverse_effect:1/datetime_of_reaction_onset": "2020-11-03T16:46:53.236+01:00",
+"medication_error_report/medication_error/adverse_effect:1/intervention_details:1/intervention|code": "at0304",
+"medication_error_report/medication_error/adverse_effect:1/intervention_details:1/intervention_result|code": "Result: 1",
+"medication_error_report/medication_error/adverse_effect:1/intervention_details:1/intervention_result|value": "Result: 1",
+"medication_error_report/medication_error/adverse_effect:1/intervention_details:2/intervention|code": "at0304",
+"medication_error_report/medication_error/adverse_effect:1/intervention_details:2/intervention_result|code": "Result: 2",
+"medication_error_report/medication_error/adverse_effect:1/intervention_details:2/intervention_result|value": "Result: 2",
+"medication_error_report/medication_error/adverse_effect:1/intervention_details/intervention|code": "at0304",
+"medication_error_report/medication_error/adverse_effect:1/intervention_details/intervention_result|code": "Result: 0",
+"medication_error_report/medication_error/adverse_effect:1/intervention_details/intervention_result|value": "Result: 0",
+"medication_error_report/medication_error/adverse_effect:1/liklihood_of_causation": "at0223",
+"medication_error_report/medication_error/adverse_effect:1/reaction|code": "Reaction : 1",
+"medication_error_report/medication_error/adverse_effect:1/reaction|value": "Reaction : 1",
+"medication_error_report/medication_error/adverse_effect:1/severity": "at0225",
+"medication_error_report/medication_error/adverse_effect/datetime_of_reaction_onset": "2020-11-03T16:46:53.236+01:00",
+"medication_error_report/medication_error/adverse_effect/intervention_details:1/intervention|code": "at0304",
+"medication_error_report/medication_error/adverse_effect/intervention_details:1/intervention_result|code": "Result: 1",
+"medication_error_report/medication_error/adverse_effect/intervention_details:1/intervention_result|value": "Result: 1",
+"medication_error_report/medication_error/adverse_effect/intervention_details:2/intervention|code": "at0304",
+"medication_error_report/medication_error/adverse_effect/intervention_details:2/intervention_result|code": "Result: 2",
+"medication_error_report/medication_error/adverse_effect/intervention_details:2/intervention_result|value": "Result: 2",
+"medication_error_report/medication_error/adverse_effect/intervention_details/intervention|code": "at0304",
+"medication_error_report/medication_error/adverse_effect/intervention_details/intervention_result|code": "Result: 0",
+"medication_error_report/medication_error/adverse_effect/intervention_details/intervention_result|value": "Result: 0",
+"medication_error_report/medication_error/adverse_effect/liklihood_of_causation": "at0223",
+"medication_error_report/medication_error/adverse_effect/reaction|code": "Reaction : 0",
+"medication_error_report/medication_error/adverse_effect/reaction|value": "Reaction : 0",
+"medication_error_report/medication_error/adverse_effect/severity": "at0225",
+"medication_error_report/medication_error/cause_of_event:1/comment": "Reason 1",
+"medication_error_report/medication_error/cause_of_event:1/estimated_cause_of_event": "at0067",
+"medication_error_report/medication_error/cause_of_event:2/comment": "Reason 2",
+"medication_error_report/medication_error/cause_of_event:2/estimated_cause_of_event": "at0068",
+"medication_error_report/medication_error/cause_of_event/comment": "Reason 0",
+"medication_error_report/medication_error/cause_of_event/estimated_cause_of_event": "at0067",
+"medication_error_report/medication_error/event_timestamp": "2020-11-03T16:46:53.236+01:00",
+"medication_error_report/medication_error/medra_classification|code": "medra",
+"medication_error_report/medication_error/medra_classification|value": "medra",
+"medication_error_report/medication_error/patient_outcome_category": "at0063",
+"medication_error_report/medication_error/potential_patient_outcome": "at0053",
+"medication_error_report/medication_error/safety_event_type": "at0250"
+}

@@ -16,7 +16,6 @@
 package care.better.platform.web.template;
 
 import care.better.platform.web.template.extension.WebTemplateTestExtension;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.joda.JodaModule;
@@ -24,14 +23,13 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import java.util.Collections;
 import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.entry;
 
 @ExtendWith(WebTemplateTestExtension.class)
-public class GelBuilderTest extends AbstractWebTemplateTest {
+public class BuildFromDataValueTest extends AbstractWebTemplateTest {
 
     private ObjectMapper objectMapper;
 
@@ -45,28 +43,16 @@ public class GelBuilderTest extends AbstractWebTemplateTest {
     }
 
     @Test
-    public void missingNameMapping() throws Exception {
+    public void dataValues() throws Exception {
+        String template = getFileContent("/Demo Vitals.opt");
+        String rawComposition = getFileContent("/DataValueTestComposition.json");
 
-        String template = getFileContent("/GEL_-_Generic_Lab_Report_import.v0.opt");
-        String flatCompositionString = getFileContent("/GenericLabReport.json");
-
-        JsonNode structuredComposition = getCompositionConverter().convertFlatToStructured(
-                template,
-                "sl",
-                flatCompositionString,
-                Collections.emptyMap(),
-                objectMapper);
-
-        Map<String, Object> flatComposition = getCompositionConverter().convertStructuredToFlat(
-                template,
-                "sl",
-                structuredComposition.toString(),
-                Collections.emptyMap(),
-                objectMapper);
-
-        assertThat(flatComposition).contains(
-                entry("laboratory_result_report/laboratory_test:0/laboratory_test_panel:0/laboratory_result:0/result_value/_name/_mapping:0/target|code",
-                      "5195-3"));
-
+        Map<String, Object> retrivedFlatComposition = getCompositionConverter().convertRawToFlat(template, "sl", rawComposition, objectMapper);
+        assertThat(retrivedFlatComposition).contains(
+                entry("vitals/vitals/body_temperature:0/any_event:0/temperature|magnitude", 39.1),
+                entry("vitals/vitals/haemoglobin_a1c:0/any_event:0/test_status|code", "at0037"),
+                entry("vitals/vitals/haemoglobin_a1c:0/any_event:0/test_status|value", "Začasen")
+        );
     }
+
 }

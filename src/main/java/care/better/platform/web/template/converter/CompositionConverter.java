@@ -52,11 +52,12 @@ public interface CompositionConverter {
      * Converts FLAT composition json string to the RAW composition json string.
      *
      * @param template        Template xml string
-     * @param defaultLanguage Template default language
+     * @param defaultTemplateLanguage Template default language
      * @param flatComposition FLAT composition json string
+     * @param compositionBuilderContext Map containing default values that will be used when composition is built
      * @return RAW composition json string
      */
-    String convertFlatToRaw(String template, String defaultLanguage, String flatComposition) throws Exception;
+    String convertFlatToRaw(String template, String defaultTemplateLanguage, String flatComposition, Map<String, Object> compositionBuilderContext) throws Exception;
 
     /**
      * Converts FLAT composition json string to the STRUCTURED composition json string.
@@ -64,9 +65,10 @@ public interface CompositionConverter {
      * @param template        Template xml string
      * @param defaultLanguage Template default language
      * @param flatComposition FLAT composition json string
+     * @param compositionBuilderContext Map containing default values that will be used when composition is built
      * @return STRUCTURED composition json string
      */
-    String convertFlatToStructured(String template, String defaultLanguage, String flatComposition) throws Exception;
+    String convertFlatToStructured(String template, String defaultLanguage, String flatComposition, Map<String, Object> compositionBuilderContext) throws Exception;
 
     /**
      * Converts STRUCTURED composition json string to the RAW composition json string.
@@ -74,9 +76,10 @@ public interface CompositionConverter {
      * @param template              Template xml string
      * @param defaultLanguage       Template default language
      * @param structuredComposition STRUCTURED composition json string
+     * @param compositionBuilderContext Map containing default values that will be used when composition is built
      * @return RAW composition json string
      */
-    String convertStructuredToRaw(String template, String defaultLanguage, String structuredComposition) throws Exception;
+    String convertStructuredToRaw(String template, String defaultLanguage, String structuredComposition, Map<String, Object> compositionBuilderContext) throws Exception;
 
     /**
      * Converts STRUCTURED composition json string to the FLAT composition json string.
@@ -84,9 +87,10 @@ public interface CompositionConverter {
      * @param template              Template xml string
      * @param defaultLanguage       Template default language
      * @param structuredComposition STRUCTURED composition json string
+     * @param compositionBuilderContext Map containing default values that will be used when composition is built
      * @return FLAT composition json string
      */
-    String convertStructuredToFlat(String template, String defaultLanguage, String structuredComposition) throws Exception;
+    String convertStructuredToFlat(String template, String defaultLanguage, String structuredComposition, Map<String, Object> compositionBuilderContext) throws Exception;
 
     /**
      * Converts RAW composition json string to the FLAT composition.
@@ -128,14 +132,16 @@ public interface CompositionConverter {
      * @param template        Template xml string
      * @param defaultLanguage Template default language
      * @param flatComposition FLAT composition json string
+     * @param compositionBuilderContext Map containing default values that will be used when composition is built
      * @return RAW composition
      */
     default JsonNode convertFlatToRaw(
             String template,
             String defaultLanguage,
             String flatComposition,
+            Map<String, Object> compositionBuilderContext,
             ObjectMapper objectMapper) throws Exception {
-        return objectMapper.readValue(convertFlatToRaw(template, defaultLanguage, flatComposition), JsonNode.class);
+        return objectMapper.readValue(convertFlatToRaw(template, defaultLanguage, flatComposition, compositionBuilderContext), JsonNode.class);
 
     }
 
@@ -145,6 +151,7 @@ public interface CompositionConverter {
      * @param template              Template xml string
      * @param defaultLanguage       Template default language
      * @param structuredComposition STRUCTURED composition json string
+     * @param compositionBuilderContext Map containing default values that will be used when composition is built
      * @return FLAT composition
      */
     @SuppressWarnings("AnonymousInnerClassMayBeStatic")
@@ -152,8 +159,9 @@ public interface CompositionConverter {
             String template,
             String defaultLanguage,
             String structuredComposition,
+            Map<String, Object> compositionBuilderContext,
             ObjectMapper objectMapper) throws Exception {
-        return objectMapper.readValue(convertFlatToStructured(template, defaultLanguage, structuredComposition), new TypeReference<Map<String, Object>>() {});
+        return objectMapper.readValue(convertStructuredToFlat(template, defaultLanguage, structuredComposition, compositionBuilderContext), new TypeReference<Map<String, Object>>() {});
     }
 
     /**
@@ -162,14 +170,16 @@ public interface CompositionConverter {
      * @param template        Template xml string
      * @param defaultLanguage Template default language
      * @param flatComposition FLAT composition json string
+     * @param compositionBuilderContext Map containing default values that will be used when composition is built
      * @return STRUCTURED composition
      */
     default JsonNode convertFlatToStructured(
             String template,
             String defaultLanguage,
             String flatComposition,
+            Map<String, Object> compositionBuilderContext,
             ObjectMapper objectMapper) throws Exception {
-        return objectMapper.readValue(convertStructuredToFlat(template, defaultLanguage, flatComposition), JsonNode.class);
+        return objectMapper.readValue(convertFlatToStructured(template, defaultLanguage, flatComposition, compositionBuilderContext), JsonNode.class);
     }
 
     /**
@@ -178,13 +188,15 @@ public interface CompositionConverter {
      * @param template              Template xml string
      * @param defaultLanguage       Template default language
      * @param structuredComposition STRUCTURED composition json string
+     * @param compositionBuilderContext Map containing default values that will be used when composition is built
      * @return RAW composition
      */
     default JsonNode convertStructuredToRaw(
             String template,
             String defaultLanguage,
             String structuredComposition,
+            Map<String, Object> compositionBuilderContext,
             ObjectMapper objectMapper) throws Exception {
-        return objectMapper.readValue(convertStructuredToRaw(template, defaultLanguage, structuredComposition), JsonNode.class);
+        return objectMapper.readValue(convertStructuredToRaw(template, defaultLanguage, structuredComposition, compositionBuilderContext), JsonNode.class);
     }
 }

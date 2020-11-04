@@ -15,6 +15,7 @@
 
 package care.better.platform.web.template;
 
+import care.better.platform.web.template.context.CompositionBuilderContextKey;
 import care.better.platform.web.template.extension.WebTemplateTestExtension;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -59,7 +60,13 @@ public class ComposerTest extends AbstractWebTemplateTest {
 
         String flatComposition = objectMapper.writeValueAsString(flatCompositionMap);
 
-        JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(template, "sl", flatComposition, objectMapper);
+        JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
+                template,
+                "sl",
+                flatComposition,
+                ImmutableMap.of(CompositionBuilderContextKey.LANGUAGE.getKey(), "sl"),
+                objectMapper);
+
         assertThat(rawComposition).isInstanceOf(ObjectNode.class);
         assertThat(rawComposition.get("composer").get("external_ref").get("id").get("value").asText()).isEqualTo("1191");
     }
@@ -81,7 +88,13 @@ public class ComposerTest extends AbstractWebTemplateTest {
 
         String flatComposition = objectMapper.writeValueAsString(flatCompositionMap);
 
-        JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(template, "sl", flatComposition, objectMapper);
+        JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
+                template,
+                "sl",
+                flatComposition,
+                ImmutableMap.of(CompositionBuilderContextKey.LANGUAGE.getKey(), "sl"),
+                objectMapper);
+
         assertThat(rawComposition).isInstanceOf(ObjectNode.class);
         assertThat(rawComposition.get("composer").get("external_ref").get("id").get("value").asText()).isEqualTo("1191");
     }

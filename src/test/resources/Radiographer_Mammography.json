@@ -1,0 +1,50 @@
+// Copyright 2020-2021 Better Ltd (www.better.care)
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+{
+  "radiographer_mammography_report/context/report_name": "at0.0.19",
+  "radiographer_mammography_report/context/episode_code": "30-03052010",
+  "radiographer_mammography_report/context/round_number": "1",
+  "radiographer_mammography_report/context/start_time": "2010-05-03T13:59:23.000+02:00",
+  "radiographer_mammography_report/context/report_id": "SCR_7505",
+  "radiographer_mammography_report/procedure_details/procedure_details/examination_request_details/accession_number": "",
+  "radiographer_mammography_report/procedure_details/procedure_details/mammography_procedure_details/imaging_quality": "at0012",
+  "radiographer_mammography_report/procedure_details/procedure_details/mammography_procedure_details/completion_status": "at0014",
+  "radiographer_mammography_report/procedure_details/procedure_details/mammography_procedure_details/number_of_images": "4",
+  "radiographer_mammography_report/procedure_details/procedure_details/mammography_procedure_details/repeat_image_status": "at0005",
+  "radiographer_mammography_report/procedure_details/procedure_details/mammography_procedure_details/number_of_repeat_images": "0",
+  "radiographer_mammography_report/procedure_details/procedure_details/time": "2010-05-03T09:49:54.000+02:00",
+  "radiographer_mammography_report/procedure_details/procedure_details/ism_transition/current_state": "526",
+  "radiographer_mammography_report/past_therapies/breast-related_interventions_tmds/location": "dora",
+  "radiographer_mammography_report/past_therapies/breast-related_interventions_tmds/time": "2008-01-01T00:00:00.000+01:00",
+  "radiographer_mammography_report/past_therapies/breast-related_interventions_tmds/comments": "",
+  "radiographer_mammography_report/past_therapies/breast-related_interventions_tmds/intervention": "at0.68",
+  "radiographer_mammography_report/past_therapies/breast-related_interventions_tmds/ism_transition/current_state": "524",
+  "radiographer_mammography_report/past_procedures/breast-related_interventions_tmds:0/ism_transition/current_state": "524",
+  "radiographer_mammography_report/past_procedures/breast-related_interventions_tmds:0/breast_location/specific_location/side": "at0003",
+  "radiographer_mammography_report/past_procedures/breast-related_interventions_tmds:1/ism_transition/current_state": "524",
+  "radiographer_mammography_report/past_procedures/breast-related_interventions_tmds:1/breast_location/specific_location/side": "at0004",
+  "radiographer_mammography_report/mammography_procedures/imaging_examination_dora:0/breast_location/specific_location/side": "at0003",
+  "radiographer_mammography_report/mammography_procedures/imaging_examination_dora:0/examination_name:0": "at0.30",
+  "radiographer_mammography_report/mammography_procedures/imaging_examination_dora:0/examination_name:1": "at0.31",
+  "radiographer_mammography_report/mammography_procedures/imaging_examination_dora:0/ism_transition/current_state": "526",
+  "radiographer_mammography_report/examination_findings:0/breast_exam_screen/breast_findings/breast_location/specific_location/side": "at0003",
+  "radiographer_mammography_report/examination_findings:0/breast_exam_screen/breast_findings/breast_finding:0": "at0010",
+  "radiographer_mammography_report/mammography_procedures/imaging_examination_dora:1/breast_location/specific_location/side": "at0004",
+  "radiographer_mammography_report/mammography_procedures/imaging_examination_dora:1/examination_name:0": "at0.30",
+  "radiographer_mammography_report/mammography_procedures/imaging_examination_dora:1/examination_name:1": "at0.31",
+  "radiographer_mammography_report/mammography_procedures/imaging_examination_dora:1/ism_transition/current_state": "526",
+  "radiographer_mammography_report/examination_findings:1/breast_exam_screen/breast_findings/breast_location/specific_location/side": "at0004",
+  "radiographer_mammography_report/examination_findings:1/breast_exam_screen/breast_findings/breast_finding:0": "at0010"
+}
