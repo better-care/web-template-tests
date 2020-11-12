@@ -28,6 +28,9 @@ import java.util.Map;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.entry;
 
+/**
+ * @author Marko Narat
+ */
 @ExtendWith(WebTemplateTestExtension.class)
 public class BuildFromDataValueTest extends AbstractWebTemplateTest {
 
@@ -44,15 +47,14 @@ public class BuildFromDataValueTest extends AbstractWebTemplateTest {
 
     @Test
     public void dataValues() throws Exception {
-        String template = getFileContent("/Demo Vitals.opt");
-        String rawComposition = getFileContent("/DataValueTestComposition.json");
+        String template = getFileContent("/res/Demo Vitals.opt");
+        String rawComposition = getFileContent("/res/DataValueTestComposition.json");
 
         Map<String, Object> retrivedFlatComposition = getCompositionConverter().convertRawToFlat(template, "sl", rawComposition, objectMapper);
         assertThat(retrivedFlatComposition).contains(
                 entry("vitals/vitals/body_temperature:0/any_event:0/temperature|magnitude", 39.1),
                 entry("vitals/vitals/haemoglobin_a1c:0/any_event:0/test_status|code", "at0037"),
-                entry("vitals/vitals/haemoglobin_a1c:0/any_event:0/test_status|value", "Začasen")
-        );
+                entry("vitals/vitals/haemoglobin_a1c:0/any_event:0/test_status|value", "Začasen"));
     }
 
 }

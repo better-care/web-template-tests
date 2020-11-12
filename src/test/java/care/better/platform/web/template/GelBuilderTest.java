@@ -30,6 +30,9 @@ import java.util.Map;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.entry;
 
+/**
+ * @author Marko Narat
+ */
 @ExtendWith(WebTemplateTestExtension.class)
 public class GelBuilderTest extends AbstractWebTemplateTest {
 
@@ -47,8 +50,8 @@ public class GelBuilderTest extends AbstractWebTemplateTest {
     @Test
     public void missingNameMapping() throws Exception {
 
-        String template = getFileContent("/GEL_-_Generic_Lab_Report_import.v0.opt");
-        String flatCompositionString = getFileContent("/GenericLabReport.json");
+        String template = getFileContent("/res/GEL_-_Generic_Lab_Report_import.v0.opt");
+        String flatCompositionString = getFileContent("/res/GenericLabReport.json");
 
         JsonNode structuredComposition = getCompositionConverter().convertFlatToStructured(
                 template,
@@ -67,6 +70,5 @@ public class GelBuilderTest extends AbstractWebTemplateTest {
         assertThat(flatComposition).contains(
                 entry("laboratory_result_report/laboratory_test:0/laboratory_test_panel:0/laboratory_result:0/result_value/_name/_mapping:0/target|code",
                       "5195-3"));
-
     }
 }

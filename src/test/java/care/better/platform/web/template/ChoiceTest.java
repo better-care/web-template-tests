@@ -28,6 +28,9 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * @author Marko Narat
+ */
 @ExtendWith(WebTemplateTestExtension.class)
 public class ChoiceTest extends AbstractWebTemplateTest {
 

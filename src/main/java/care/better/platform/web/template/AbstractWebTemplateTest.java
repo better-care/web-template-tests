@@ -33,7 +33,7 @@ import java.nio.charset.StandardCharsets;
  */
 
 public abstract class AbstractWebTemplateTest {
-    ObjectMapper mapper = new ObjectMapper();
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
     @SuppressWarnings("NoopMethodInAbstractClass")
     @BeforeEach
@@ -78,14 +78,18 @@ public abstract class AbstractWebTemplateTest {
     protected String getFileContent(String fileName) throws IOException {
         try (InputStream inputStream = getClass().getResourceAsStream(fileName)) {
             if (inputStream == null) {
-                throw new IllegalStateException(String.format("File with name {} was not found.", fileName));
+                throw new IllegalStateException(String.format("File with name %s was not found.", fileName));
             }
             String fileString = IOUtils.toString(inputStream, StandardCharsets.UTF_8);
             if (fileName.endsWith(".json")) {
-                mapper.enable(JsonParser.Feature.ALLOW_COMMENTS);
-                fileString = mapper.writeValueAsString(mapper.readTree(fileString));
+                objectMapper.enable(JsonParser.Feature.ALLOW_COMMENTS);
+                fileString = objectMapper.writeValueAsString(objectMapper.readTree(fileString));
             }
             return fileString;
         }
+    }
+
+    protected ObjectMapper getObjectMapper() {
+        return objectMapper;
     }
 }

@@ -28,6 +28,9 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * @author Marko Narat
+ */
 @ExtendWith(WebTemplateTestExtension.class)
 public class BRMohTest extends AbstractWebTemplateTest {
 
@@ -44,8 +47,8 @@ public class BRMohTest extends AbstractWebTemplateTest {
 
     @Test
     public void brMohTest() throws Exception {
-        String template = getFileContent("/br-moh1.xml");
-        String flatCompositionString = getFileContent("/br-moh.json");
+        String template = getFileContent("/res/br-moh1.xml");
+        String flatCompositionString = getFileContent("/res/br-moh.json");
 
         JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
                 template,

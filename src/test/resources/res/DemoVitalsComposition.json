@@ -1,0 +1,634 @@
+// Copyright 2020-2021 Better Ltd (www.better.care)
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+{
+    "@class":"COMPOSITION",
+    "name":{
+        "@class":"DV_TEXT",
+        "value":"Vitals",
+        "hyperlink":null,
+        "formatting":null,
+        "mappings":[
+
+        ],
+        "language":null,
+        "encoding":null
+    },
+    "uid":null,
+    "links":[
+
+    ],
+    "archetype_details":{
+        "@class":"ARCHETYPED",
+        "archetype_id":{
+            "@class":"ARCHETYPE_ID",
+            "value":"openEHR-EHR-COMPOSITION.encounter.v1"
+        },
+        "template_id":{
+            "@class":"TEMPLATE_ID",
+            "value":"Demo Vitals"
+        },
+        "rm_version":"1.0.4"
+    },
+    "feeder_audit":null,
+    "archetype_node_id":"openEHR-EHR-COMPOSITION.encounter.v1",
+    "language":{
+        "@class":"CODE_PHRASE",
+        "terminology_id":{
+            "@class":"TERMINOLOGY_ID",
+            "value":"ISO_639-1"
+        },
+        "code_string":"en"
+    },
+    "territory":{
+        "@class":"CODE_PHRASE",
+        "terminology_id":{
+            "@class":"TERMINOLOGY_ID",
+            "value":"ISO_3166-1"
+        },
+        "code_string":"SI"
+    },
+    "category":{
+        "@class":"DV_CODED_TEXT",
+        "value":"event",
+        "hyperlink":null,
+        "formatting":null,
+        "mappings":[
+
+        ],
+        "language":null,
+        "encoding":null,
+        "defining_code":{
+            "@class":"CODE_PHRASE",
+            "terminology_id":{
+                "@class":"TERMINOLOGY_ID",
+                "value":"openehr"
+            },
+            "code_string":"433"
+        }
+    },
+    "composer":{
+        "@class":"PARTY_IDENTIFIED",
+        "external_ref":null,
+        "name":"matijak_test",
+        "identifiers":[
+
+        ]
+    },
+    "context":{
+        "@class":"EVENT_CONTEXT",
+        "start_time":{
+            "@class":"DV_DATE_TIME",
+            "normal_range":null,
+            "other_reference_ranges":[
+
+            ],
+            "normal_status":null,
+            "magnitude_status":null,
+            "accuracy":null,
+            "value":"2014-01-22T15:18:07.339+01:00"
+        },
+        "end_time":null,
+        "location":null,
+        "setting":{
+            "@class":"DV_CODED_TEXT",
+            "value":"other care",
+            "hyperlink":null,
+            "formatting":null,
+            "mappings":[
+
+            ],
+            "language":null,
+            "encoding":null,
+            "defining_code":{
+                "@class":"CODE_PHRASE",
+                "terminology_id":{
+                    "@class":"TERMINOLOGY_ID",
+                    "value":"openehr"
+                },
+                "code_string":"238"
+            }
+        },
+        "other_context":null,
+        "health_care_facility":null,
+        "participations":[
+
+        ]
+    },
+    "content":[
+        {
+            "@class":"SECTION",
+            "name":{
+                "@class":"DV_TEXT",
+                "value":"Vitals",
+                "hyperlink":null,
+                "formatting":null,
+                "mappings":[
+
+                ],
+                "language":null,
+                "encoding":null
+            },
+            "uid":null,
+            "links":[
+
+            ],
+            "archetype_details":{
+                "@class":"ARCHETYPED",
+                "archetype_id":{
+                    "@class":"ARCHETYPE_ID",
+                    "value":"openEHR-EHR-SECTION.ispek_dialog.v1"
+                },
+                "template_id":null,
+                "rm_version":"1.0.4"
+            },
+            "feeder_audit":null,
+            "archetype_node_id":"openEHR-EHR-SECTION.ispek_dialog.v1",
+            "items":[
+                {
+                    "@class":"OBSERVATION",
+                    "name":{
+                        "@class":"DV_TEXT",
+                        "value":"Haemoglobin A1c",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null
+                    },
+                    "uid":null,
+                    "links":[
+
+                    ],
+                    "archetype_details":{
+                        "@class":"ARCHETYPED",
+                        "archetype_id":{
+                            "@class":"ARCHETYPE_ID",
+                            "value":"openEHR-EHR-OBSERVATION.lab_test-hba1c.v1"
+                        },
+                        "template_id":null,
+                        "rm_version":"1.0.4"
+                    },
+                    "feeder_audit":null,
+                    "archetype_node_id":"openEHR-EHR-OBSERVATION.lab_test-hba1c.v1",
+                    "language":{
+                        "@class":"CODE_PHRASE",
+                        "terminology_id":{
+                            "@class":"TERMINOLOGY_ID",
+                            "value":"ISO_639-1"
+                        },
+                        "code_string":"en"
+                    },
+                    "encoding":{
+                        "@class":"CODE_PHRASE",
+                        "terminology_id":{
+                            "@class":"TERMINOLOGY_ID",
+                            "value":"IANA_character-sets"
+                        },
+                        "code_string":"UTF-8"
+                    },
+                    "subject":{
+                        "@class":"PARTY_SELF",
+                        "external_ref":null
+                    },
+                    "provider":null,
+                    "other_participations":[
+
+                    ],
+                    "work_flow_id":null,
+                    "protocol":null,
+                    "guideline_id":null,
+                    "data":{
+                        "@class":"HISTORY",
+                        "name":{
+                            "@class":"DV_TEXT",
+                            "value":"Event Series",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                        },
+                        "uid":null,
+                        "links":[
+
+                        ],
+                        "archetype_details":null,
+                        "feeder_audit":null,
+                        "archetype_node_id":"at0001",
+                        "origin":{
+                            "@class":"DV_DATE_TIME",
+                            "normal_range":null,
+                            "other_reference_ranges":[
+
+                            ],
+                            "normal_status":null,
+                            "magnitude_status":null,
+                            "accuracy":null,
+                            "value":"2014-01-22T15:18:07.339+01:00"
+                        },
+                        "period":null,
+                        "duration":null,
+                        "events":[
+                            {
+                                "@class":"POINT_EVENT",
+                                "name":{
+                                    "@class":"DV_TEXT",
+                                    "value":"Any event",
+                                    "hyperlink":null,
+                                    "formatting":null,
+                                    "mappings":[
+
+                                    ],
+                                    "language":null,
+                                    "encoding":null
+                                },
+                                "uid":null,
+                                "links":[
+
+                                ],
+                                "archetype_details":null,
+                                "feeder_audit":null,
+                                "archetype_node_id":"at0002",
+                                "time":{
+                                    "@class":"DV_DATE_TIME",
+                                    "normal_range":null,
+                                    "other_reference_ranges":[
+
+                                    ],
+                                    "normal_status":null,
+                                    "magnitude_status":null,
+                                    "accuracy":null,
+                                    "value":"2014-01-22T15:18:07.339+01:00"
+                                },
+                                "data":{
+                                    "@class":"ITEM_TREE",
+                                    "name":{
+                                        "@class":"DV_TEXT",
+                                        "value":"Tree",
+                                        "hyperlink":null,
+                                        "formatting":null,
+                                        "mappings":[
+
+                                        ],
+                                        "language":null,
+                                        "encoding":null
+                                    },
+                                    "uid":null,
+                                    "links":[
+
+                                    ],
+                                    "archetype_details":null,
+                                    "feeder_audit":null,
+                                    "archetype_node_id":"at0003",
+                                    "items":[
+                                        {
+                                            "@class":"ELEMENT",
+                                            "name":{
+                                                "@class":"DV_TEXT",
+                                                "value":"Test name",
+                                                "hyperlink":null,
+                                                "formatting":null,
+                                                "mappings":[
+
+                                                ],
+                                                "language":null,
+                                                "encoding":null
+                                            },
+                                            "uid":null,
+                                            "links":[
+
+                                            ],
+                                            "archetype_details":null,
+                                            "feeder_audit":null,
+                                            "archetype_node_id":"at0005",
+                                            "value":{
+                                                "@class":"DV_TEXT",
+                                                "value":"Test test name",
+                                                "hyperlink":null,
+                                                "formatting":null,
+                                                "mappings":[
+
+                                                ],
+                                                "language":null,
+                                                "encoding":null
+                                            },
+                                            "null_flavour":null
+                                        }
+                                    ]
+                                },
+                                "state":null
+                            }
+                        ],
+                        "summary":null
+                    },
+                    "state":null
+                },
+                {
+                    "@class":"OBSERVATION",
+                    "name":{
+                        "@class":"DV_TEXT",
+                        "value":"Body temperature",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null
+                    },
+                    "uid":null,
+                    "links":[
+
+                    ],
+                    "archetype_details":{
+                        "@class":"ARCHETYPED",
+                        "archetype_id":{
+                            "@class":"ARCHETYPE_ID",
+                            "value":"openEHR-EHR-OBSERVATION.body_temperature-zn.v1"
+                        },
+                        "template_id":null,
+                        "rm_version":"1.0.4"
+                    },
+                    "feeder_audit":null,
+                    "archetype_node_id":"openEHR-EHR-OBSERVATION.body_temperature-zn.v1",
+                    "language":{
+                        "@class":"CODE_PHRASE",
+                        "terminology_id":{
+                            "@class":"TERMINOLOGY_ID",
+                            "value":"ISO_639-1"
+                        },
+                        "code_string":"en"
+                    },
+                    "encoding":{
+                        "@class":"CODE_PHRASE",
+                        "terminology_id":{
+                            "@class":"TERMINOLOGY_ID",
+                            "value":"IANA_character-sets"
+                        },
+                        "code_string":"UTF-8"
+                    },
+                    "subject":{
+                        "@class":"PARTY_SELF",
+                        "external_ref":null
+                    },
+                    "provider":null,
+                    "other_participations":[
+
+                    ],
+                    "work_flow_id":null,
+                    "protocol":null,
+                    "guideline_id":null,
+                    "data":{
+                        "@class":"HISTORY",
+                        "name":{
+                            "@class":"DV_TEXT",
+                            "value":"History",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                        },
+                        "uid":null,
+                        "links":[
+
+                        ],
+                        "archetype_details":null,
+                        "feeder_audit":null,
+                        "archetype_node_id":"at0002",
+                        "origin":{
+                            "@class":"DV_DATE_TIME",
+                            "normal_range":null,
+                            "other_reference_ranges":[
+
+                            ],
+                            "normal_status":null,
+                            "magnitude_status":null,
+                            "accuracy":null,
+                            "value":"2014-01-22T15:18:07.339+01:00"
+                        },
+                        "period":null,
+                        "duration":null,
+                        "events":[
+                            {
+                                "@class":"POINT_EVENT",
+                                "name":{
+                                    "@class":"DV_TEXT",
+                                    "value":"Any event",
+                                    "hyperlink":null,
+                                    "formatting":null,
+                                    "mappings":[
+
+                                    ],
+                                    "language":null,
+                                    "encoding":null
+                                },
+                                "uid":null,
+                                "links":[
+
+                                ],
+                                "archetype_details":null,
+                                "feeder_audit":null,
+                                "archetype_node_id":"at0003",
+                                "time":{
+                                    "@class":"DV_DATE_TIME",
+                                    "normal_range":null,
+                                    "other_reference_ranges":[
+
+                                    ],
+                                    "normal_status":null,
+                                    "magnitude_status":null,
+                                    "accuracy":null,
+                                    "value":"2014-01-22T15:18:07.339+01:00"
+                                },
+                                "data":{
+                                    "@class":"ITEM_TREE",
+                                    "name":{
+                                        "@class":"DV_TEXT",
+                                        "value":"Single",
+                                        "hyperlink":null,
+                                        "formatting":null,
+                                        "mappings":[
+
+                                        ],
+                                        "language":null,
+                                        "encoding":null
+                                    },
+                                    "uid":null,
+                                    "links":[
+
+                                    ],
+                                    "archetype_details":null,
+                                    "feeder_audit":null,
+                                    "archetype_node_id":"at0001",
+                                    "items":[
+                                        {
+                                            "@class":"ELEMENT",
+                                            "name":{
+                                                "@class":"DV_TEXT",
+                                                "value":"Temperature",
+                                                "hyperlink":null,
+                                                "formatting":null,
+                                                "mappings":[
+
+                                                ],
+                                                "language":null,
+                                                "encoding":null
+                                            },
+                                            "uid":null,
+                                            "links":[
+
+                                            ],
+                                            "archetype_details":null,
+                                            "feeder_audit":null,
+                                            "archetype_node_id":"at0004",
+                                            "value":{
+                                                "@class":"DV_QUANTITY",
+                                                "normal_range":null,
+                                                "other_reference_ranges":[
+
+                                                ],
+                                                "normal_status":null,
+                                                "magnitude_status":null,
+                                                "accuracy":null,
+                                                "accuracy_is_percent":null,
+                                                "magnitude":37.2,
+                                                "units":"°C",
+                                                "precision":1
+                                            },
+                                            "null_flavour":null
+                                        },
+                                        {
+                                            "@class":"ELEMENT",
+                                            "name":{
+                                                "@class":"DV_TEXT",
+                                                "value":"Symptoms",
+                                                "hyperlink":null,
+                                                "formatting":null,
+                                                "mappings":[
+
+                                                ],
+                                                "language":null,
+                                                "encoding":null
+                                            },
+                                            "uid":null,
+                                            "links":[
+
+                                            ],
+                                            "archetype_details":null,
+                                            "feeder_audit":null,
+                                            "archetype_node_id":"at0.63",
+                                            "value":{
+                                                "@class":"DV_CODED_TEXT",
+                                                "value":"Chills / rigor / shivering",
+                                                "hyperlink":null,
+                                                "formatting":null,
+                                                "mappings":[
+
+                                                ],
+                                                "language":null,
+                                                "encoding":null,
+                                                "defining_code":{
+                                                    "@class":"CODE_PHRASE",
+                                                    "terminology_id":{
+                                                        "@class":"TERMINOLOGY_ID",
+                                                        "value":"local"
+                                                    },
+                                                    "code_string":"at0.64"
+                                                }
+                                            },
+                                            "null_flavour":null
+                                        }
+                                    ]
+                                },
+                                "state":{
+                                    "@class":"ITEM_TREE",
+                                    "name":{
+                                        "@class":"DV_TEXT",
+                                        "value":"State",
+                                        "hyperlink":null,
+                                        "formatting":null,
+                                        "mappings":[
+
+                                        ],
+                                        "language":null,
+                                        "encoding":null
+                                    },
+                                    "uid":null,
+                                    "links":[
+
+                                    ],
+                                    "archetype_details":null,
+                                    "feeder_audit":null,
+                                    "archetype_node_id":"at0029",
+                                    "items":[
+                                        {
+                                            "@class":"ELEMENT",
+                                            "name":{
+                                                "@class":"DV_TEXT",
+                                                "value":"Description of thermal stress",
+                                                "hyperlink":null,
+                                                "formatting":null,
+                                                "mappings":[
+
+                                                ],
+                                                "language":null,
+                                                "encoding":null
+                                            },
+                                            "uid":null,
+                                            "links":[
+
+                                            ],
+                                            "archetype_details":null,
+                                            "feeder_audit":null,
+                                            "archetype_node_id":"at0041",
+                                            "value":null,
+                                            "null_flavour":{
+                                                "@class":"DV_CODED_TEXT",
+                                                "value":"no information",
+                                                "hyperlink":null,
+                                                "formatting":null,
+                                                "mappings":[
+
+                                                ],
+                                                "language":null,
+                                                "encoding":null,
+                                                "defining_code":{
+                                                    "@class":"CODE_PHRASE",
+                                                    "terminology_id":{
+                                                        "@class":"TERMINOLOGY_ID",
+                                                        "value":"openehr"
+                                                    },
+                                                    "code_string":"271"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "summary":null
+                    },
+                    "state":null
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+  "@class":"ELEMENT",
+  "name":{
+    "@class":"DV_TEXT",
+    "value":"Test name",
+    "hyperlink":null,
+    "formatting":null,
+    "mappings":[
+
+    ],
+    "language":null,
+    "encoding":null
+  },
+  "uid":null,
+  "links":[
+
+  ],
+  "archetype_details":null,
+  "feeder_audit":null,
+  "archetype_node_id":"at0005",
+  "value":null,
+  "null_flavour":{
+    "@class":"DV_CODED_TEXT",
+    "value":"not applicable",
+    "hyperlink":null,
+    "formatting":null,
+    "mappings":[
+
+    ],
+    "language":null,
+    "encoding":null,
+    "defining_code":{
+      "@class":"CODE_PHRASE",
+      "terminology_id":{
+        "@class":"TERMINOLOGY_ID",
+        "value":"openehr"
+      },
+      "code_string":"273"
+    }
+  }
+}

@@ -1,0 +1,370 @@
+// Copyright 2020-2021 Better Ltd (www.better.care)
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+{
+  "@class":"COMPOSITION",
+  "name":{
+    "@class":"DV_TEXT",
+    "value":"Medication list",
+    "hyperlink":null,
+    "formatting":null,
+    "mappings":[
+
+    ],
+    "language":null,
+    "encoding":null
+  },
+  "uid":null,
+  "links":[
+
+  ],
+  "archetype_details":{
+    "@class":"ARCHETYPED",
+    "archetype_id":{
+      "@class":"ARCHETYPE_ID",
+      "value":"openEHR-EHR-COMPOSITION.medication_list.v1"
+    },
+    "template_id":{
+      "@class":"TEMPLATE_ID",
+      "value":"medication_list"
+    },
+    "rm_version":"1.0.4"
+  },
+  "feeder_audit":null,
+  "archetype_node_id":"openEHR-EHR-COMPOSITION.medication_list.v1",
+  "language":{
+    "@class":"CODE_PHRASE",
+    "terminology_id":{
+      "@class":"TERMINOLOGY_ID",
+      "value":"ISO_639-1"
+    },
+    "code_string":"sv"
+  },
+  "territory":{
+    "@class":"CODE_PHRASE",
+    "terminology_id":{
+      "@class":"TERMINOLOGY_ID",
+      "value":"ISO_3166-1"
+    },
+    "code_string":"SE"
+  },
+  "category":{
+    "@class":"DV_CODED_TEXT",
+    "value":"persistent",
+    "hyperlink":null,
+    "formatting":null,
+    "mappings":[
+
+    ],
+    "language":null,
+    "encoding":null,
+    "defining_code":{
+      "@class":"CODE_PHRASE",
+      "terminology_id":{
+        "@class":"TERMINOLOGY_ID",
+        "value":"openehr"
+      },
+      "code_string":"431"
+    }
+  },
+  "composer":{
+    "@class":"PARTY_IDENTIFIED",
+    "external_ref":null,
+    "name":"Cambio import",
+    "identifiers":[
+
+    ]
+  },
+  "context":null,
+  "content":[
+    {
+      "@class":"INSTRUCTION",
+      "name":{
+        "@class":"DV_TEXT",
+        "value":"Medication order",
+        "hyperlink":null,
+        "formatting":null,
+        "mappings":[
+
+        ],
+        "language":null,
+        "encoding":null
+      },
+      "uid":null,
+      "links":[
+
+      ],
+      "archetype_details":{
+        "@class":"ARCHETYPED",
+        "archetype_id":{
+          "@class":"ARCHETYPE_ID",
+          "value":"openEHR-EHR-INSTRUCTION.medication.v1"
+        },
+        "template_id":null,
+        "rm_version":"1.0.4"
+      },
+      "feeder_audit":null,
+      "archetype_node_id":"openEHR-EHR-INSTRUCTION.medication.v1",
+      "language":{
+        "@class":"CODE_PHRASE",
+        "terminology_id":{
+          "@class":"TERMINOLOGY_ID",
+          "value":"ISO_639-1"
+        },
+        "code_string":"sv"
+      },
+      "encoding":{
+        "@class":"CODE_PHRASE",
+        "terminology_id":{
+          "@class":"TERMINOLOGY_ID",
+          "value":"IANA_character-sets"
+        },
+        "code_string":"UTF-8"
+      },
+      "subject":{
+        "@class":"PARTY_SELF",
+        "external_ref":null
+      },
+      "provider":null,
+      "other_participations":[
+
+      ],
+      "work_flow_id":null,
+      "protocol":null,
+      "guideline_id":null,
+      "narrative":null,
+      "expiry_time":null,
+      "wf_definition":null,
+      "activities":[
+        {
+          "@class":"ACTIVITY",
+          "name":{
+            "@class":"DV_TEXT",
+            "value":"Medication activity",
+            "hyperlink":null,
+            "formatting":null,
+            "mappings":[
+
+            ],
+            "language":null,
+            "encoding":null
+          },
+          "uid":null,
+          "links":[
+
+          ],
+          "archetype_details":null,
+          "feeder_audit":null,
+          "archetype_node_id":"at0001",
+          "description":{
+            "@class":"ITEM_TREE",
+            "name":{
+              "@class":"DV_TEXT",
+              "value":"Medication description",
+              "hyperlink":null,
+              "formatting":null,
+              "mappings":[
+
+              ],
+              "language":null,
+              "encoding":null
+            },
+            "uid":null,
+            "links":[
+
+            ],
+            "archetype_details":{
+              "@class":"ARCHETYPED",
+              "archetype_id":{
+                "@class":"ARCHETYPE_ID",
+                "value":"openEHR-EHR-ITEM_TREE.medication.v1"
+              },
+              "template_id":null,
+              "rm_version":"1.0.4"
+            },
+            "feeder_audit":null,
+            "archetype_node_id":"openEHR-EHR-ITEM_TREE.medication.v1",
+            "items":[
+              {
+                "@class":"ELEMENT",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Name of medication",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at0001",
+                "value":{
+                  "@class":"DV_TEXT",
+                  "value":"Aspirin",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "null_flavour":null
+              },
+              {
+                "@class":"ELEMENT",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Generic name",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at0012",
+                "value":{
+                  "@class":"DV_CODED_TEXT",
+                  "value":"value",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null,
+                  "defining_code":{
+                    "@class":"CODE_PHRASE",
+                    "terminology_id":{
+                      "@class":"TERMINOLOGY_ID",
+                      "value":"ATC"
+                    },
+                    "code_string":"code"
+                  }
+                },
+                "null_flavour":null
+              },
+              {
+                "@class":"CLUSTER",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Administration information",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at0018",
+                "items":[
+                  {
+                    "@class":"ELEMENT",
+                    "name":{
+                      "@class":"DV_TEXT",
+                      "value":"Date (time) of first administration",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null
+                    },
+                    "uid":null,
+                    "links":[
+
+                    ],
+                    "archetype_details":null,
+                    "feeder_audit":null,
+                    "archetype_node_id":"at0019",
+                    "value":{
+                      "@class":"DV_DATE_TIME",
+                      "normal_range":null,
+                      "other_reference_ranges":[
+
+                      ],
+                      "normal_status":null,
+                      "magnitude_status":null,
+                      "accuracy":null,
+                      "value":"2020-11-09T15:46:30.415+01:00"
+                    },
+                    "null_flavour":null
+                  },
+                  {
+                    "@class":"ELEMENT",
+                    "name":{
+                      "@class":"DV_TEXT",
+                      "value":"Date (time) of last administration",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null
+                    },
+                    "uid":null,
+                    "links":[
+
+                    ],
+                    "archetype_details":null,
+                    "feeder_audit":null,
+                    "archetype_node_id":"at0032",
+                    "value":{
+                      "@class":"DV_DATE_TIME",
+                      "normal_range":null,
+                      "other_reference_ranges":[
+
+                      ],
+                      "normal_status":null,
+                      "magnitude_status":null,
+                      "accuracy":null,
+                      "value":"2020-11-09T15:46:30.428+01:00"
+                    },
+                    "null_flavour":null
+                  }
+                ]
+              }
+            ]
+          },
+          "timing":null,
+          "action_archetype_id":"openEHR-EHR-ACTION.medication.v1"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2495 @@
+// Copyright 2020-2021 Better Ltd (www.better.care)
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+{
+  "@class":"COMPOSITION",
+  "name":{
+    "@class":"DV_TEXT",
+    "value":"openEHR-EHR-COMPOSITION.diabetic_retinopathy_screening_od.v1",
+    "hyperlink":null,
+    "formatting":null,
+    "mappings":[
+
+    ],
+    "language":null,
+    "encoding":null
+  },
+  "uid":{
+    "@class":"OBJECT_VERSION_ID",
+    "value":"54b7ff66-6736-4e95-ae04-559adebfda05::privantis.ehrscape.com::1"
+  },
+  "links":[
+
+  ],
+  "archetype_details":{
+    "@class":"ARCHETYPED",
+    "archetype_id":{
+      "@class":"ARCHETYPE_ID",
+      "value":"openEHR-EHR-COMPOSITION.diabetic_retinopathy_screening_od.v1"
+    },
+    "template_id":{
+      "@class":"TEMPLATE_ID",
+      "value":"DRS Fundus Severity for od form"
+    },
+    "rm_version":"1.0.1"
+  },
+  "feeder_audit":null,
+  "archetype_node_id":"openEHR-EHR-COMPOSITION.diabetic_retinopathy_screening_od.v1",
+  "language":{
+    "@class":"CODE_PHRASE",
+    "terminology_id":{
+      "@class":"TERMINOLOGY_ID",
+      "value":"ISO_639-1"
+    },
+    "code_string":"en"
+  },
+  "territory":{
+    "@class":"CODE_PHRASE",
+    "terminology_id":{
+      "@class":"TERMINOLOGY_ID",
+      "value":"ISO_3166-1"
+    },
+    "code_string":"SE"
+  },
+  "category":{
+    "@class":"DV_CODED_TEXT",
+    "value":"event",
+    "hyperlink":null,
+    "formatting":null,
+    "mappings":[
+
+    ],
+    "language":null,
+    "encoding":null,
+    "defining_code":{
+      "@class":"CODE_PHRASE",
+      "terminology_id":{
+        "@class":"TERMINOLOGY_ID",
+        "value":"openehr"
+      },
+      "code_string":"433"
+    }
+  },
+  "composer":{
+    "@class":"PARTY_IDENTIFIED",
+    "external_ref":null,
+    "name":"Doctor",
+    "identifiers":[
+
+    ]
+  },
+  "context":{
+    "@class":"EVENT_CONTEXT",
+    "start_time":{
+      "@class":"DV_DATE_TIME",
+      "normal_range":null,
+      "other_reference_ranges":[
+
+      ],
+      "normal_status":null,
+      "magnitude_status":null,
+      "accuracy":null,
+      "value":"2015-03-17T09:23:19,690"
+    },
+    "end_time":null,
+    "location":null,
+    "setting":{
+      "@class":"DV_CODED_TEXT",
+      "value":"secondary care",
+      "hyperlink":null,
+      "formatting":null,
+      "mappings":[
+
+      ],
+      "language":null,
+      "encoding":null,
+      "defining_code":{
+        "@class":"CODE_PHRASE",
+        "terminology_id":{
+          "@class":"TERMINOLOGY_ID",
+          "value":"openehr"
+        },
+        "code_string":"232"
+      }
+    },
+    "other_context":null,
+    "health_care_facility":null,
+    "participations":[
+
+    ]
+  },
+  "content":[
+    {
+      "@class":"OBSERVATION",
+      "name":{
+        "@class":"DV_TEXT",
+        "value":"openEHR-EHR-OBSERVATION.drs_severity_fundus.v1",
+        "hyperlink":null,
+        "formatting":null,
+        "mappings":[
+
+        ],
+        "language":null,
+        "encoding":null
+      },
+      "uid":null,
+      "links":[
+
+      ],
+      "archetype_details":{
+        "@class":"ARCHETYPED",
+        "archetype_id":{
+          "@class":"ARCHETYPE_ID",
+          "value":"openEHR-EHR-OBSERVATION.drs_severity_fundus.v1"
+        },
+        "template_id":{
+          "@class":"TEMPLATE_ID",
+          "value":"DRS Fundus Severity for od form"
+        },
+        "rm_version":"1.0.1"
+      },
+      "feeder_audit":null,
+      "archetype_node_id":"openEHR-EHR-OBSERVATION.drs_severity_fundus.v1",
+      "language":{
+        "@class":"CODE_PHRASE",
+        "terminology_id":{
+          "@class":"TERMINOLOGY_ID",
+          "value":"ISO_639-1"
+        },
+        "code_string":"en"
+      },
+      "encoding":{
+        "@class":"CODE_PHRASE",
+        "terminology_id":{
+          "@class":"TERMINOLOGY_ID",
+          "value":"IANA_character-sets"
+        },
+        "code_string":"UTF-8"
+      },
+      "subject":{
+        "@class":"PARTY_SELF",
+        "external_ref":{
+          "@class":"PARTY_REF",
+          "id":{
+            "@class":"HIER_OBJECT_ID",
+            "value":"1.2.4.5.6.12.1"
+          },
+          "namespace":"DEMOGRAPHIC",
+          "type":"PARTY"
+        }
+      },
+      "provider":null,
+      "other_participations":[
+
+      ],
+      "work_flow_id":null,
+      "protocol":null,
+      "guideline_id":null,
+      "data":{
+        "@class":"HISTORY",
+        "name":{
+          "@class":"DV_TEXT",
+          "value":"Event Series",
+          "hyperlink":null,
+          "formatting":null,
+          "mappings":[
+
+          ],
+          "language":null,
+          "encoding":null
+        },
+        "uid":null,
+        "links":[
+
+        ],
+        "archetype_details":null,
+        "feeder_audit":null,
+        "archetype_node_id":"at0001",
+        "origin":{
+          "@class":"DV_DATE_TIME",
+          "normal_range":null,
+          "other_reference_ranges":[
+
+          ],
+          "normal_status":null,
+          "magnitude_status":null,
+          "accuracy":null,
+          "value":"2015-03-17T09:23:19,690"
+        },
+        "period":null,
+        "duration":null,
+        "events":[
+          {
+            "@class":"POINT_EVENT",
+            "name":{
+              "@class":"DV_TEXT",
+              "value":"Any event",
+              "hyperlink":null,
+              "formatting":null,
+              "mappings":[
+
+              ],
+              "language":null,
+              "encoding":null
+            },
+            "uid":null,
+            "links":[
+
+            ],
+            "archetype_details":null,
+            "feeder_audit":null,
+            "archetype_node_id":"at0002",
+            "time":{
+              "@class":"DV_DATE_TIME",
+              "normal_range":null,
+              "other_reference_ranges":[
+
+              ],
+              "normal_status":null,
+              "magnitude_status":null,
+              "accuracy":null,
+              "value":"2015-03-17T09:23:19,689"
+            },
+            "data":{
+              "@class":"ITEM_TREE",
+              "name":{
+                "@class":"DV_TEXT",
+                "value":"Tree",
+                "hyperlink":null,
+                "formatting":null,
+                "mappings":[
+
+                ],
+                "language":null,
+                "encoding":null
+              },
+              "uid":null,
+              "links":[
+
+              ],
+              "archetype_details":null,
+              "feeder_audit":null,
+              "archetype_node_id":"at0003",
+              "items":[
+                {
+                  "@class":"CLUSTER",
+                  "name":{
+                    "@class":"DV_TEXT",
+                    "value":"Ocular Fundus Evaluation",
+                    "hyperlink":null,
+                    "formatting":null,
+                    "mappings":[
+
+                    ],
+                    "language":null,
+                    "encoding":null
+                  },
+                  "uid":null,
+                  "links":[
+
+                  ],
+                  "archetype_details":null,
+                  "feeder_audit":null,
+                  "archetype_node_id":"at0006",
+                  "items":[
+                    {
+                      "@class":"CLUSTER",
+                      "name":{
+                        "@class":"DV_TEXT",
+                        "value":"openEHR-EHR-CLUSTER.drs_exam_type.v1",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null
+                      },
+                      "uid":null,
+                      "links":[
+
+                      ],
+                      "archetype_details":null,
+                      "feeder_audit":null,
+                      "archetype_node_id":"openEHR-EHR-CLUSTER.drs_exam_type.v1",
+                      "items":[
+                        {
+                          "@class":"CLUSTER",
+                          "name":{
+                            "@class":"DV_TEXT",
+                            "value":"Exam Type",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "uid":null,
+                          "links":[
+
+                          ],
+                          "archetype_details":null,
+                          "feeder_audit":null,
+                          "archetype_node_id":"at0001",
+                          "items":[
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Exam",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0002",
+                              "value":null,
+                              "null_flavour":{
+                                "@class":"DV_CODED_TEXT",
+                                "value":"no information",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null,
+                                "defining_code":{
+                                  "@class":"CODE_PHRASE",
+                                  "terminology_id":{
+                                    "@class":"TERMINOLOGY_ID",
+                                    "value":"openehr"
+                                  },
+                                  "code_string":"271"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "@class":"CLUSTER",
+                      "name":{
+                        "@class":"DV_TEXT",
+                        "value":"openEHR-EHR-CLUSTER.drs_fundus_reflex.v1",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null
+                      },
+                      "uid":null,
+                      "links":[
+
+                      ],
+                      "archetype_details":null,
+                      "feeder_audit":null,
+                      "archetype_node_id":"openEHR-EHR-CLUSTER.drs_fundus_reflex.v1",
+                      "items":[
+                        {
+                          "@class":"CLUSTER",
+                          "name":{
+                            "@class":"DV_TEXT",
+                            "value":"Fundus Reflex",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "uid":null,
+                          "links":[
+
+                          ],
+                          "archetype_details":null,
+                          "feeder_audit":null,
+                          "archetype_node_id":"at0001",
+                          "items":[
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Evaluation",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0003",
+                              "value":{
+                                "@class":"DV_ORDINAL",
+                                "normal_range":null,
+                                "other_reference_ranges":[
+
+                                ],
+                                "normal_status":null,
+                                "value":0,
+                                "symbol":{
+                                  "@class":"DV_CODED_TEXT",
+                                  "value":"No or mild opacity",
+                                  "hyperlink":null,
+                                  "formatting":null,
+                                  "mappings":[
+
+                                  ],
+                                  "language":null,
+                                  "encoding":null,
+                                  "defining_code":{
+                                    "@class":"CODE_PHRASE",
+                                    "terminology_id":{
+                                      "@class":"TERMINOLOGY_ID",
+                                      "value":"local"
+                                    },
+                                    "code_string":"at0004"
+                                  }
+                                }
+                              },
+                              "null_flavour":null
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "@class":"CLUSTER",
+                      "name":{
+                        "@class":"DV_TEXT",
+                        "value":"openEHR-EHR-CLUSTER.drs_fundus_visibility.v1",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null
+                      },
+                      "uid":null,
+                      "links":[
+
+                      ],
+                      "archetype_details":null,
+                      "feeder_audit":null,
+                      "archetype_node_id":"openEHR-EHR-CLUSTER.drs_fundus_visibility.v1",
+                      "items":[
+                        {
+                          "@class":"CLUSTER",
+                          "name":{
+                            "@class":"DV_TEXT",
+                            "value":"Fundus Visibility",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "uid":null,
+                          "links":[
+
+                          ],
+                          "archetype_details":null,
+                          "feeder_audit":null,
+                          "archetype_node_id":"at0001",
+                          "items":[
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Visibility of II-order retinal vessels",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0002",
+                              "value":{
+                                "@class":"DV_ORDINAL",
+                                "normal_range":null,
+                                "other_reference_ranges":[
+
+                                ],
+                                "normal_status":null,
+                                "value":0,
+                                "symbol":{
+                                  "@class":"DV_CODED_TEXT",
+                                  "value":"Good",
+                                  "hyperlink":null,
+                                  "formatting":null,
+                                  "mappings":[
+
+                                  ],
+                                  "language":null,
+                                  "encoding":null,
+                                  "defining_code":{
+                                    "@class":"CODE_PHRASE",
+                                    "terminology_id":{
+                                      "@class":"TERMINOLOGY_ID",
+                                      "value":"local"
+                                    },
+                                    "code_string":"at0003"
+                                  }
+                                }
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Analysable Fundus Area",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0007",
+                              "value":{
+                                "@class":"DV_ORDINAL",
+                                "normal_range":null,
+                                "other_reference_ranges":[
+
+                                ],
+                                "normal_status":null,
+                                "value":0,
+                                "symbol":{
+                                  "@class":"DV_CODED_TEXT",
+                                  "value":"The entire fundus area",
+                                  "hyperlink":null,
+                                  "formatting":null,
+                                  "mappings":[
+
+                                  ],
+                                  "language":null,
+                                  "encoding":null,
+                                  "defining_code":{
+                                    "@class":"CODE_PHRASE",
+                                    "terminology_id":{
+                                      "@class":"TERMINOLOGY_ID",
+                                      "value":"local"
+                                    },
+                                    "code_string":"at0008"
+                                  }
+                                }
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Macular Region Visibility",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0012",
+                              "value":{
+                                "@class":"DV_ORDINAL",
+                                "normal_range":null,
+                                "other_reference_ranges":[
+
+                                ],
+                                "normal_status":null,
+                                "value":0,
+                                "symbol":{
+                                  "@class":"DV_CODED_TEXT",
+                                  "value":"Analysable",
+                                  "hyperlink":null,
+                                  "formatting":null,
+                                  "mappings":[
+
+                                  ],
+                                  "language":null,
+                                  "encoding":null,
+                                  "defining_code":{
+                                    "@class":"CODE_PHRASE",
+                                    "terminology_id":{
+                                      "@class":"TERMINOLOGY_ID",
+                                      "value":"local"
+                                    },
+                                    "code_string":"at0013"
+                                  }
+                                }
+                              },
+                              "null_flavour":null
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "@class":"CLUSTER",
+                      "name":{
+                        "@class":"DV_TEXT",
+                        "value":"openEHR-EHR-CLUSTER.drs_dr_severity_evaluation.v1",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null
+                      },
+                      "uid":null,
+                      "links":[
+
+                      ],
+                      "archetype_details":null,
+                      "feeder_audit":null,
+                      "archetype_node_id":"openEHR-EHR-CLUSTER.drs_dr_severity_evaluation.v1",
+                      "items":[
+                        {
+                          "@class":"CLUSTER",
+                          "name":{
+                            "@class":"DV_TEXT",
+                            "value":"DR Severity Evaluation (IC)",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "uid":null,
+                          "links":[
+
+                          ],
+                          "archetype_details":null,
+                          "feeder_audit":null,
+                          "archetype_node_id":"at0001",
+                          "items":[
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Microaneurysms",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0002",
+                              "value":{
+                                "@class":"DV_ORDINAL",
+                                "normal_range":null,
+                                "other_reference_ranges":[
+
+                                ],
+                                "normal_status":null,
+                                "value":0,
+                                "symbol":{
+                                  "@class":"DV_CODED_TEXT",
+                                  "value":"Absent",
+                                  "hyperlink":null,
+                                  "formatting":null,
+                                  "mappings":[
+
+                                  ],
+                                  "language":null,
+                                  "encoding":null,
+                                  "defining_code":{
+                                    "@class":"CODE_PHRASE",
+                                    "terminology_id":{
+                                      "@class":"TERMINOLOGY_ID",
+                                      "value":"local"
+                                    },
+                                    "code_string":"at0003"
+                                  }
+                                }
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Retinal Hemorrhages",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0007",
+                              "value":{
+                                "@class":"DV_ORDINAL",
+                                "normal_range":null,
+                                "other_reference_ranges":[
+
+                                ],
+                                "normal_status":null,
+                                "value":0,
+                                "symbol":{
+                                  "@class":"DV_CODED_TEXT",
+                                  "value":"Absent",
+                                  "hyperlink":null,
+                                  "formatting":null,
+                                  "mappings":[
+
+                                  ],
+                                  "language":null,
+                                  "encoding":null,
+                                  "defining_code":{
+                                    "@class":"CODE_PHRASE",
+                                    "terminology_id":{
+                                      "@class":"TERMINOLOGY_ID",
+                                      "value":"local"
+                                    },
+                                    "code_string":"at0008"
+                                  }
+                                }
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Venous Beading (VB)",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0012",
+                              "value":{
+                                "@class":"DV_ORDINAL",
+                                "normal_range":null,
+                                "other_reference_ranges":[
+
+                                ],
+                                "normal_status":null,
+                                "value":0,
+                                "symbol":{
+                                  "@class":"DV_CODED_TEXT",
+                                  "value":"Absent",
+                                  "hyperlink":null,
+                                  "formatting":null,
+                                  "mappings":[
+
+                                  ],
+                                  "language":null,
+                                  "encoding":null,
+                                  "defining_code":{
+                                    "@class":"CODE_PHRASE",
+                                    "terminology_id":{
+                                      "@class":"TERMINOLOGY_ID",
+                                      "value":"local"
+                                    },
+                                    "code_string":"at0013"
+                                  }
+                                }
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"IRMA",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0017",
+                              "value":{
+                                "@class":"DV_ORDINAL",
+                                "normal_range":null,
+                                "other_reference_ranges":[
+
+                                ],
+                                "normal_status":null,
+                                "value":0,
+                                "symbol":{
+                                  "@class":"DV_CODED_TEXT",
+                                  "value":"Absent",
+                                  "hyperlink":null,
+                                  "formatting":null,
+                                  "mappings":[
+
+                                  ],
+                                  "language":null,
+                                  "encoding":null,
+                                  "defining_code":{
+                                    "@class":"CODE_PHRASE",
+                                    "terminology_id":{
+                                      "@class":"TERMINOLOGY_ID",
+                                      "value":"local"
+                                    },
+                                    "code_string":"at0018"
+                                  }
+                                }
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"NVE",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0021",
+                              "value":{
+                                "@class":"DV_ORDINAL",
+                                "normal_range":null,
+                                "other_reference_ranges":[
+
+                                ],
+                                "normal_status":null,
+                                "value":0,
+                                "symbol":{
+                                  "@class":"DV_CODED_TEXT",
+                                  "value":"Absent",
+                                  "hyperlink":null,
+                                  "formatting":null,
+                                  "mappings":[
+
+                                  ],
+                                  "language":null,
+                                  "encoding":null,
+                                  "defining_code":{
+                                    "@class":"CODE_PHRASE",
+                                    "terminology_id":{
+                                      "@class":"TERMINOLOGY_ID",
+                                      "value":"local"
+                                    },
+                                    "code_string":"at0022"
+                                  }
+                                }
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"NVD",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0025",
+                              "value":{
+                                "@class":"DV_ORDINAL",
+                                "normal_range":null,
+                                "other_reference_ranges":[
+
+                                ],
+                                "normal_status":null,
+                                "value":0,
+                                "symbol":{
+                                  "@class":"DV_CODED_TEXT",
+                                  "value":"Absent",
+                                  "hyperlink":null,
+                                  "formatting":null,
+                                  "mappings":[
+
+                                  ],
+                                  "language":null,
+                                  "encoding":null,
+                                  "defining_code":{
+                                    "@class":"CODE_PHRASE",
+                                    "terminology_id":{
+                                      "@class":"TERMINOLOGY_ID",
+                                      "value":"local"
+                                    },
+                                    "code_string":"at0026"
+                                  }
+                                }
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"PRH",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0029",
+                              "value":{
+                                "@class":"DV_ORDINAL",
+                                "normal_range":null,
+                                "other_reference_ranges":[
+
+                                ],
+                                "normal_status":null,
+                                "value":0,
+                                "symbol":{
+                                  "@class":"DV_CODED_TEXT",
+                                  "value":"Absent",
+                                  "hyperlink":null,
+                                  "formatting":null,
+                                  "mappings":[
+
+                                  ],
+                                  "language":null,
+                                  "encoding":null,
+                                  "defining_code":{
+                                    "@class":"CODE_PHRASE",
+                                    "terminology_id":{
+                                      "@class":"TERMINOLOGY_ID",
+                                      "value":"local"
+                                    },
+                                    "code_string":"at0030"
+                                  }
+                                }
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"VH",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0033",
+                              "value":{
+                                "@class":"DV_ORDINAL",
+                                "normal_range":null,
+                                "other_reference_ranges":[
+
+                                ],
+                                "normal_status":null,
+                                "value":0,
+                                "symbol":{
+                                  "@class":"DV_CODED_TEXT",
+                                  "value":"Absent",
+                                  "hyperlink":null,
+                                  "formatting":null,
+                                  "mappings":[
+
+                                  ],
+                                  "language":null,
+                                  "encoding":null,
+                                  "defining_code":{
+                                    "@class":"CODE_PHRASE",
+                                    "terminology_id":{
+                                      "@class":"TERMINOLOGY_ID",
+                                      "value":"local"
+                                    },
+                                    "code_string":"at0034"
+                                  }
+                                }
+                              },
+                              "null_flavour":null
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "@class":"CLUSTER",
+                      "name":{
+                        "@class":"DV_TEXT",
+                        "value":"openEHR-EHR-CLUSTER.drs_laser_photocoagulation.v1",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null
+                      },
+                      "uid":null,
+                      "links":[
+
+                      ],
+                      "archetype_details":null,
+                      "feeder_audit":null,
+                      "archetype_node_id":"openEHR-EHR-CLUSTER.drs_laser_photocoagulation.v1",
+                      "items":[
+                        {
+                          "@class":"CLUSTER",
+                          "name":{
+                            "@class":"DV_TEXT",
+                            "value":"Laser Photocoagulation (UW-FPRC)",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "uid":null,
+                          "links":[
+
+                          ],
+                          "archetype_details":null,
+                          "feeder_audit":null,
+                          "archetype_node_id":"at0003",
+                          "items":[
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Presence of Focal/Grid PC",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0001",
+                              "value":{
+                                "@class":"DV_ORDINAL",
+                                "normal_range":null,
+                                "other_reference_ranges":[
+
+                                ],
+                                "normal_status":null,
+                                "value":0,
+                                "symbol":{
+                                  "@class":"DV_CODED_TEXT",
+                                  "value":"None",
+                                  "hyperlink":null,
+                                  "formatting":null,
+                                  "mappings":[
+
+                                  ],
+                                  "language":null,
+                                  "encoding":null,
+                                  "defining_code":{
+                                    "@class":"CODE_PHRASE",
+                                    "terminology_id":{
+                                      "@class":"TERMINOLOGY_ID",
+                                      "value":"local"
+                                    },
+                                    "code_string":"at0002"
+                                  }
+                                }
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Presence of scatter PC",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0012",
+                              "value":{
+                                "@class":"DV_ORDINAL",
+                                "normal_range":null,
+                                "other_reference_ranges":[
+
+                                ],
+                                "normal_status":null,
+                                "value":0,
+                                "symbol":{
+                                  "@class":"DV_CODED_TEXT",
+                                  "value":"None",
+                                  "hyperlink":null,
+                                  "formatting":null,
+                                  "mappings":[
+
+                                  ],
+                                  "language":null,
+                                  "encoding":null,
+                                  "defining_code":{
+                                    "@class":"CODE_PHRASE",
+                                    "terminology_id":{
+                                      "@class":"TERMINOLOGY_ID",
+                                      "value":"local"
+                                    },
+                                    "code_string":"at0013"
+                                  }
+                                }
+                              },
+                              "null_flavour":null
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "@class":"CLUSTER",
+                      "name":{
+                        "@class":"DV_TEXT",
+                        "value":"openEHR-EHR-CLUSTER.drs_diabetic_macular_edema_severity.v1",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null
+                      },
+                      "uid":null,
+                      "links":[
+
+                      ],
+                      "archetype_details":null,
+                      "feeder_audit":null,
+                      "archetype_node_id":"openEHR-EHR-CLUSTER.drs_diabetic_macular_edema_severity.v1",
+                      "items":[
+                        {
+                          "@class":"CLUSTER",
+                          "name":{
+                            "@class":"DV_TEXT",
+                            "value":"Diabetic Macular Edema Severity (IC)",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "uid":null,
+                          "links":[
+
+                          ],
+                          "archetype_details":null,
+                          "feeder_audit":null,
+                          "archetype_node_id":"at0001",
+                          "items":[
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Presence of HE in PP",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0002",
+                              "value":{
+                                "@class":"DV_ORDINAL",
+                                "normal_range":null,
+                                "other_reference_ranges":[
+
+                                ],
+                                "normal_status":null,
+                                "value":0,
+                                "symbol":{
+                                  "@class":"DV_CODED_TEXT",
+                                  "value":"No apparent HE in the grid",
+                                  "hyperlink":null,
+                                  "formatting":null,
+                                  "mappings":[
+
+                                  ],
+                                  "language":null,
+                                  "encoding":null,
+                                  "defining_code":{
+                                    "@class":"CODE_PHRASE",
+                                    "terminology_id":{
+                                      "@class":"TERMINOLOGY_ID",
+                                      "value":"local"
+                                    },
+                                    "code_string":"at0003"
+                                  }
+                                }
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Presence of RT in PP",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0008",
+                              "value":{
+                                "@class":"DV_ORDINAL",
+                                "normal_range":null,
+                                "other_reference_ranges":[
+
+                                ],
+                                "normal_status":null,
+                                "value":0,
+                                "symbol":{
+                                  "@class":"DV_CODED_TEXT",
+                                  "value":"No apparent RT in the grid",
+                                  "hyperlink":null,
+                                  "formatting":null,
+                                  "mappings":[
+
+                                  ],
+                                  "language":null,
+                                  "encoding":null,
+                                  "defining_code":{
+                                    "@class":"CODE_PHRASE",
+                                    "terminology_id":{
+                                      "@class":"TERMINOLOGY_ID",
+                                      "value":"local"
+                                    },
+                                    "code_string":"at0009"
+                                  }
+                                }
+                              },
+                              "null_flavour":null
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "@class":"CLUSTER",
+                      "name":{
+                        "@class":"DV_TEXT",
+                        "value":"openEHR-EHR-CLUSTER.drs_ocular_abnormalities.v1",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null
+                      },
+                      "uid":null,
+                      "links":[
+
+                      ],
+                      "archetype_details":null,
+                      "feeder_audit":null,
+                      "archetype_node_id":"openEHR-EHR-CLUSTER.drs_ocular_abnormalities.v1",
+                      "items":[
+                        {
+                          "@class":"CLUSTER",
+                          "name":{
+                            "@class":"DV_TEXT",
+                            "value":"Non DR-Specific Ocular Abnormalities",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "uid":null,
+                          "links":[
+
+                          ],
+                          "archetype_details":null,
+                          "feeder_audit":null,
+                          "archetype_node_id":"at0019",
+                          "items":[
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Presence of ocular abnormalities?",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0046",
+                              "value":{
+                                "@class":"DV_ORDINAL",
+                                "normal_range":null,
+                                "other_reference_ranges":[
+
+                                ],
+                                "normal_status":null,
+                                "value":0,
+                                "symbol":{
+                                  "@class":"DV_CODED_TEXT",
+                                  "value":"Absent",
+                                  "hyperlink":null,
+                                  "formatting":null,
+                                  "mappings":[
+
+                                  ],
+                                  "language":null,
+                                  "encoding":null,
+                                  "defining_code":{
+                                    "@class":"CODE_PHRASE",
+                                    "terminology_id":{
+                                      "@class":"TERMINOLOGY_ID",
+                                      "value":"local"
+                                    },
+                                    "code_string":"at0062"
+                                  }
+                                }
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Large drusen area",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0021",
+                              "value":{
+                                "@class":"DV_BOOLEAN",
+                                "value":false
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"AMD RPE depigmentation",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0025",
+                              "value":{
+                                "@class":"DV_BOOLEAN",
+                                "value":false
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"AMD RPE hyperpigmentation",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0026",
+                              "value":{
+                                "@class":"DV_BOOLEAN",
+                                "value":false
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"AMD subretinal hemorrhage",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0029",
+                              "value":{
+                                "@class":"DV_BOOLEAN",
+                                "value":false
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"AMD subretinal fibrous scar",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0028",
+                              "value":{
+                                "@class":"DV_BOOLEAN",
+                                "value":false
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"AMD SSE/RPE detachment",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0027",
+                              "value":{
+                                "@class":"DV_BOOLEAN",
+                                "value":false
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"AMD Geographic atropy",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0024",
+                              "value":{
+                                "@class":"DV_BOOLEAN",
+                                "value":false
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Angioid Streaks",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0031",
+                              "value":{
+                                "@class":"DV_BOOLEAN",
+                                "value":false
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Asteroid Hyalosis",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0032",
+                              "value":{
+                                "@class":"DV_BOOLEAN",
+                                "value":false
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"CRAO or BRAO",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0034",
+                              "value":{
+                                "@class":"DV_BOOLEAN",
+                                "value":false
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"CRVO or BRVO",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0035",
+                              "value":{
+                                "@class":"DV_BOOLEAN",
+                                "value":false
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Chorioretinal Scars",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0048",
+                              "value":{
+                                "@class":"DV_BOOLEAN",
+                                "value":false
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Drusen on optic nervehead",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0068",
+                              "value":{
+                                "@class":"DV_BOOLEAN",
+                                "value":false
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Hollenhorst Plaques",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0049",
+                              "value":{
+                                "@class":"DV_BOOLEAN",
+                                "value":false
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Large cup/disc Ratio",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0050",
+                              "value":{
+                                "@class":"DV_BOOLEAN",
+                                "value":false
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Macular Hole or Pseudo Hole",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0051",
+                              "value":{
+                                "@class":"DV_BOOLEAN",
+                                "value":false
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Nevus",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0052",
+                              "value":{
+                                "@class":"DV_BOOLEAN",
+                                "value":false
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Papillary Swelling",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0053",
+                              "value":{
+                                "@class":"DV_BOOLEAN",
+                                "value":false
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Peripapillary Atrophy, Myopic Crescent",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0054",
+                              "value":{
+                                "@class":"DV_BOOLEAN",
+                                "value":false
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Surface Wrinkling, Epiretinal Membrane",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0056",
+                              "value":{
+                                "@class":"DV_BOOLEAN",
+                                "value":false
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Tension Lines, Dragged Macula",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0057",
+                              "value":{
+                                "@class":"DV_BOOLEAN",
+                                "value":false
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Vitrous Opacity, Glial Remnant",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0058",
+                              "value":{
+                                "@class":"DV_BOOLEAN",
+                                "value":false
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Other",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0059",
+                              "value":{
+                                "@class":"DV_BOOLEAN",
+                                "value":false
+                              },
+                              "null_flavour":null
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "@class":"CLUSTER",
+                      "name":{
+                        "@class":"DV_TEXT",
+                        "value":"openEHR-EHR-CLUSTER.drs_conclusions.v1",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null
+                      },
+                      "uid":null,
+                      "links":[
+
+                      ],
+                      "archetype_details":null,
+                      "feeder_audit":null,
+                      "archetype_node_id":"openEHR-EHR-CLUSTER.drs_conclusions.v1",
+                      "items":[
+                        {
+                          "@class":"CLUSTER",
+                          "name":{
+                            "@class":"DV_TEXT",
+                            "value":"Evaluation Conclusions",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "uid":null,
+                          "links":[
+
+                          ],
+                          "archetype_details":null,
+                          "feeder_audit":null,
+                          "archetype_node_id":"at0001",
+                          "items":[
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Level of Fundus Visibility",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0002",
+                              "value":{
+                                "@class":"DV_ORDINAL",
+                                "normal_range":null,
+                                "other_reference_ranges":[
+
+                                ],
+                                "normal_status":null,
+                                "value":0,
+                                "symbol":{
+                                  "@class":"DV_CODED_TEXT",
+                                  "value":"Good for evaluation",
+                                  "hyperlink":null,
+                                  "formatting":null,
+                                  "mappings":[
+
+                                  ],
+                                  "language":null,
+                                  "encoding":null,
+                                  "defining_code":{
+                                    "@class":"CODE_PHRASE",
+                                    "terminology_id":{
+                                      "@class":"TERMINOLOGY_ID",
+                                      "value":"local"
+                                    },
+                                    "code_string":"at0003"
+                                  }
+                                }
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"DR Severity Level (IC)",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0006",
+                              "value":{
+                                "@class":"DV_ORDINAL",
+                                "normal_range":null,
+                                "other_reference_ranges":[
+
+                                ],
+                                "normal_status":null,
+                                "value":0,
+                                "symbol":{
+                                  "@class":"DV_CODED_TEXT",
+                                  "value":"No apparent DR",
+                                  "hyperlink":null,
+                                  "formatting":null,
+                                  "mappings":[
+
+                                  ],
+                                  "language":null,
+                                  "encoding":null,
+                                  "defining_code":{
+                                    "@class":"CODE_PHRASE",
+                                    "terminology_id":{
+                                      "@class":"TERMINOLOGY_ID",
+                                      "value":"local"
+                                    },
+                                    "code_string":"at0007"
+                                  }
+                                }
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"ELEMENT",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"DME Severity Level (IC)",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0013",
+                              "value":{
+                                "@class":"DV_ORDINAL",
+                                "normal_range":null,
+                                "other_reference_ranges":[
+
+                                ],
+                                "normal_status":null,
+                                "value":0,
+                                "symbol":{
+                                  "@class":"DV_CODED_TEXT",
+                                  "value":"DME apparently absent",
+                                  "hyperlink":null,
+                                  "formatting":null,
+                                  "mappings":[
+
+                                  ],
+                                  "language":null,
+                                  "encoding":null,
+                                  "defining_code":{
+                                    "@class":"CODE_PHRASE",
+                                    "terminology_id":{
+                                      "@class":"TERMINOLOGY_ID",
+                                      "value":"local"
+                                    },
+                                    "code_string":"at0014"
+                                  }
+                                }
+                              },
+                              "null_flavour":null
+                            },
+                            {
+                              "@class":"CLUSTER",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Recommendations",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0019",
+                              "items":[
+                                {
+                                  "@class":"ELEMENT",
+                                  "name":{
+                                    "@class":"DV_TEXT",
+                                    "value":"Next DR screening exam",
+                                    "hyperlink":null,
+                                    "formatting":null,
+                                    "mappings":[
+
+                                    ],
+                                    "language":null,
+                                    "encoding":null
+                                  },
+                                  "uid":null,
+                                  "links":[
+
+                                  ],
+                                  "archetype_details":null,
+                                  "feeder_audit":null,
+                                  "archetype_node_id":"at0020",
+                                  "value":{
+                                    "@class":"DV_ORDINAL",
+                                    "normal_range":null,
+                                    "other_reference_ranges":[
+
+                                    ],
+                                    "normal_status":null,
+                                    "value":0,
+                                    "symbol":{
+                                      "@class":"DV_CODED_TEXT",
+                                      "value":"Two years",
+                                      "hyperlink":null,
+                                      "formatting":null,
+                                      "mappings":[
+
+                                      ],
+                                      "language":null,
+                                      "encoding":null,
+                                      "defining_code":{
+                                        "@class":"CODE_PHRASE",
+                                        "terminology_id":{
+                                          "@class":"TERMINOLOGY_ID",
+                                          "value":"local"
+                                        },
+                                        "code_string":"at0021"
+                                      }
+                                    }
+                                  },
+                                  "null_flavour":null
+                                },
+                                {
+                                  "@class":"ELEMENT",
+                                  "name":{
+                                    "@class":"DV_TEXT",
+                                    "value":"Next consultation with an ophthalmologist",
+                                    "hyperlink":null,
+                                    "formatting":null,
+                                    "mappings":[
+
+                                    ],
+                                    "language":null,
+                                    "encoding":null
+                                  },
+                                  "uid":null,
+                                  "links":[
+
+                                  ],
+                                  "archetype_details":null,
+                                  "feeder_audit":null,
+                                  "archetype_node_id":"at0023",
+                                  "value":null,
+                                  "null_flavour":{
+                                    "@class":"DV_CODED_TEXT",
+                                    "value":"no information",
+                                    "hyperlink":null,
+                                    "formatting":null,
+                                    "mappings":[
+
+                                    ],
+                                    "language":null,
+                                    "encoding":null,
+                                    "defining_code":{
+                                      "@class":"CODE_PHRASE",
+                                      "terminology_id":{
+                                        "@class":"TERMINOLOGY_ID",
+                                        "value":"openehr"
+                                      },
+                                      "code_string":"271"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "@class":"CLUSTER",
+                              "name":{
+                                "@class":"DV_TEXT",
+                                "value":"Comments section",
+                                "hyperlink":null,
+                                "formatting":null,
+                                "mappings":[
+
+                                ],
+                                "language":null,
+                                "encoding":null
+                              },
+                              "uid":null,
+                              "links":[
+
+                              ],
+                              "archetype_details":null,
+                              "feeder_audit":null,
+                              "archetype_node_id":"at0030",
+                              "items":[
+                                {
+                                  "@class":"ELEMENT",
+                                  "name":{
+                                    "@class":"DV_TEXT",
+                                    "value":"Comments",
+                                    "hyperlink":null,
+                                    "formatting":null,
+                                    "mappings":[
+
+                                    ],
+                                    "language":null,
+                                    "encoding":null
+                                  },
+                                  "uid":null,
+                                  "links":[
+
+                                  ],
+                                  "archetype_details":null,
+                                  "feeder_audit":null,
+                                  "archetype_node_id":"at0031",
+                                  "value":{
+                                    "@class":"DV_TEXT",
+                                    "value":"test by vaadin7.2",
+                                    "hyperlink":null,
+                                    "formatting":null,
+                                    "mappings":[
+
+                                    ],
+                                    "language":null,
+                                    "encoding":null
+                                  },
+                                  "null_flavour":null
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "state":null
+          }
+        ],
+        "summary":null
+      },
+      "state":null
+    }
+  ]
+}

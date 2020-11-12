@@ -30,6 +30,9 @@ import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * @author Marko Narat
+ */
 @ExtendWith(WebTemplateTestExtension.class)
 public class CodedTextTest extends AbstractWebTemplateTest {
 
@@ -46,7 +49,7 @@ public class CodedTextTest extends AbstractWebTemplateTest {
 
     @Test
     public void codedText() throws Exception {
-        String template = getFileContent("/Demo Vitals.opt");
+        String template = getFileContent("/res/Demo Vitals.opt");
 
         Map<String, String> values = ImmutableMap.<String, String>builder()
                 .put("vitals/vitals/haemoglobin_a1c/any_event/test_status", "at0038")
@@ -59,8 +62,8 @@ public class CodedTextTest extends AbstractWebTemplateTest {
                 ImmutableMap.of(CompositionBuilderContextKey.LANGUAGE.getKey(), "en"),
                 objectMapper);
 
-        assertThat(rawComposition.get("content").get(0).get("items").get(0).get("data").get("events").get(0).get("data").get("items").get(0).get(
-                "value")).isNotEmpty();
+        assertThat(rawComposition.get("content").get(0).get("items").get(0).get("data").get("events").get(0).get("data")
+                           .get("items").get(0).get("value")).isNotEmpty();
     }
 
 }

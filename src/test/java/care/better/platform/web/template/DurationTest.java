@@ -32,6 +32,9 @@ import java.util.Map;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.entry;
 
+/**
+ * @author Marko Narat
+ */
 @ExtendWith(WebTemplateTestExtension.class)
 public class DurationTest extends AbstractWebTemplateTest {
 
@@ -48,8 +51,8 @@ public class DurationTest extends AbstractWebTemplateTest {
 
     @Test
     public void defaultDuration() throws Exception {
-        String template = getFileContent("/Testing.opt");
-        String flatCompositionString = getFileContent("/DefaultDurationTest.json");
+        String template = getFileContent("/res/Testing.opt");
+        String flatCompositionString = getFileContent("/res/DefaultDurationTest.json");
 
         JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
                 template,
@@ -65,8 +68,8 @@ public class DurationTest extends AbstractWebTemplateTest {
 
     @Test
     public void constrainedDurations() throws Exception {
-        String template = getFileContent("/br-moh1.xml");
-        String flatCompositionString = getFileContent("/DurationsBrMoh.json");
+        String template = getFileContent("/res/br-moh1.xml");
+        String flatCompositionString = getFileContent("/res/DurationsBrMoh.json");
 
         JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
                 template,
@@ -79,22 +82,19 @@ public class DurationTest extends AbstractWebTemplateTest {
 
         assertThat(flatComposition).isNotEmpty();
 
-        Period duration1 = Period.parse((String)flatComposition.get(
-                "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/aleitamento_materno/infant_feeding_summary:0/total_duration_of_breast_feeding"));
+        Period duration1 = Period.parse((String)flatComposition.get("ficha_individual_da_aten_cao_basica/resumo_do_atendimento/aleitamento_materno/infant_feeding_summary:0/total_duration_of_breast_feeding"));
         assertThat(duration1.getHours()).isZero();
         assertThat(duration1.getMinutes()).isZero();
         assertThat(duration1.getSeconds()).isZero();
         assertThat(duration1.getMillis()).isZero();
 
-        Period duration2 = Period.parse((String)flatComposition.get(
-                "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/aleitamento_materno/infant_feeding_summary:0/age_commenced_solid_foods"));
+        Period duration2 = Period.parse((String)flatComposition.get("ficha_individual_da_aten_cao_basica/resumo_do_atendimento/aleitamento_materno/infant_feeding_summary:0/age_commenced_solid_foods"));
         assertThat(duration2.getHours()).isZero();
         assertThat(duration2.getMinutes()).isZero();
         assertThat(duration2.getSeconds()).isZero();
         assertThat(duration2.getMillis()).isZero();
 
-        Period duration3 = Period.parse((String)flatComposition.get(
-                "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/duration_of_second_stage"));
+        Period duration3 = Period.parse((String)flatComposition.get("ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/duration_of_second_stage"));
         assertThat(duration3.getYears()).isZero();
         assertThat(duration3.getMonths()).isZero();
         assertThat(duration3.getWeeks()).isZero();

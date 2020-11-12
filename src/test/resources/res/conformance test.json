@@ -1,0 +1,3686 @@
+// Copyright 2020-2021 Better Ltd (www.better.care)
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+{
+  "@class":"COMPOSITION",
+  "name":{
+    "@class":"DV_TEXT",
+    "value":"Encounter",
+    "hyperlink":null,
+    "formatting":null,
+    "mappings":[
+
+    ],
+    "language":null,
+    "encoding":null
+  },
+  "uid":{
+    "@class":"OBJECT_VERSION_ID",
+    "value":"18c3c6c0-902c-4a06-ba93-ed588c76995d::example.ethercis.com::1"
+  },
+  "links":[
+
+  ],
+  "archetype_details":{
+    "@class":"ARCHETYPED",
+    "archetype_id":{
+      "@class":"ARCHETYPE_ID",
+      "value":"openEHR-EHR-COMPOSITION.encounter.v1"
+    },
+    "template_id":{
+      "@class":"TEMPLATE_ID",
+      "value":"RIPPLE - Conformance Test template"
+    },
+    "rm_version":"1.0.1"
+  },
+  "feeder_audit":null,
+  "archetype_node_id":"openEHR-EHR-COMPOSITION.encounter.v1",
+  "language":{
+    "@class":"CODE_PHRASE",
+    "terminology_id":{
+      "@class":"TERMINOLOGY_ID",
+      "value":"ISO_639-1"
+    },
+    "code_string":"en"
+  },
+  "territory":{
+    "@class":"CODE_PHRASE",
+    "terminology_id":{
+      "@class":"TERMINOLOGY_ID",
+      "value":"ISO_3166-1"
+    },
+    "code_string":"GB"
+  },
+  "category":{
+    "@class":"DV_CODED_TEXT",
+    "value":"event",
+    "hyperlink":null,
+    "formatting":null,
+    "mappings":[
+
+    ],
+    "language":null,
+    "encoding":null,
+    "defining_code":{
+      "@class":"CODE_PHRASE",
+      "terminology_id":{
+        "@class":"TERMINOLOGY_ID",
+        "value":"openehr"
+      },
+      "code_string":"433"
+    }
+  },
+  "composer":{
+    "@class":"PARTY_IDENTIFIED",
+    "external_ref":{
+      "@class":"PARTY_REF",
+      "id":{
+        "@class":"HIER_OBJECT_ID",
+        "value":"ref"
+      },
+      "namespace":"DEMOGRAPHIC",
+      "type":"PARTY"
+    },
+    "name":"Composer",
+    "identifiers":[
+      {
+        "@class":"DV_IDENTIFIER",
+        "issuer":"ETHERCIS",
+        "assigner":"dummy",
+        "id":"1234-5678",
+        "type":"dummy"
+      }
+    ]
+  },
+  "context":{
+    "@class":"EVENT_CONTEXT",
+    "start_time":{
+      "@class":"DV_DATE_TIME",
+      "normal_range":null,
+      "other_reference_ranges":[
+
+      ],
+      "normal_status":null,
+      "magnitude_status":null,
+      "accuracy":null,
+      "value":"2016-02-23T10:59:00.938+07:00"
+    },
+    "end_time":null,
+    "location":"TEST LAB",
+    "setting":{
+      "@class":"DV_CODED_TEXT",
+      "value":"Other Care",
+      "hyperlink":null,
+      "formatting":null,
+      "mappings":[
+
+      ],
+      "language":null,
+      "encoding":null,
+      "defining_code":{
+        "@class":"CODE_PHRASE",
+        "terminology_id":{
+          "@class":"TERMINOLOGY_ID",
+          "value":"openehr"
+        },
+        "code_string":"238"
+      }
+    },
+    "other_context":null,
+    "health_care_facility":{
+      "@class":"PARTY_IDENTIFIED",
+      "external_ref":{
+        "@class":"PARTY_REF",
+        "id":{
+          "@class":"HIER_OBJECT_ID",
+          "value":"ref"
+        },
+        "namespace":"DEMOGRAPHIC",
+        "type":"PARTY"
+      },
+      "name":"FACILITY",
+      "identifiers":[
+
+      ]
+    },
+    "participations":[
+
+    ]
+  },
+  "content":[
+    {
+      "@class":"SECTION",
+      "name":{
+        "@class":"DV_TEXT",
+        "value":"Ad hoc heading",
+        "hyperlink":null,
+        "formatting":null,
+        "mappings":[
+
+        ],
+        "language":null,
+        "encoding":null
+      },
+      "uid":null,
+      "links":[
+
+      ],
+      "archetype_details":{
+        "@class":"ARCHETYPED",
+        "archetype_id":{
+          "@class":"ARCHETYPE_ID",
+          "value":"openEHR-EHR-SECTION.adhoc.v1"
+        },
+        "template_id":null,
+        "rm_version":"1.0.1"
+      },
+      "feeder_audit":null,
+      "archetype_node_id":"openEHR-EHR-SECTION.adhoc.v1",
+      "items":[
+        {
+          "@class":"OBSERVATION",
+          "name":{
+            "@class":"DV_TEXT",
+            "value":"Pulse",
+            "hyperlink":null,
+            "formatting":null,
+            "mappings":[
+
+            ],
+            "language":null,
+            "encoding":null
+          },
+          "uid":null,
+          "links":[
+
+          ],
+          "archetype_details":{
+            "@class":"ARCHETYPED",
+            "archetype_id":{
+              "@class":"ARCHETYPE_ID",
+              "value":"openEHR-EHR-OBSERVATION.pulse.v1"
+            },
+            "template_id":null,
+            "rm_version":"1.0.1"
+          },
+          "feeder_audit":null,
+          "archetype_node_id":"openEHR-EHR-OBSERVATION.pulse.v1",
+          "language":{
+            "@class":"CODE_PHRASE",
+            "terminology_id":{
+              "@class":"TERMINOLOGY_ID",
+              "value":"ISO_639-1"
+            },
+            "code_string":"en"
+          },
+          "encoding":{
+            "@class":"CODE_PHRASE",
+            "terminology_id":{
+              "@class":"TERMINOLOGY_ID",
+              "value":"IANA_character-sets"
+            },
+            "code_string":"UTF-8"
+          },
+          "subject":{
+            "@class":"PARTY_SELF",
+            "external_ref":null
+          },
+          "provider":null,
+          "other_participations":[
+
+          ],
+          "work_flow_id":null,
+          "protocol":{
+            "@class":"ITEM_TREE",
+            "name":{
+              "@class":"DV_TEXT",
+              "value":"List",
+              "hyperlink":null,
+              "formatting":null,
+              "mappings":[
+
+              ],
+              "language":null,
+              "encoding":null
+            },
+            "uid":null,
+            "links":[
+
+            ],
+            "archetype_details":null,
+            "feeder_audit":null,
+            "archetype_node_id":"at0010",
+            "items":[
+              {
+                "@class":"ELEMENT",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Method",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at1019",
+                "value":{
+                  "@class":"DV_CODED_TEXT",
+                  "value":"Palpation",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null,
+                  "defining_code":{
+                    "@class":"CODE_PHRASE",
+                    "terminology_id":{
+                      "@class":"TERMINOLOGY_ID",
+                      "value":"local"
+                    },
+                    "code_string":"at1032"
+                  }
+                },
+                "null_flavour":null
+              },
+              {
+                "@class":"ELEMENT",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Findings Location",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at1037",
+                "value":{
+                  "@class":"DV_CODED_TEXT",
+                  "value":"Radial Artery - Left",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null,
+                  "defining_code":{
+                    "@class":"CODE_PHRASE",
+                    "terminology_id":{
+                      "@class":"TERMINOLOGY_ID",
+                      "value":"local"
+                    },
+                    "code_string":"at1038"
+                  }
+                },
+                "null_flavour":null
+              },
+              {
+                "@class":"CLUSTER",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Medical Device",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":{
+                  "@class":"ARCHETYPED",
+                  "archetype_id":{
+                    "@class":"ARCHETYPE_ID",
+                    "value":"openEHR-EHR-CLUSTER.device.v1"
+                  },
+                  "template_id":null,
+                  "rm_version":"1.0.1"
+                },
+                "feeder_audit":null,
+                "archetype_node_id":"openEHR-EHR-CLUSTER.device.v1",
+                "items":[
+                  {
+                    "@class":"ELEMENT",
+                    "name":{
+                      "@class":"DV_TEXT",
+                      "value":"Device name",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null
+                    },
+                    "uid":null,
+                    "links":[
+
+                    ],
+                    "archetype_details":null,
+                    "feeder_audit":null,
+                    "archetype_node_id":"at0001",
+                    "value":{
+                      "@class":"DV_TEXT",
+                      "value":"text value",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null
+                    },
+                    "null_flavour":null
+                  },
+                  {
+                    "@class":"ELEMENT",
+                    "name":{
+                      "@class":"DV_TEXT",
+                      "value":"Unique device identifier (UDI)",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null
+                    },
+                    "uid":null,
+                    "links":[
+
+                    ],
+                    "archetype_details":null,
+                    "feeder_audit":null,
+                    "archetype_node_id":"at0021",
+                    "value":{
+                      "@class":"DV_IDENTIFIER",
+                      "issuer":"1",
+                      "assigner":"1",
+                      "id":"1",
+                      "type":"1"
+                    },
+                    "null_flavour":null
+                  },
+                  {
+                    "@class":"ELEMENT",
+                    "name":{
+                      "@class":"DV_TEXT",
+                      "value":"Manufacturer",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null
+                    },
+                    "uid":null,
+                    "links":[
+
+                    ],
+                    "archetype_details":null,
+                    "feeder_audit":null,
+                    "archetype_node_id":"at0004",
+                    "value":{
+                      "@class":"DV_TEXT",
+                      "value":"text value",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null
+                    },
+                    "null_flavour":null
+                  },
+                  {
+                    "@class":"ELEMENT",
+                    "name":{
+                      "@class":"DV_TEXT",
+                      "value":"Date of manufacture",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null
+                    },
+                    "uid":null,
+                    "links":[
+
+                    ],
+                    "archetype_details":null,
+                    "feeder_audit":null,
+                    "archetype_node_id":"at0005",
+                    "value":{
+                      "@class":"DV_DATE_TIME",
+                      "normal_range":null,
+                      "other_reference_ranges":[
+
+                      ],
+                      "normal_status":null,
+                      "magnitude_status":null,
+                      "accuracy":null,
+                      "value":"2010-01-01T10:00:00Z"
+                    },
+                    "null_flavour":null
+                  },
+                  {
+                    "@class":"ELEMENT",
+                    "name":{
+                      "@class":"DV_TEXT",
+                      "value":"Other identifier",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null
+                    },
+                    "uid":null,
+                    "links":[
+
+                    ],
+                    "archetype_details":null,
+                    "feeder_audit":null,
+                    "archetype_node_id":"at0024",
+                    "value":{
+                      "@class":"DV_IDENTIFIER",
+                      "issuer":"1",
+                      "assigner":"1",
+                      "id":"1",
+                      "type":"1"
+                    },
+                    "null_flavour":null
+                  },
+                  {
+                    "@class":"ELEMENT",
+                    "name":{
+                      "@class":"DV_TEXT",
+                      "value":"Comment",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null
+                    },
+                    "uid":null,
+                    "links":[
+
+                    ],
+                    "archetype_details":null,
+                    "feeder_audit":null,
+                    "archetype_node_id":"at0008",
+                    "value":{
+                      "@class":"DV_TEXT",
+                      "value":"text value",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null
+                    },
+                    "null_flavour":null
+                  }
+                ]
+              }
+            ]
+          },
+          "guideline_id":null,
+          "data":{
+            "@class":"HISTORY",
+            "name":{
+              "@class":"DV_TEXT",
+              "value":"history",
+              "hyperlink":null,
+              "formatting":null,
+              "mappings":[
+
+              ],
+              "language":null,
+              "encoding":null
+            },
+            "uid":null,
+            "links":[
+
+            ],
+            "archetype_details":null,
+            "feeder_audit":null,
+            "archetype_node_id":"at0002",
+            "origin":{
+              "@class":"DV_DATE_TIME",
+              "normal_range":null,
+              "other_reference_ranges":[
+
+              ],
+              "normal_status":null,
+              "magnitude_status":null,
+              "accuracy":null,
+              "value":"2016-02-23T10:58:59.180+07:00"
+            },
+            "period":null,
+            "duration":null,
+            "events":[
+              {
+                "@class":"POINT_EVENT",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"First event",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at0003",
+                "time":{
+                  "@class":"DV_DATE_TIME",
+                  "normal_range":null,
+                  "other_reference_ranges":[
+
+                  ],
+                  "normal_status":null,
+                  "magnitude_status":null,
+                  "accuracy":null,
+                  "value":"2016-02-23T10:58:58.984+07:00"
+                },
+                "data":{
+                  "@class":"ITEM_TREE",
+                  "name":{
+                    "@class":"DV_TEXT",
+                    "value":"structure",
+                    "hyperlink":null,
+                    "formatting":null,
+                    "mappings":[
+
+                    ],
+                    "language":null,
+                    "encoding":null
+                  },
+                  "uid":null,
+                  "links":[
+
+                  ],
+                  "archetype_details":null,
+                  "feeder_audit":null,
+                  "archetype_node_id":"at0001",
+                  "items":[
+                    {
+                      "@class":"ELEMENT",
+                      "name":{
+                        "@class":"DV_CODED_TEXT",
+                        "value":"Pulse Rate",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null,
+                        "defining_code":{
+                          "@class":"CODE_PHRASE",
+                          "terminology_id":{
+                            "@class":"TERMINOLOGY_ID",
+                            "value":"local"
+                          },
+                          "code_string":"at1026"
+                        }
+                      },
+                      "uid":null,
+                      "links":[
+
+                      ],
+                      "archetype_details":null,
+                      "feeder_audit":null,
+                      "archetype_node_id":"at0004",
+                      "value":{
+                        "@class":"DV_QUANTITY",
+                        "normal_range":null,
+                        "other_reference_ranges":[
+
+                        ],
+                        "normal_status":null,
+                        "magnitude_status":null,
+                        "accuracy":0.0,
+                        "accuracy_is_percent":null,
+                        "magnitude":0.0,
+                        "units":"/min",
+                        "precision":0
+                      },
+                      "null_flavour":null
+                    },
+                    {
+                      "@class":"ELEMENT",
+                      "name":{
+                        "@class":"DV_TEXT",
+                        "value":"Regularity",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null
+                      },
+                      "uid":null,
+                      "links":[
+
+                      ],
+                      "archetype_details":null,
+                      "feeder_audit":null,
+                      "archetype_node_id":"at0005",
+                      "value":{
+                        "@class":"DV_CODED_TEXT",
+                        "value":"Regular",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null,
+                        "defining_code":{
+                          "@class":"CODE_PHRASE",
+                          "terminology_id":{
+                            "@class":"TERMINOLOGY_ID",
+                            "value":"local"
+                          },
+                          "code_string":"at0006"
+                        }
+                      },
+                      "null_flavour":null
+                    },
+                    {
+                      "@class":"ELEMENT",
+                      "name":{
+                        "@class":"DV_TEXT",
+                        "value":"Clinical Description",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null
+                      },
+                      "uid":null,
+                      "links":[
+
+                      ],
+                      "archetype_details":null,
+                      "feeder_audit":null,
+                      "archetype_node_id":"at1022",
+                      "value":{
+                        "@class":"DV_TEXT",
+                        "value":"text value",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null
+                      },
+                      "null_flavour":null
+                    },
+                    {
+                      "@class":"ELEMENT",
+                      "name":{
+                        "@class":"DV_TEXT",
+                        "value":"Clinical Interpretation",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null
+                      },
+                      "uid":null,
+                      "links":[
+
+                      ],
+                      "archetype_details":null,
+                      "feeder_audit":null,
+                      "archetype_node_id":"at1023",
+                      "value":{
+                        "@class":"DV_TEXT",
+                        "value":"text value",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null
+                      },
+                      "null_flavour":null
+                    }
+                  ]
+                },
+                "state":null
+              },
+              {
+                "@class":"POINT_EVENT",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Second event",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at0003",
+                "time":{
+                  "@class":"DV_DATE_TIME",
+                  "normal_range":null,
+                  "other_reference_ranges":[
+
+                  ],
+                  "normal_status":null,
+                  "magnitude_status":null,
+                  "accuracy":null,
+                  "value":"2016-02-23T10:58:59.093+07:00"
+                },
+                "data":{
+                  "@class":"ITEM_TREE",
+                  "name":{
+                    "@class":"DV_TEXT",
+                    "value":"structure",
+                    "hyperlink":null,
+                    "formatting":null,
+                    "mappings":[
+
+                    ],
+                    "language":null,
+                    "encoding":null
+                  },
+                  "uid":null,
+                  "links":[
+
+                  ],
+                  "archetype_details":null,
+                  "feeder_audit":null,
+                  "archetype_node_id":"at0001",
+                  "items":[
+                    {
+                      "@class":"ELEMENT",
+                      "name":{
+                        "@class":"DV_TEXT",
+                        "value":"Pulse Presence",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null
+                      },
+                      "uid":null,
+                      "links":[
+
+                      ],
+                      "archetype_details":null,
+                      "feeder_audit":null,
+                      "archetype_node_id":"at1005",
+                      "value":{
+                        "@class":"DV_CODED_TEXT",
+                        "value":"Present",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null,
+                        "defining_code":{
+                          "@class":"CODE_PHRASE",
+                          "terminology_id":{
+                            "@class":"TERMINOLOGY_ID",
+                            "value":"local"
+                          },
+                          "code_string":"at1024"
+                        }
+                      },
+                      "null_flavour":null
+                    },
+                    {
+                      "@class":"ELEMENT",
+                      "name":{
+                        "@class":"DV_CODED_TEXT",
+                        "value":"Pulse Rate",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null,
+                        "defining_code":{
+                          "@class":"CODE_PHRASE",
+                          "terminology_id":{
+                            "@class":"TERMINOLOGY_ID",
+                            "value":"local"
+                          },
+                          "code_string":"at1026"
+                        }
+                      },
+                      "uid":null,
+                      "links":[
+
+                      ],
+                      "archetype_details":null,
+                      "feeder_audit":null,
+                      "archetype_node_id":"at0004",
+                      "value":{
+                        "@class":"DV_QUANTITY",
+                        "normal_range":null,
+                        "other_reference_ranges":[
+
+                        ],
+                        "normal_status":null,
+                        "magnitude_status":null,
+                        "accuracy":0.0,
+                        "accuracy_is_percent":null,
+                        "magnitude":0.0,
+                        "units":"/min",
+                        "precision":0
+                      },
+                      "null_flavour":null
+                    },
+                    {
+                      "@class":"ELEMENT",
+                      "name":{
+                        "@class":"DV_TEXT",
+                        "value":"Regularity",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null
+                      },
+                      "uid":null,
+                      "links":[
+
+                      ],
+                      "archetype_details":null,
+                      "feeder_audit":null,
+                      "archetype_node_id":"at0005",
+                      "value":{
+                        "@class":"DV_CODED_TEXT",
+                        "value":"Regular",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null,
+                        "defining_code":{
+                          "@class":"CODE_PHRASE",
+                          "terminology_id":{
+                            "@class":"TERMINOLOGY_ID",
+                            "value":"local"
+                          },
+                          "code_string":"at0006"
+                        }
+                      },
+                      "null_flavour":null
+                    },
+                    {
+                      "@class":"ELEMENT",
+                      "name":{
+                        "@class":"DV_TEXT",
+                        "value":"Clinical Interpretation",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null
+                      },
+                      "uid":null,
+                      "links":[
+
+                      ],
+                      "archetype_details":null,
+                      "feeder_audit":null,
+                      "archetype_node_id":"at1023",
+                      "value":{
+                        "@class":"DV_TEXT",
+                        "value":"text value",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null
+                      },
+                      "null_flavour":null
+                    }
+                  ]
+                },
+                "state":null
+              },
+              {
+                "@class":"INTERVAL_EVENT",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Maximum",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at1036",
+                "time":{
+                  "@class":"DV_DATE_TIME",
+                  "normal_range":null,
+                  "other_reference_ranges":[
+
+                  ],
+                  "normal_status":null,
+                  "magnitude_status":null,
+                  "accuracy":null,
+                  "value":"1970-01-01T07:00:00.000+07:00"
+                },
+                "data":{
+                  "@class":"ITEM_TREE",
+                  "name":{
+                    "@class":"DV_TEXT",
+                    "value":"structure",
+                    "hyperlink":null,
+                    "formatting":null,
+                    "mappings":[
+
+                    ],
+                    "language":null,
+                    "encoding":null
+                  },
+                  "uid":null,
+                  "links":[
+
+                  ],
+                  "archetype_details":null,
+                  "feeder_audit":null,
+                  "archetype_node_id":"at0001",
+                  "items":[
+                    {
+                      "@class":"ELEMENT",
+                      "name":{
+                        "@class":"DV_CODED_TEXT",
+                        "value":"Heart Rate",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null,
+                        "defining_code":{
+                          "@class":"CODE_PHRASE",
+                          "terminology_id":{
+                            "@class":"TERMINOLOGY_ID",
+                            "value":"local"
+                          },
+                          "code_string":"at1027"
+                        }
+                      },
+                      "uid":null,
+                      "links":[
+
+                      ],
+                      "archetype_details":null,
+                      "feeder_audit":null,
+                      "archetype_node_id":"at0004",
+                      "value":{
+                        "@class":"DV_QUANTITY",
+                        "normal_range":null,
+                        "other_reference_ranges":[
+
+                        ],
+                        "normal_status":null,
+                        "magnitude_status":null,
+                        "accuracy":0.0,
+                        "accuracy_is_percent":null,
+                        "magnitude":0.0,
+                        "units":"/min",
+                        "precision":0
+                      },
+                      "null_flavour":null
+                    }
+                  ]
+                },
+                "state":{
+                  "@class":"ITEM_TREE",
+                  "name":{
+                    "@class":"DV_TEXT",
+                    "value":"List",
+                    "hyperlink":null,
+                    "formatting":null,
+                    "mappings":[
+
+                    ],
+                    "language":null,
+                    "encoding":null
+                  },
+                  "uid":null,
+                  "links":[
+
+                  ],
+                  "archetype_details":null,
+                  "feeder_audit":null,
+                  "archetype_node_id":"at0012",
+                  "items":[
+                    {
+                      "@class":"ELEMENT",
+                      "name":{
+                        "@class":"DV_TEXT",
+                        "value":"Position",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null
+                      },
+                      "uid":null,
+                      "links":[
+
+                      ],
+                      "archetype_details":null,
+                      "feeder_audit":null,
+                      "archetype_node_id":"at0013",
+                      "value":{
+                        "@class":"DV_CODED_TEXT",
+                        "value":"coded text value",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null,
+                        "defining_code":{
+                          "@class":"CODE_PHRASE",
+                          "terminology_id":{
+                            "@class":"TERMINOLOGY_ID",
+                            "value":"local"
+                          },
+                          "code_string":"at9999"
+                        }
+                      },
+                      "null_flavour":null
+                    },
+                    {
+                      "@class":"ELEMENT",
+                      "name":{
+                        "@class":"DV_TEXT",
+                        "value":"Confounding Factors",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null
+                      },
+                      "uid":null,
+                      "links":[
+
+                      ],
+                      "archetype_details":null,
+                      "feeder_audit":null,
+                      "archetype_node_id":"at1018",
+                      "value":{
+                        "@class":"DV_TEXT",
+                        "value":"text value",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null
+                      },
+                      "null_flavour":null
+                    }
+                  ]
+                },
+                "width":{
+                  "@class":"DV_DURATION",
+                  "normal_range":null,
+                  "other_reference_ranges":[
+
+                  ],
+                  "normal_status":null,
+                  "magnitude_status":null,
+                  "accuracy":0.0,
+                  "accuracy_is_percent":null,
+                  "value":"PT1H"
+                },
+                "sample_count":0,
+                "math_function":{
+                  "@class":"DV_CODED_TEXT",
+                  "value":"maximum",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null,
+                  "defining_code":{
+                    "@class":"CODE_PHRASE",
+                    "terminology_id":{
+                      "@class":"TERMINOLOGY_ID",
+                      "value":"openehr"
+                    },
+                    "code_string":"144"
+                  }
+                }
+              }
+            ],
+            "summary":null
+          },
+          "state":null
+        },
+        {
+          "@class":"EVALUATION",
+          "name":{
+            "@class":"DV_TEXT",
+            "value":"CPR decision",
+            "hyperlink":null,
+            "formatting":null,
+            "mappings":[
+
+            ],
+            "language":null,
+            "encoding":null
+          },
+          "uid":null,
+          "links":[
+
+          ],
+          "archetype_details":{
+            "@class":"ARCHETYPED",
+            "archetype_id":{
+              "@class":"ARCHETYPE_ID",
+              "value":"openEHR-EHR-EVALUATION.cpr_decision_uk.v1"
+            },
+            "template_id":null,
+            "rm_version":"1.0.1"
+          },
+          "feeder_audit":null,
+          "archetype_node_id":"openEHR-EHR-EVALUATION.cpr_decision_uk.v1",
+          "language":{
+            "@class":"CODE_PHRASE",
+            "terminology_id":{
+              "@class":"TERMINOLOGY_ID",
+              "value":"ISO_639-1"
+            },
+            "code_string":"en"
+          },
+          "encoding":{
+            "@class":"CODE_PHRASE",
+            "terminology_id":{
+              "@class":"TERMINOLOGY_ID",
+              "value":"IANA_character-sets"
+            },
+            "code_string":"UTF-8"
+          },
+          "subject":{
+            "@class":"PARTY_SELF",
+            "external_ref":null
+          },
+          "provider":null,
+          "other_participations":[
+
+          ],
+          "work_flow_id":null,
+          "protocol":{
+            "@class":"ITEM_TREE",
+            "name":{
+              "@class":"DV_TEXT",
+              "value":"Tree",
+              "hyperlink":null,
+              "formatting":null,
+              "mappings":[
+
+              ],
+              "language":null,
+              "encoding":null
+            },
+            "uid":null,
+            "links":[
+
+            ],
+            "archetype_details":null,
+            "feeder_audit":null,
+            "archetype_node_id":"at0010",
+            "items":[
+              {
+                "@class":"ELEMENT",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Discussion with informal carer",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at0014",
+                "value":{
+                  "@class":"DV_CODED_TEXT",
+                  "value":"Resuscitation discussed with informal carer",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null,
+                  "defining_code":{
+                    "@class":"CODE_PHRASE",
+                    "terminology_id":{
+                      "@class":"TERMINOLOGY_ID",
+                      "value":"local"
+                    },
+                    "code_string":"at0015"
+                  }
+                },
+                "null_flavour":null
+              },
+              {
+                "@class":"ELEMENT",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Date for review of CPR decision",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at0009",
+                "value":{
+                  "@class":"DV_DATE_TIME",
+                  "normal_range":null,
+                  "other_reference_ranges":[
+
+                  ],
+                  "normal_status":null,
+                  "magnitude_status":null,
+                  "accuracy":null,
+                  "value":"2010-01-01T10:00:00Z"
+                },
+                "null_flavour":null
+              }
+            ]
+          },
+          "guideline_id":null,
+          "data":{
+            "@class":"ITEM_TREE",
+            "name":{
+              "@class":"DV_TEXT",
+              "value":"Tree",
+              "hyperlink":null,
+              "formatting":null,
+              "mappings":[
+
+              ],
+              "language":null,
+              "encoding":null
+            },
+            "uid":null,
+            "links":[
+
+            ],
+            "archetype_details":null,
+            "feeder_audit":null,
+            "archetype_node_id":"at0001",
+            "items":[
+              {
+                "@class":"ELEMENT",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"CPR decision",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at0003",
+                "value":{
+                  "@class":"DV_CODED_TEXT",
+                  "value":"For attempted cardio-pulmonary resuscitation",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null,
+                  "defining_code":{
+                    "@class":"CODE_PHRASE",
+                    "terminology_id":{
+                      "@class":"TERMINOLOGY_ID",
+                      "value":"local"
+                    },
+                    "code_string":"at0004"
+                  }
+                },
+                "null_flavour":null
+              },
+              {
+                "@class":"ELEMENT",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Date of CPR decision",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at0002",
+                "value":{
+                  "@class":"DV_DATE_TIME",
+                  "normal_range":null,
+                  "other_reference_ranges":[
+
+                  ],
+                  "normal_status":null,
+                  "magnitude_status":null,
+                  "accuracy":null,
+                  "value":"2010-01-01T10:00:00Z"
+                },
+                "null_flavour":null
+              },
+              {
+                "@class":"ELEMENT",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Comment",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at0021",
+                "value":{
+                  "@class":"DV_TEXT",
+                  "value":"text value",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "null_flavour":null
+              }
+            ]
+          }
+        },
+        {
+          "@class":"INSTRUCTION",
+          "name":{
+            "@class":"DV_TEXT",
+            "value":"Procedure request",
+            "hyperlink":null,
+            "formatting":null,
+            "mappings":[
+
+            ],
+            "language":null,
+            "encoding":null
+          },
+          "uid":null,
+          "links":[
+
+          ],
+          "archetype_details":{
+            "@class":"ARCHETYPED",
+            "archetype_id":{
+              "@class":"ARCHETYPE_ID",
+              "value":"openEHR-EHR-INSTRUCTION.request-procedure.v1"
+            },
+            "template_id":null,
+            "rm_version":"1.0.1"
+          },
+          "feeder_audit":null,
+          "archetype_node_id":"openEHR-EHR-INSTRUCTION.request-procedure.v1",
+          "language":{
+            "@class":"CODE_PHRASE",
+            "terminology_id":{
+              "@class":"TERMINOLOGY_ID",
+              "value":"ISO_639-1"
+            },
+            "code_string":"en"
+          },
+          "encoding":{
+            "@class":"CODE_PHRASE",
+            "terminology_id":{
+              "@class":"TERMINOLOGY_ID",
+              "value":"IANA_character-sets"
+            },
+            "code_string":"UTF-8"
+          },
+          "subject":{
+            "@class":"PARTY_SELF",
+            "external_ref":null
+          },
+          "provider":null,
+          "other_participations":[
+
+          ],
+          "work_flow_id":null,
+          "protocol":{
+            "@class":"ITEM_TREE",
+            "name":{
+              "@class":"DV_TEXT",
+              "value":"Tree",
+              "hyperlink":null,
+              "formatting":null,
+              "mappings":[
+
+              ],
+              "language":null,
+              "encoding":null
+            },
+            "uid":null,
+            "links":[
+
+            ],
+            "archetype_details":null,
+            "feeder_audit":null,
+            "archetype_node_id":"at0008",
+            "items":[
+              {
+                "@class":"CLUSTER",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Distribution",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":{
+                  "@class":"ARCHETYPED",
+                  "archetype_id":{
+                    "@class":"ARCHETYPE_ID",
+                    "value":"openEHR-EHR-CLUSTER.distribution.v1"
+                  },
+                  "template_id":null,
+                  "rm_version":"1.0.1"
+                },
+                "feeder_audit":null,
+                "archetype_node_id":"openEHR-EHR-CLUSTER.distribution.v1",
+                "items":[
+                  {
+                    "@class":"ELEMENT",
+                    "name":{
+                      "@class":"DV_TEXT",
+                      "value":"Group category",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null
+                    },
+                    "uid":null,
+                    "links":[
+
+                    ],
+                    "archetype_details":null,
+                    "feeder_audit":null,
+                    "archetype_node_id":"at0008",
+                    "value":{
+                      "@class":"DV_TEXT",
+                      "value":"text value",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null
+                    },
+                    "null_flavour":null
+                  },
+                  {
+                    "@class":"ELEMENT",
+                    "name":{
+                      "@class":"DV_TEXT",
+                      "value":"Urgent",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null
+                    },
+                    "uid":null,
+                    "links":[
+
+                    ],
+                    "archetype_details":null,
+                    "feeder_audit":null,
+                    "archetype_node_id":"at0012",
+                    "value":{
+                      "@class":"DV_BOOLEAN",
+                      "value":true
+                    },
+                    "null_flavour":null
+                  },
+                  {
+                    "@class":"ELEMENT",
+                    "name":{
+                      "@class":"DV_TEXT",
+                      "value":"Date sent",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null
+                    },
+                    "uid":null,
+                    "links":[
+
+                    ],
+                    "archetype_details":null,
+                    "feeder_audit":null,
+                    "archetype_node_id":"at0006",
+                    "value":{
+                      "@class":"DV_DATE_TIME",
+                      "normal_range":null,
+                      "other_reference_ranges":[
+
+                      ],
+                      "normal_status":null,
+                      "magnitude_status":null,
+                      "accuracy":null,
+                      "value":"2010-01-01T10:00:00Z"
+                    },
+                    "null_flavour":null
+                  }
+                ]
+              }
+            ]
+          },
+          "guideline_id":null,
+          "narrative":{
+            "@class":"DV_TEXT",
+            "value":"instruction narrative",
+            "hyperlink":null,
+            "formatting":null,
+            "mappings":[
+
+            ],
+            "language":null,
+            "encoding":null
+          },
+          "expiry_time":null,
+          "wf_definition":null,
+          "activities":[
+            {
+              "@class":"ACTIVITY",
+              "name":{
+                "@class":"DV_TEXT",
+                "value":"Request",
+                "hyperlink":null,
+                "formatting":null,
+                "mappings":[
+
+                ],
+                "language":null,
+                "encoding":null
+              },
+              "uid":null,
+              "links":[
+
+              ],
+              "archetype_details":null,
+              "feeder_audit":null,
+              "archetype_node_id":"at0001",
+              "description":{
+                "@class":"ITEM_TREE",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Tree",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at0009",
+                "items":[
+                  {
+                    "@class":"ELEMENT",
+                    "name":{
+                      "@class":"DV_TEXT",
+                      "value":"Procedure requested",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null
+                    },
+                    "uid":null,
+                    "links":[
+
+                    ],
+                    "archetype_details":null,
+                    "feeder_audit":null,
+                    "archetype_node_id":"at0121",
+                    "value":{
+                      "@class":"DV_TEXT",
+                      "value":"text value",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null
+                    },
+                    "null_flavour":null
+                  },
+                  {
+                    "@class":"ELEMENT",
+                    "name":{
+                      "@class":"DV_TEXT",
+                      "value":"Latest date service required",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null
+                    },
+                    "uid":null,
+                    "links":[
+
+                    ],
+                    "archetype_details":null,
+                    "feeder_audit":null,
+                    "archetype_node_id":"at0144",
+                    "value":{
+                      "@class":"DV_DATE_TIME",
+                      "normal_range":null,
+                      "other_reference_ranges":[
+
+                      ],
+                      "normal_status":null,
+                      "magnitude_status":null,
+                      "accuracy":null,
+                      "value":"2010-01-01T10:00:00Z"
+                    },
+                    "null_flavour":null
+                  },
+                  {
+                    "@class":"ELEMENT",
+                    "name":{
+                      "@class":"DV_TEXT",
+                      "value":"Supplementary information to follow",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null
+                    },
+                    "uid":null,
+                    "links":[
+
+                    ],
+                    "archetype_details":null,
+                    "feeder_audit":null,
+                    "archetype_node_id":"at0076",
+                    "value":{
+                      "@class":"DV_BOOLEAN",
+                      "value":true
+                    },
+                    "null_flavour":null
+                  }
+                ]
+              },
+              "timing":{
+                "@class":"DV_PARSABLE",
+                "charset":null,
+                "language":null,
+                "value":"activity timing",
+                "formalism":"txt"
+              },
+              "action_archetype_id":"/.*/"
+            },
+            {
+              "@class":"ACTIVITY",
+              "name":{
+                "@class":"DV_TEXT",
+                "value":"Request #3",
+                "hyperlink":null,
+                "formatting":null,
+                "mappings":[
+
+                ],
+                "language":null,
+                "encoding":null
+              },
+              "uid":null,
+              "links":[
+
+              ],
+              "archetype_details":null,
+              "feeder_audit":null,
+              "archetype_node_id":"at0001",
+              "description":{
+                "@class":"ITEM_TREE",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Tree",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at0009",
+                "items":[
+                  {
+                    "@class":"ELEMENT",
+                    "name":{
+                      "@class":"DV_TEXT",
+                      "value":"Procedure requested",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null
+                    },
+                    "uid":null,
+                    "links":[
+
+                    ],
+                    "archetype_details":null,
+                    "feeder_audit":null,
+                    "archetype_node_id":"at0121",
+                    "value":{
+                      "@class":"DV_TEXT",
+                      "value":"text value",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null
+                    },
+                    "null_flavour":null
+                  },
+                  {
+                    "@class":"ELEMENT",
+                    "name":{
+                      "@class":"DV_TEXT",
+                      "value":"Latest date service required",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null
+                    },
+                    "uid":null,
+                    "links":[
+
+                    ],
+                    "archetype_details":null,
+                    "feeder_audit":null,
+                    "archetype_node_id":"at0144",
+                    "value":{
+                      "@class":"DV_DATE_TIME",
+                      "normal_range":null,
+                      "other_reference_ranges":[
+
+                      ],
+                      "normal_status":null,
+                      "magnitude_status":null,
+                      "accuracy":null,
+                      "value":"2010-01-01T10:00:00Z"
+                    },
+                    "null_flavour":null
+                  },
+                  {
+                    "@class":"ELEMENT",
+                    "name":{
+                      "@class":"DV_TEXT",
+                      "value":"Supplementary information to follow",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null
+                    },
+                    "uid":null,
+                    "links":[
+
+                    ],
+                    "archetype_details":null,
+                    "feeder_audit":null,
+                    "archetype_node_id":"at0076",
+                    "value":{
+                      "@class":"DV_BOOLEAN",
+                      "value":true
+                    },
+                    "null_flavour":null
+                  }
+                ]
+              },
+              "timing":{
+                "@class":"DV_PARSABLE",
+                "charset":null,
+                "language":null,
+                "value":"activity timing",
+                "formalism":"txt"
+              },
+              "action_archetype_id":"/.*/"
+            }
+          ]
+        },
+        {
+          "@class":"ACTION",
+          "name":{
+            "@class":"DV_TEXT",
+            "value":"Procedure",
+            "hyperlink":null,
+            "formatting":null,
+            "mappings":[
+
+            ],
+            "language":null,
+            "encoding":null
+          },
+          "uid":null,
+          "links":[
+
+          ],
+          "archetype_details":{
+            "@class":"ARCHETYPED",
+            "archetype_id":{
+              "@class":"ARCHETYPE_ID",
+              "value":"openEHR-EHR-ACTION.procedure.v1"
+            },
+            "template_id":null,
+            "rm_version":"1.0.1"
+          },
+          "feeder_audit":null,
+          "archetype_node_id":"openEHR-EHR-ACTION.procedure.v1",
+          "language":{
+            "@class":"CODE_PHRASE",
+            "terminology_id":{
+              "@class":"TERMINOLOGY_ID",
+              "value":"ISO_639-1"
+            },
+            "code_string":"en"
+          },
+          "encoding":{
+            "@class":"CODE_PHRASE",
+            "terminology_id":{
+              "@class":"TERMINOLOGY_ID",
+              "value":"IANA_character-sets"
+            },
+            "code_string":"UTF-8"
+          },
+          "subject":{
+            "@class":"PARTY_SELF",
+            "external_ref":null
+          },
+          "provider":null,
+          "other_participations":[
+
+          ],
+          "work_flow_id":null,
+          "protocol":{
+            "@class":"ITEM_TREE",
+            "name":{
+              "@class":"DV_TEXT",
+              "value":"Tree",
+              "hyperlink":null,
+              "formatting":null,
+              "mappings":[
+
+              ],
+              "language":null,
+              "encoding":null
+            },
+            "uid":null,
+            "links":[
+
+            ],
+            "archetype_details":null,
+            "feeder_audit":null,
+            "archetype_node_id":"at0053",
+            "items":[
+              {
+                "@class":"ELEMENT",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Requestor order identifier",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at0054",
+                "value":{
+                  "@class":"DV_TEXT",
+                  "value":"text value",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "null_flavour":null
+              },
+              {
+                "@class":"CLUSTER",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Person name",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":{
+                  "@class":"ARCHETYPED",
+                  "archetype_id":{
+                    "@class":"ARCHETYPE_ID",
+                    "value":"openEHR-EHR-CLUSTER.person_name.v1"
+                  },
+                  "template_id":null,
+                  "rm_version":"1.0.1"
+                },
+                "feeder_audit":null,
+                "archetype_node_id":"openEHR-EHR-CLUSTER.person_name.v1",
+                "items":[
+                  {
+                    "@class":"ELEMENT",
+                    "name":{
+                      "@class":"DV_TEXT",
+                      "value":"Name type",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null
+                    },
+                    "uid":null,
+                    "links":[
+
+                    ],
+                    "archetype_details":null,
+                    "feeder_audit":null,
+                    "archetype_node_id":"at0006",
+                    "value":{
+                      "@class":"DV_CODED_TEXT",
+                      "value":"Registered name",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null,
+                      "defining_code":{
+                        "@class":"CODE_PHRASE",
+                        "terminology_id":{
+                          "@class":"TERMINOLOGY_ID",
+                          "value":"local"
+                        },
+                        "code_string":"at0020"
+                      }
+                    },
+                    "null_flavour":null
+                  },
+                  {
+                    "@class":"ELEMENT",
+                    "name":{
+                      "@class":"DV_TEXT",
+                      "value":"Preferred name",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null
+                    },
+                    "uid":null,
+                    "links":[
+
+                    ],
+                    "archetype_details":null,
+                    "feeder_audit":null,
+                    "archetype_node_id":"at0022",
+                    "value":{
+                      "@class":"DV_BOOLEAN",
+                      "value":true
+                    },
+                    "null_flavour":null
+                  },
+                  {
+                    "@class":"ELEMENT",
+                    "name":{
+                      "@class":"DV_TEXT",
+                      "value":"Unstructured name",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null
+                    },
+                    "uid":null,
+                    "links":[
+
+                    ],
+                    "archetype_details":null,
+                    "feeder_audit":null,
+                    "archetype_node_id":"at0001",
+                    "value":{
+                      "@class":"DV_TEXT",
+                      "value":"text value",
+                      "hyperlink":null,
+                      "formatting":null,
+                      "mappings":[
+
+                      ],
+                      "language":null,
+                      "encoding":null
+                    },
+                    "null_flavour":null
+                  }
+                ]
+              },
+              {
+                "@class":"ELEMENT",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Receiver order identifier",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at0056",
+                "value":{
+                  "@class":"DV_IDENTIFIER",
+                  "issuer":"1",
+                  "assigner":"1",
+                  "id":"1",
+                  "type":"1"
+                },
+                "null_flavour":null
+              }
+            ]
+          },
+          "guideline_id":null,
+          "time":{
+            "@class":"DV_DATE_TIME",
+            "normal_range":null,
+            "other_reference_ranges":[
+
+            ],
+            "normal_status":null,
+            "magnitude_status":null,
+            "accuracy":null,
+            "value":"2016-02-23T10:59:00.032+07:00"
+          },
+          "description":{
+            "@class":"ITEM_TREE",
+            "name":{
+              "@class":"DV_TEXT",
+              "value":"Tree",
+              "hyperlink":null,
+              "formatting":null,
+              "mappings":[
+
+              ],
+              "language":null,
+              "encoding":null
+            },
+            "uid":null,
+            "links":[
+
+            ],
+            "archetype_details":null,
+            "feeder_audit":null,
+            "archetype_node_id":"at0001",
+            "items":[
+              {
+                "@class":"ELEMENT",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Procedure name",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at0002",
+                "value":{
+                  "@class":"DV_TEXT",
+                  "value":"text value",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "null_flavour":null
+              },
+              {
+                "@class":"ELEMENT",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Method",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at0065",
+                "value":{
+                  "@class":"DV_TEXT",
+                  "value":"text value",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "null_flavour":null
+              },
+              {
+                "@class":"ELEMENT",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Method #1",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at0065",
+                "value":{
+                  "@class":"DV_TEXT",
+                  "value":"text value",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "null_flavour":null
+              },
+              {
+                "@class":"ELEMENT",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Scheduled date/time",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at0066",
+                "value":{
+                  "@class":"DV_DATE_TIME",
+                  "normal_range":null,
+                  "other_reference_ranges":[
+
+                  ],
+                  "normal_status":null,
+                  "magnitude_status":null,
+                  "accuracy":null,
+                  "value":"2010-01-01T10:00:00Z"
+                },
+                "null_flavour":null
+              },
+              {
+                "@class":"ELEMENT",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Final end date/time",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at0060",
+                "value":{
+                  "@class":"DV_DATE_TIME",
+                  "normal_range":null,
+                  "other_reference_ranges":[
+
+                  ],
+                  "normal_status":null,
+                  "magnitude_status":null,
+                  "accuracy":null,
+                  "value":"2010-01-01T10:00:00Z"
+                },
+                "null_flavour":null
+              }
+            ]
+          },
+          "ism_transition":{
+            "@class":"ISM_TRANSITION",
+            "current_state":{
+              "@class":"DV_CODED_TEXT",
+              "value":"initial",
+              "hyperlink":null,
+              "formatting":null,
+              "mappings":[
+
+              ],
+              "language":null,
+              "encoding":null,
+              "defining_code":{
+                "@class":"CODE_PHRASE",
+                "terminology_id":{
+                  "@class":"TERMINOLOGY_ID",
+                  "value":"openehr"
+                },
+                "code_string":"524"
+              }
+            },
+            "transition":null,
+            "careflow_step":null,
+            "reason":[
+
+            ]
+          },
+          "instruction_details":null
+        },
+        {
+          "@class":"ADMIN_ENTRY",
+          "name":{
+            "@class":"DV_TEXT",
+            "value":"Inpatient admission",
+            "hyperlink":null,
+            "formatting":null,
+            "mappings":[
+
+            ],
+            "language":null,
+            "encoding":null
+          },
+          "uid":null,
+          "links":[
+
+          ],
+          "archetype_details":{
+            "@class":"ARCHETYPED",
+            "archetype_id":{
+              "@class":"ARCHETYPE_ID",
+              "value":"openEHR-EHR-ADMIN_ENTRY.inpatient_admission_uk.v1"
+            },
+            "template_id":{
+              "@class":"TEMPLATE_ID",
+              "value":"RIPPLE - Conformance Test template"
+            },
+            "rm_version":"1.0.1"
+          },
+          "feeder_audit":null,
+          "archetype_node_id":"openEHR-EHR-ADMIN_ENTRY.inpatient_admission_uk.v1",
+          "language":{
+            "@class":"CODE_PHRASE",
+            "terminology_id":{
+              "@class":"TERMINOLOGY_ID",
+              "value":"ISO_639-1"
+            },
+            "code_string":"en"
+          },
+          "encoding":{
+            "@class":"CODE_PHRASE",
+            "terminology_id":{
+              "@class":"TERMINOLOGY_ID",
+              "value":"IANA_character-sets"
+            },
+            "code_string":"UTF-8"
+          },
+          "subject":{
+            "@class":"PARTY_SELF",
+            "external_ref":null
+          },
+          "provider":null,
+          "other_participations":[
+
+          ],
+          "work_flow_id":null,
+          "data":{
+            "@class":"ITEM_TREE",
+            "name":{
+              "@class":"DV_TEXT",
+              "value":"Tree",
+              "hyperlink":null,
+              "formatting":null,
+              "mappings":[
+
+              ],
+              "language":null,
+              "encoding":null
+            },
+            "uid":null,
+            "links":[
+
+            ],
+            "archetype_details":null,
+            "feeder_audit":null,
+            "archetype_node_id":"at0001",
+            "items":[
+              {
+                "@class":"ELEMENT",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Date of admission",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at0002",
+                "value":{
+                  "@class":"DV_DATE_TIME",
+                  "normal_range":null,
+                  "other_reference_ranges":[
+
+                  ],
+                  "normal_status":null,
+                  "magnitude_status":null,
+                  "accuracy":null,
+                  "value":"2010-01-01T10:00:00Z"
+                },
+                "null_flavour":null
+              },
+              {
+                "@class":"ELEMENT",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Admission method",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at0003",
+                "value":{
+                  "@class":"DV_CODED_TEXT",
+                  "value":"coded text value",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null,
+                  "defining_code":{
+                    "@class":"CODE_PHRASE",
+                    "terminology_id":{
+                      "@class":"TERMINOLOGY_ID",
+                      "value":"local"
+                    },
+                    "code_string":"at9999"
+                  }
+                },
+                "null_flavour":null
+              },
+              {
+                "@class":"ELEMENT",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Source of admission",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at0009",
+                "value":{
+                  "@class":"DV_TEXT",
+                  "value":"text value",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "null_flavour":null
+              }
+            ]
+          }
+        },
+        {
+          "@class":"OBSERVATION",
+          "name":{
+            "@class":"DV_TEXT",
+            "value":"Demonstration",
+            "hyperlink":null,
+            "formatting":null,
+            "mappings":[
+
+            ],
+            "language":null,
+            "encoding":null
+          },
+          "uid":null,
+          "links":[
+
+          ],
+          "archetype_details":{
+            "@class":"ARCHETYPED",
+            "archetype_id":{
+              "@class":"ARCHETYPE_ID",
+              "value":"openEHR-EHR-OBSERVATION.demo.v1"
+            },
+            "template_id":null,
+            "rm_version":"1.0.1"
+          },
+          "feeder_audit":null,
+          "archetype_node_id":"openEHR-EHR-OBSERVATION.demo.v1",
+          "language":{
+            "@class":"CODE_PHRASE",
+            "terminology_id":{
+              "@class":"TERMINOLOGY_ID",
+              "value":"ISO_639-1"
+            },
+            "code_string":"en"
+          },
+          "encoding":{
+            "@class":"CODE_PHRASE",
+            "terminology_id":{
+              "@class":"TERMINOLOGY_ID",
+              "value":"IANA_character-sets"
+            },
+            "code_string":"UTF-8"
+          },
+          "subject":{
+            "@class":"PARTY_SELF",
+            "external_ref":null
+          },
+          "provider":null,
+          "other_participations":[
+
+          ],
+          "work_flow_id":null,
+          "protocol":{
+            "@class":"ITEM_TREE",
+            "name":{
+              "@class":"DV_TEXT",
+              "value":"Tree",
+              "hyperlink":null,
+              "formatting":null,
+              "mappings":[
+
+              ],
+              "language":null,
+              "encoding":null
+            },
+            "uid":null,
+            "links":[
+
+            ],
+            "archetype_details":null,
+            "feeder_audit":null,
+            "archetype_node_id":"at0036",
+            "items":[
+              {
+                "@class":"ELEMENT",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Protocol - definition",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at0037",
+                "value":{
+                  "@class":"DV_TEXT",
+                  "value":"*any*",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "null_flavour":null
+              }
+            ]
+          },
+          "guideline_id":null,
+          "data":{
+            "@class":"HISTORY",
+            "name":{
+              "@class":"DV_TEXT",
+              "value":"Event Series",
+              "hyperlink":null,
+              "formatting":null,
+              "mappings":[
+
+              ],
+              "language":null,
+              "encoding":null
+            },
+            "uid":null,
+            "links":[
+
+            ],
+            "archetype_details":null,
+            "feeder_audit":null,
+            "archetype_node_id":"at0001",
+            "origin":{
+              "@class":"DV_DATE_TIME",
+              "normal_range":null,
+              "other_reference_ranges":[
+
+              ],
+              "normal_status":null,
+              "magnitude_status":null,
+              "accuracy":null,
+              "value":"2016-02-23T10:59:00.927+07:00"
+            },
+            "period":null,
+            "duration":null,
+            "events":[
+              {
+                "@class":"POINT_EVENT",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Any event",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at0002",
+                "time":{
+                  "@class":"DV_DATE_TIME",
+                  "normal_range":null,
+                  "other_reference_ranges":[
+
+                  ],
+                  "normal_status":null,
+                  "magnitude_status":null,
+                  "accuracy":null,
+                  "value":"2016-02-23T10:59:00.927+07:00"
+                },
+                "data":{
+                  "@class":"ITEM_TREE",
+                  "name":{
+                    "@class":"DV_TEXT",
+                    "value":"Tree",
+                    "hyperlink":null,
+                    "formatting":null,
+                    "mappings":[
+
+                    ],
+                    "language":null,
+                    "encoding":null
+                  },
+                  "uid":null,
+                  "links":[
+
+                  ],
+                  "archetype_details":null,
+                  "feeder_audit":null,
+                  "archetype_node_id":"at0003",
+                  "items":[
+                    {
+                      "@class":"CLUSTER",
+                      "name":{
+                        "@class":"DV_TEXT",
+                        "value":"Heading1",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null
+                      },
+                      "uid":null,
+                      "links":[
+
+                      ],
+                      "archetype_details":null,
+                      "feeder_audit":null,
+                      "archetype_node_id":"at0004",
+                      "items":[
+                        {
+                          "@class":"ELEMENT",
+                          "name":{
+                            "@class":"DV_TEXT",
+                            "value":"Free text or coded",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "uid":null,
+                          "links":[
+
+                          ],
+                          "archetype_details":null,
+                          "feeder_audit":null,
+                          "archetype_node_id":"at0005",
+                          "value":{
+                            "@class":"DV_TEXT",
+                            "value":"text value",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "null_flavour":null
+                        },
+                        {
+                          "@class":"ELEMENT",
+                          "name":{
+                            "@class":"DV_TEXT",
+                            "value":"Text that uses Internal codes",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "uid":null,
+                          "links":[
+
+                          ],
+                          "archetype_details":null,
+                          "feeder_audit":null,
+                          "archetype_node_id":"at0006",
+                          "value":{
+                            "@class":"DV_CODED_TEXT",
+                            "value":"Lying",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null,
+                            "defining_code":{
+                              "@class":"CODE_PHRASE",
+                              "terminology_id":{
+                                "@class":"TERMINOLOGY_ID",
+                                "value":"local"
+                              },
+                              "code_string":"at0007"
+                            }
+                          },
+                          "null_flavour":null
+                        },
+                        {
+                          "@class":"ELEMENT",
+                          "name":{
+                            "@class":"DV_TEXT",
+                            "value":"Text that is sourced from an external terminology",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "uid":null,
+                          "links":[
+
+                          ],
+                          "archetype_details":null,
+                          "feeder_audit":null,
+                          "archetype_node_id":"at0011",
+                          "value":{
+                            "@class":"DV_CODED_TEXT",
+                            "value":"coded text value",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null,
+                            "defining_code":{
+                              "@class":"CODE_PHRASE",
+                              "terminology_id":{
+                                "@class":"TERMINOLOGY_ID",
+                                "value":"local"
+                              },
+                              "code_string":"at9999"
+                            }
+                          },
+                          "null_flavour":null
+                        },
+                        {
+                          "@class":"ELEMENT",
+                          "name":{
+                            "@class":"DV_TEXT",
+                            "value":"Quantity",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "uid":null,
+                          "links":[
+
+                          ],
+                          "archetype_details":null,
+                          "feeder_audit":null,
+                          "archetype_node_id":"at0012",
+                          "value":{
+                            "@class":"DV_QUANTITY",
+                            "normal_range":null,
+                            "other_reference_ranges":[
+
+                            ],
+                            "normal_status":null,
+                            "magnitude_status":null,
+                            "accuracy":0.0,
+                            "accuracy_is_percent":null,
+                            "magnitude":0.0,
+                            "units":"cm",
+                            "precision":0
+                          },
+                          "null_flavour":null
+                        },
+                        {
+                          "@class":"ELEMENT",
+                          "name":{
+                            "@class":"DV_TEXT",
+                            "value":"Interval of Quantity",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "uid":null,
+                          "links":[
+
+                          ],
+                          "archetype_details":null,
+                          "feeder_audit":null,
+                          "archetype_node_id":"at0023",
+                          "value":{
+                            "@class":"DV_INTERVAL",
+                            "lower":{
+                              "@class":"DV_QUANTITY",
+                              "normal_range":null,
+                              "other_reference_ranges":[
+
+                              ],
+                              "normal_status":null,
+                              "magnitude_status":null,
+                              "accuracy":0.0,
+                              "accuracy_is_percent":null,
+                              "magnitude":0.0,
+                              "units":"",
+                              "precision":0
+                            },
+                            "upper":{
+                              "@class":"DV_QUANTITY",
+                              "normal_range":null,
+                              "other_reference_ranges":[
+
+                              ],
+                              "normal_status":null,
+                              "magnitude_status":null,
+                              "accuracy":0.0,
+                              "accuracy_is_percent":null,
+                              "magnitude":1.0,
+                              "units":"",
+                              "precision":0
+                            },
+                            "lower_included":null,
+                            "upper_included":null,
+                            "lower_unbounded":false,
+                            "upper_unbounded":false
+                          },
+                          "null_flavour":null
+                        },
+                        {
+                          "@class":"ELEMENT",
+                          "name":{
+                            "@class":"DV_TEXT",
+                            "value":"Count",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "uid":null,
+                          "links":[
+
+                          ],
+                          "archetype_details":null,
+                          "feeder_audit":null,
+                          "archetype_node_id":"at0013",
+                          "value":{
+                            "@class":"DV_COUNT",
+                            "normal_range":null,
+                            "other_reference_ranges":[
+
+                            ],
+                            "normal_status":null,
+                            "magnitude_status":null,
+                            "accuracy":0.0,
+                            "accuracy_is_percent":null,
+                            "magnitude":0
+                          },
+                          "null_flavour":null
+                        },
+                        {
+                          "@class":"ELEMENT",
+                          "name":{
+                            "@class":"DV_TEXT",
+                            "value":"Interval of Integer",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "uid":null,
+                          "links":[
+
+                          ],
+                          "archetype_details":null,
+                          "feeder_audit":null,
+                          "archetype_node_id":"at0022",
+                          "value":{
+                            "@class":"DV_INTERVAL",
+                            "lower":{
+                              "@class":"DV_COUNT",
+                              "normal_range":null,
+                              "other_reference_ranges":[
+
+                              ],
+                              "normal_status":null,
+                              "magnitude_status":null,
+                              "accuracy":0.0,
+                              "accuracy_is_percent":null,
+                              "magnitude":0
+                            },
+                            "upper":{
+                              "@class":"DV_COUNT",
+                              "normal_range":null,
+                              "other_reference_ranges":[
+
+                              ],
+                              "normal_status":null,
+                              "magnitude_status":null,
+                              "accuracy":0.0,
+                              "accuracy_is_percent":null,
+                              "magnitude":1
+                            },
+                            "lower_included":null,
+                            "upper_included":null,
+                            "lower_unbounded":false,
+                            "upper_unbounded":false
+                          },
+                          "null_flavour":null
+                        },
+                        {
+                          "@class":"ELEMENT",
+                          "name":{
+                            "@class":"DV_TEXT",
+                            "value":"Proportion",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "uid":null,
+                          "links":[
+
+                          ],
+                          "archetype_details":null,
+                          "feeder_audit":null,
+                          "archetype_node_id":"at0028",
+                          "value":{
+                            "@class":"DV_PROPORTION",
+                            "normal_range":null,
+                            "other_reference_ranges":[
+
+                            ],
+                            "normal_status":null,
+                            "magnitude_status":null,
+                            "accuracy":0.0,
+                            "accuracy_is_percent":null,
+                            "numerator":1.0,
+                            "denominator":1.0,
+                            "type":0,
+                            "precision":0
+                          },
+                          "null_flavour":null
+                        },
+                        {
+                          "@class":"ELEMENT",
+                          "name":{
+                            "@class":"DV_TEXT",
+                            "value":"Date/Time",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "uid":null,
+                          "links":[
+
+                          ],
+                          "archetype_details":null,
+                          "feeder_audit":null,
+                          "archetype_node_id":"at0014",
+                          "value":{
+                            "@class":"DV_DATE_TIME",
+                            "normal_range":null,
+                            "other_reference_ranges":[
+
+                            ],
+                            "normal_status":null,
+                            "magnitude_status":null,
+                            "accuracy":null,
+                            "value":"2010-01-01T10:00:00Z"
+                          },
+                          "null_flavour":null
+                        },
+                        {
+                          "@class":"ELEMENT",
+                          "name":{
+                            "@class":"DV_TEXT",
+                            "value":"Interval of Date",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "uid":null,
+                          "links":[
+
+                          ],
+                          "archetype_details":null,
+                          "feeder_audit":null,
+                          "archetype_node_id":"at0024",
+                          "value":{
+                            "@class":"DV_INTERVAL",
+                            "lower":{
+                              "@class":"DV_DATE_TIME",
+                              "normal_range":null,
+                              "other_reference_ranges":[
+
+                              ],
+                              "normal_status":null,
+                              "magnitude_status":null,
+                              "accuracy":null,
+                              "value":"1970-01-01T07:00:00.000+07:00"
+                            },
+                            "upper":{
+                              "@class":"DV_DATE_TIME",
+                              "normal_range":null,
+                              "other_reference_ranges":[
+
+                              ],
+                              "normal_status":null,
+                              "magnitude_status":null,
+                              "accuracy":null,
+                              "value":"1970-01-02T07:00:00,000+07:00"
+                            },
+                            "lower_included":null,
+                            "upper_included":null,
+                            "lower_unbounded":false,
+                            "upper_unbounded":false
+                          },
+                          "null_flavour":null
+                        },
+                        {
+                          "@class":"ELEMENT",
+                          "name":{
+                            "@class":"DV_TEXT",
+                            "value":"Duration",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "uid":null,
+                          "links":[
+
+                          ],
+                          "archetype_details":null,
+                          "feeder_audit":null,
+                          "archetype_node_id":"at0021",
+                          "value":{
+                            "@class":"DV_DURATION",
+                            "normal_range":null,
+                            "other_reference_ranges":[
+
+                            ],
+                            "normal_status":null,
+                            "magnitude_status":null,
+                            "accuracy":0.0,
+                            "accuracy_is_percent":null,
+                            "value":"PT1H"
+                          },
+                          "null_flavour":null
+                        },
+                        {
+                          "@class":"ELEMENT",
+                          "name":{
+                            "@class":"DV_TEXT",
+                            "value":"Ordinal",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "uid":null,
+                          "links":[
+
+                          ],
+                          "archetype_details":null,
+                          "feeder_audit":null,
+                          "archetype_node_id":"at0015",
+                          "value":{
+                            "@class":"DV_ORDINAL",
+                            "normal_range":null,
+                            "other_reference_ranges":[
+
+                            ],
+                            "normal_status":null,
+                            "value":-1,
+                            "symbol":{
+                              "@class":"DV_CODED_TEXT",
+                              "value":"No pain",
+                              "hyperlink":null,
+                              "formatting":null,
+                              "mappings":[
+
+                              ],
+                              "language":null,
+                              "encoding":null,
+                              "defining_code":{
+                                "@class":"CODE_PHRASE",
+                                "terminology_id":{
+                                  "@class":"TERMINOLOGY_ID",
+                                  "value":"openehr"
+                                },
+                                "code_string":"at0038"
+                              }
+                            }
+                          },
+                          "null_flavour":null
+                        },
+                        {
+                          "@class":"ELEMENT",
+                          "name":{
+                            "@class":"DV_TEXT",
+                            "value":"Boolean",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "uid":null,
+                          "links":[
+
+                          ],
+                          "archetype_details":null,
+                          "feeder_audit":null,
+                          "archetype_node_id":"at0016",
+                          "value":{
+                            "@class":"DV_BOOLEAN",
+                            "value":true
+                          },
+                          "null_flavour":null
+                        },
+                        {
+                          "@class":"ELEMENT",
+                          "name":{
+                            "@class":"DV_TEXT",
+                            "value":"Any",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "uid":null,
+                          "links":[
+
+                          ],
+                          "archetype_details":null,
+                          "feeder_audit":null,
+                          "archetype_node_id":"at0017",
+                          "value":{
+                            "@class":"DV_TEXT",
+                            "value":"*any*",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "null_flavour":null
+                        },
+                        {
+                          "@class":"ELEMENT",
+                          "name":{
+                            "@class":"DV_TEXT",
+                            "value":"Choice",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "uid":null,
+                          "links":[
+
+                          ],
+                          "archetype_details":null,
+                          "feeder_audit":null,
+                          "archetype_node_id":"at0025",
+                          "value":{
+                            "@class":"DV_QUANTITY",
+                            "normal_range":null,
+                            "other_reference_ranges":[
+
+                            ],
+                            "normal_status":null,
+                            "magnitude_status":null,
+                            "accuracy":0.0,
+                            "accuracy_is_percent":null,
+                            "magnitude":0.0,
+                            "units":"gm",
+                            "precision":0
+                          },
+                          "null_flavour":null
+                        },
+                        {
+                          "@class":"ELEMENT",
+                          "name":{
+                            "@class":"DV_TEXT",
+                            "value":"Multimedia",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "uid":null,
+                          "links":[
+
+                          ],
+                          "archetype_details":null,
+                          "feeder_audit":null,
+                          "archetype_node_id":"at0026",
+                          "value":{
+                            "@class":"DV_MULTIMEDIA",
+                            "charset":{
+                              "@class":"CODE_PHRASE",
+                              "terminology_id":{
+                                "@class":"TERMINOLOGY_ID",
+                                "value":"IANA_character-sets"
+                              },
+                              "code_string":"UTF-8"
+                            },
+                            "language":{
+                              "@class":"CODE_PHRASE",
+                              "terminology_id":{
+                                "@class":"TERMINOLOGY_ID",
+                                "value":"ISO_639-1"
+                              },
+                              "code_string":"en"
+                            },
+                            "alternate_text":"alternative text",
+                            "uri":{
+                              "@class":"DV_URI",
+                              "value":"www.iana.org"
+                            },
+                            "data":null,
+                            "media_type":{
+                              "@class":"CODE_PHRASE",
+                              "terminology_id":{
+                                "@class":"TERMINOLOGY_ID",
+                                "value":"IANA_media-types"
+                              },
+                              "code_string":"text/plain"
+                            },
+                            "compression_algorithm":{
+                              "@class":"CODE_PHRASE",
+                              "terminology_id":{
+                                "@class":"TERMINOLOGY_ID",
+                                "value":"openehr_compression_algorithms"
+                              },
+                              "code_string":"other"
+                            },
+                            "integrity_check":null,
+                            "integrity_check_algorithm":{
+                              "@class":"CODE_PHRASE",
+                              "terminology_id":{
+                                "@class":"TERMINOLOGY_ID",
+                                "value":"openehr_integrity_check_algorithms"
+                              },
+                              "code_string":"SHA-1"
+                            },
+                            "size":0,
+                            "thumbnail":null
+                          },
+                          "null_flavour":null
+                        },
+                        {
+                          "@class":"ELEMENT",
+                          "name":{
+                            "@class":"DV_TEXT",
+                            "value":"URI - resource identifier",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "uid":null,
+                          "links":[
+
+                          ],
+                          "archetype_details":null,
+                          "feeder_audit":null,
+                          "archetype_node_id":"at0027",
+                          "value":{
+                            "@class":"DV_URI",
+                            "value":"http://www.ethercis.com/"
+                          },
+                          "null_flavour":null
+                        },
+                        {
+                          "@class":"ELEMENT",
+                          "name":{
+                            "@class":"DV_TEXT",
+                            "value":"Identifier",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "uid":null,
+                          "links":[
+
+                          ],
+                          "archetype_details":null,
+                          "feeder_audit":null,
+                          "archetype_node_id":"at0044",
+                          "value":{
+                            "@class":"DV_IDENTIFIER",
+                            "issuer":"1",
+                            "assigner":"1",
+                            "id":"1",
+                            "type":"1"
+                          },
+                          "null_flavour":null
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "state":null
+              }
+            ],
+            "summary":null
+          },
+          "state":null
+        }
+      ]
+    }
+  ]
+}

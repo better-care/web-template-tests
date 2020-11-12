@@ -1,0 +1,2152 @@
+// Copyright 2020-2021 Better Ltd (www.better.care)
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+{
+  "ficha_individual_da_aten_cao_basica/_link:0|meaning":"Follow up to",
+  "ficha_individual_da_aten_cao_basica/_link:0|type":"Problem",
+  "ficha_individual_da_aten_cao_basica/_link:0|target":"ehr://b4ab52fb-2640-44be-a72e-b4d2b1deac20",
+  "ficha_individual_da_aten_cao_basica/_uid":"4f9b14d6-4229-4b15-a05f-9cd3f541f1f0::example::1",
+  "ficha_individual_da_aten_cao_basica/context/start_time":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":267000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/context/setting|code":"238",
+  "ficha_individual_da_aten_cao_basica/context/setting|value":"other care",
+  "ficha_individual_da_aten_cao_basica/context/setting|terminology":"openehr",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/_uid":"f4833dc5-512a-4244-b3d4-7ded8122977d",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/subject_demographic_data:0/birth_date":{
+    "year":2020,
+    "month":"NOVEMBER",
+    "monthValue":11,
+    "dayOfMonth":13,
+    "dayOfYear":318,
+    "leapYear":true,
+    "dayOfWeek":"FRIDAY",
+    "era":"CE",
+    "chronology":{
+      "id":"ISO",
+      "calendarType":"iso8601"
+    }
+  },
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/subject_demographic_data:0/sex":"Sex 38",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/subject_demographic_data:0/new_element_en":"91604029-c5e4-412e-880d-d77922f9808f",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/subject_demographic_data:0/new_element_en|issuer":"Issuer",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/subject_demographic_data:0/new_element_en|assigner":"Assigner",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/subject_demographic_data:0/new_element_en|type":"Prescription",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/subject_demographic_data:0/language|code":"en",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/subject_demographic_data:0/language|terminology":"ISO_639-1",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/subject_demographic_data:0/encoding|code":"UTF-8",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/subject_demographic_data:0/encoding|terminology":"IANA_character-sets",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/patient_class|code":"at0156",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/patient_class|value":"*Demanda Espontânea (DE) de escuta inicial/orientações(en)",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/patient_class|terminology":"local",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/assigned_patient_location/point_of_care_unit|code":"at0144",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/assigned_patient_location/point_of_care_unit|value":"*Unidade Móvel(en)",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/assigned_patient_location/point_of_care_unit|terminology":"local",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/assigned_patient_location/ward":"Ward 33",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/assigned_patient_location/room":"Room 63",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/assigned_patient_location/bed":"Bed 11",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/assigned_patient_location/facility/namespace_id":"Namespace ID 91",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/assigned_patient_location/facility/universal_id":"Universal ID 13",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/assigned_patient_location/facility/universal_id_type":"at0111",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/assigned_patient_location/building":"Building 93",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/assigned_patient_location/floor":"Floor 75",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/assigned_patient_location/location_description":"Location description 71",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/assigned_patient_location/address/street":"Street 88",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/assigned_patient_location/address/city":"City 7",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/assigned_patient_location/address/state_province":"State/province 4",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/assigned_patient_location/address/post_code":"Post code 13",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/assigned_patient_location/address/country":"Country 5",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/assigned_patient_location/location_type":"at0092",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/admission_type":"at0016",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/specialty":"Specialty 80",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/consult_type":"at0149",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/contact_type":"Contact type 73",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/attending_doctor:0/id|code":"E.28",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/attending_doctor:0/id|value":"E.28 description",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/attending_doctor:0/id|terminology":"external_terminology",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/attending_doctor:0/new_element_en":"*New element(en) 82",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/attending_doctor:0/family_name":"Family name 59",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/attending_doctor:0/last_name":"Last name 88",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/referring_doctor/id|code":"C.65",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/referring_doctor/id|value":"C.65 description",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/referring_doctor/id|terminology":"external_terminology",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/referring_doctor/family_name":"Family name 34",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/referring_doctor/last_name":"Last name 68",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/consulting_doctor:0/id|code":"N.37",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/consulting_doctor:0/id|value":"N.37 description",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/consulting_doctor:0/id|terminology":"external_terminology",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/consulting_doctor:0/family_name":"Family name 85",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/consulting_doctor:0/last_name":"Last name 86",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/hospital_service":"Hospital service 19",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/admit_source":"Admit source 61",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/admitting_doctor/id|code":"V.49",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/admitting_doctor/id|value":"V.49 description",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/admitting_doctor/id|terminology":"external_terminology",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/admitting_doctor/family_name":"Family name 84",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/admitting_doctor/last_name":"Last name 51",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/link_to_clinical_event_summary_document":"Link to Clinical event summary document 30",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/admit_date_time":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":296000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/language|code":"en",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/language|terminology":"ISO_639-1",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/encoding|code":"UTF-8",
+  "ficha_individual_da_aten_cao_basica/dados_do_atendimento/patient_admission:0/encoding|terminology":"IANA_character-sets",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/_uid":"88281df3-269c-4acd-a0ad-ebd085cf325c",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/_uid":"6dfa8fa1-fa2b-40a9-91a3-e87dd5e63303",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/_uid":"1f62046f-a11f-4fbf-9de6-43d24a4479c4",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/_other_participation:0|function":"performer",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/_other_participation:0|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/_other_participation:0|name":"Nurse Bailey",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/_other_participation:1|function":"requester",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/_other_participation:1|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/_other_participation:1|name":"Dr. Stiles",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/problem_diagnosis|code":"V.91",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/problem_diagnosis|value":"V.91 description",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/problem_diagnosis|terminology":"CIAP2?subset=CIAP2&language=Portugues",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/description":"Description 53",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/severity":"Severity 78",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/date_of_onset":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":298000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/age_at_onset":{
+    "weeks":0,
+    "hours":3,
+    "minutes":33,
+    "seconds":0,
+    "years":0,
+    "days":1,
+    "months":0,
+    "millis":0,
+    "periodType":{
+      "name":"Standard"
+    },
+    "values":[
+      0,
+      0,
+      0,
+      1,
+      3,
+      33,
+      0,
+      0
+    ],
+    "fieldTypes":[
+      {
+        "name":"years"
+      },
+      {
+        "name":"months"
+      },
+      {
+        "name":"weeks"
+      },
+      {
+        "name":"days"
+      },
+      {
+        "name":"hours"
+      },
+      {
+        "name":"minutes"
+      },
+      {
+        "name":"seconds"
+      },
+      {
+        "name":"millis"
+      }
+    ]
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/body_site":"Body Site 60",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/previous_occurrences/frequency|magnitude":43.71,
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/previous_occurrences/frequency|unit":"/min",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/previous_occurrences/date_of_last_occurrence":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":305000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/previous_occurrences/number":618,
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/previous_occurrences/description":"Description 52",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/related_item:0/relationship_type|code":"at0040",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/related_item:0/relationship_type|value":"Caused by",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/related_item:0/relationship_type|terminology":"local",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/related_item:0/item/text_value":"null 75",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/related_item:0/description":"Description 90",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/date_of_resolution":{
+    "year":2020,
+    "month":"NOVEMBER",
+    "monthValue":11,
+    "dayOfMonth":13,
+    "dayOfYear":318,
+    "leapYear":true,
+    "dayOfWeek":"FRIDAY",
+    "era":"CE",
+    "chronology":{
+      "id":"ISO",
+      "calendarType":"iso8601"
+    }
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/age_at_resolution":{
+    "weeks":0,
+    "hours":1,
+    "minutes":2,
+    "seconds":0,
+    "years":0,
+    "days":1,
+    "months":0,
+    "millis":0,
+    "periodType":{
+      "name":"Standard"
+    },
+    "values":[
+      0,
+      0,
+      0,
+      1,
+      1,
+      2,
+      0,
+      0
+    ],
+    "fieldTypes":[
+      {
+        "name":"years"
+      },
+      {
+        "name":"months"
+      },
+      {
+        "name":"weeks"
+      },
+      {
+        "name":"days"
+      },
+      {
+        "name":"hours"
+      },
+      {
+        "name":"minutes"
+      },
+      {
+        "name":"seconds"
+      },
+      {
+        "name":"millis"
+      }
+    ]
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/date_clinically_recognized":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":306000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/registration_date":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":306000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/supporting_clinical_evidence:0":"ehr://9750adb1-3d7a-4f86-af8b-7eacdefc838b",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/language|code":"en",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/language|terminology":"ISO_639-1",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/encoding|code":"UTF-8",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/problemas/problem_diagnosis:0/encoding|terminology":"IANA_character-sets",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/_uid":"13547f41-c1cd-4574-ae60-6990992361d0",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/body_weight:0/_uid":"71836b20-3386-44d9-a17c-c976e6ba5b28",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/body_weight:0/_other_participation:0|function":"performer",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/body_weight:0/_other_participation:0|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/body_weight:0/_other_participation:0|name":"Nurse Bailey",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/body_weight:0/_other_participation:1|function":"requester",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/body_weight:0/_other_participation:1|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/body_weight:0/_other_participation:1|name":"Dr. Stiles",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/body_weight:0/any_event:0/weight|magnitude":751.86,
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/body_weight:0/any_event:0/weight|unit":"kg",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/body_weight:0/any_event:0/comment":"Comment 1",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/body_weight:0/any_event:0/state_of_dress|code":"at0011",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/body_weight:0/any_event:0/state_of_dress|value":"Lightly clothed/underwear",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/body_weight:0/any_event:0/state_of_dress|terminology":"local",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/body_weight:0/any_event:0/confounding_factors":"Confounding Factors 30",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/body_weight:0/any_event:0/time":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":307000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/body_weight:0/language|code":"en",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/body_weight:0/language|terminology":"ISO_639-1",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/body_weight:0/encoding|code":"UTF-8",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/body_weight:0/encoding|terminology":"IANA_character-sets",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/height_length:0/_uid":"6ef967e8-88d7-4b5e-ab23-e90d1fbf90dd",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/height_length:0/_other_participation:0|function":"performer",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/height_length:0/_other_participation:0|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/height_length:0/_other_participation:0|name":"Nurse Bailey",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/height_length:0/_other_participation:1|function":"requester",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/height_length:0/_other_participation:1|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/height_length:0/_other_participation:1|name":"Dr. Stiles",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/height_length:0/any_event:0/height_length|magnitude":493.73,
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/height_length:0/any_event:0/height_length|unit":"cm",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/height_length:0/any_event:0/comment":"Comment 53",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/height_length:0/any_event:0/position|code":"at0016",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/height_length:0/any_event:0/position|value":"Standing",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/height_length:0/any_event:0/position|terminology":"local",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/height_length:0/any_event:0/confounding_factors":"Confounding factors 25",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/height_length:0/any_event:0/time":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":307000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/height_length:0/language|code":"en",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/height_length:0/language|terminology":"ISO_639-1",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/height_length:0/encoding|code":"UTF-8",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/acompanhamento_nutricional/height_length:0/encoding|terminology":"IANA_character-sets",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/_uid":"d4241767-9e94-4918-b4ab-1746f4a9c650",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/_uid":"795b4efa-0f18-4186-a72b-c6b028f705b9",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/_other_participation:0|function":"performer",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/_other_participation:0|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/_other_participation:0|name":"Nurse Bailey",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/_other_participation:1|function":"requester",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/_other_participation:1|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/_other_participation:1|name":"Dr. Stiles",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/maternity_states":"at0005",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/conception/date_of_lmp":{
+    "year":2020,
+    "month":"NOVEMBER",
+    "monthValue":11,
+    "dayOfMonth":13,
+    "dayOfYear":318,
+    "leapYear":true,
+    "dayOfWeek":"FRIDAY",
+    "era":"CE",
+    "chronology":{
+      "id":"ISO",
+      "calendarType":"iso8601"
+    }
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/conception/date_of_conception":{
+    "year":2020,
+    "month":"NOVEMBER",
+    "monthValue":11,
+    "dayOfMonth":13,
+    "dayOfYear":318,
+    "leapYear":true,
+    "dayOfWeek":"FRIDAY",
+    "era":"CE",
+    "chronology":{
+      "id":"ISO",
+      "calendarType":"iso8601"
+    }
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/previous_pregnancies/any_prior_pregnancy":false,
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/previous_pregnancies/number_of_prior_pregnancies":3,
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/previous_pregnancies/parity":8,
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/previous_pregnancies/miscarriages":10,
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/previous_pregnancies/terminations_of_pregnancy":380,
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/expected_date_of_birth":{
+    "year":2020,
+    "month":"NOVEMBER",
+    "monthValue":11,
+    "dayOfMonth":13,
+    "dayOfYear":318,
+    "leapYear":true,
+    "dayOfWeek":"FRIDAY",
+    "era":"CE",
+    "chronology":{
+      "id":"ISO",
+      "calendarType":"iso8601"
+    }
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/basis_for_estimated_date_of_birth":"Basis for estimated date of birth 13",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/number_of_fetuses:0/number_of_fetuses":9,
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/number_of_fetuses:0/gestation":{
+    "weeks":0,
+    "hours":0,
+    "minutes":0,
+    "seconds":0,
+    "years":0,
+    "days":0,
+    "months":0,
+    "millis":0,
+    "periodType":{
+      "name":"Standard"
+    },
+    "values":[
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "fieldTypes":[
+      {
+        "name":"years"
+      },
+      {
+        "name":"months"
+      },
+      {
+        "name":"weeks"
+      },
+      {
+        "name":"days"
+      },
+      {
+        "name":"hours"
+      },
+      {
+        "name":"minutes"
+      },
+      {
+        "name":"seconds"
+      },
+      {
+        "name":"millis"
+      }
+    ]
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/planned_model_of_care":"Planned model of care 27",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/model_of_care_at_delivery":"Model of care at delivery 36",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/comments":"Comments 86",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/onset/type|code":"at0045",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/onset/type|value":"Spontaneous",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/onset/type|terminology":"local",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/onset/time_of_onset":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":309000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/rupture_of_membranes/type|code":"at0047",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/rupture_of_membranes/type|value":"Amniotomy",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/rupture_of_membranes/type|terminology":"local",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/rupture_of_membranes/time_of_rupture":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":309000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/rupture_of_membranes/duration_of_ruptured_membranes":{
+    "weeks":0,
+    "hours":3,
+    "minutes":2,
+    "seconds":0,
+    "years":0,
+    "days":2,
+    "months":0,
+    "millis":0,
+    "periodType":{
+      "name":"Standard"
+    },
+    "values":[
+      0,
+      0,
+      0,
+      2,
+      3,
+      2,
+      0,
+      0
+    ],
+    "fieldTypes":[
+      {
+        "name":"years"
+      },
+      {
+        "name":"months"
+      },
+      {
+        "name":"weeks"
+      },
+      {
+        "name":"days"
+      },
+      {
+        "name":"hours"
+      },
+      {
+        "name":"minutes"
+      },
+      {
+        "name":"seconds"
+      },
+      {
+        "name":"millis"
+      }
+    ]
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/rupture_of_membranes/decription_of_liquor":"Decription of liquor 94",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/augmentation:0/type":"Type 94",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/augmentation:0/time_of_augmentation":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":309000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/augmentation:0/duration_of_augmentation":{
+    "weeks":0,
+    "hours":4,
+    "minutes":0,
+    "seconds":0,
+    "years":0,
+    "days":0,
+    "months":0,
+    "millis":0,
+    "periodType":{
+      "name":"Standard"
+    },
+    "values":[
+      0,
+      0,
+      0,
+      0,
+      4,
+      0,
+      0,
+      0
+    ],
+    "fieldTypes":[
+      {
+        "name":"years"
+      },
+      {
+        "name":"months"
+      },
+      {
+        "name":"weeks"
+      },
+      {
+        "name":"days"
+      },
+      {
+        "name":"hours"
+      },
+      {
+        "name":"minutes"
+      },
+      {
+        "name":"seconds"
+      },
+      {
+        "name":"millis"
+      }
+    ]
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/duration":{
+    "weeks":0,
+    "hours":2,
+    "minutes":3,
+    "seconds":0,
+    "years":0,
+    "days":2,
+    "months":0,
+    "millis":0,
+    "periodType":{
+      "name":"Standard"
+    },
+    "values":[
+      0,
+      0,
+      0,
+      2,
+      2,
+      3,
+      0,
+      0
+    ],
+    "fieldTypes":[
+      {
+        "name":"years"
+      },
+      {
+        "name":"months"
+      },
+      {
+        "name":"weeks"
+      },
+      {
+        "name":"days"
+      },
+      {
+        "name":"hours"
+      },
+      {
+        "name":"minutes"
+      },
+      {
+        "name":"seconds"
+      },
+      {
+        "name":"millis"
+      }
+    ]
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/outcome":"at0082",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/name|code":"B.4",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/name|value":"B.4 description",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/name|terminology":"local",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/date_of_delivery":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":310000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/gender":"at0052",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/birth_weight|magnitude":66.05,
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/birth_weight|unit":"gm",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/duration_of_second_stage":{
+    "weeks":0,
+    "hours":1,
+    "minutes":2,
+    "seconds":0,
+    "years":0,
+    "days":0,
+    "months":0,
+    "millis":0,
+    "periodType":{
+      "name":"Standard"
+    },
+    "values":[
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      0,
+      0
+    ],
+    "fieldTypes":[
+      {
+        "name":"years"
+      },
+      {
+        "name":"months"
+      },
+      {
+        "name":"weeks"
+      },
+      {
+        "name":"days"
+      },
+      {
+        "name":"hours"
+      },
+      {
+        "name":"minutes"
+      },
+      {
+        "name":"seconds"
+      },
+      {
+        "name":"millis"
+      }
+    ]
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/place_of_birth":"Place of birth 17",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/mode_of_birth":"at0045",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/presenting_part_at_birth|code":"at0101",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/presenting_part_at_birth|value":"Brow",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/presenting_part_at_birth|terminology":"local",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/interventions/intervention:0/type|code":"at0093",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/interventions/intervention:0/type|value":"Shoulder manouvre",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/interventions/intervention:0/type|terminology":"local",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/interventions/intervention:0/status|code":"at0069",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/interventions/intervention:0/status|value":"Elective",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/interventions/intervention:0/status|terminology":"local",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/interventions/intervention:0/successful":false,
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/interventions/intervention:0/indication":"Indication 43",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/interventions/intervention:0/description":"Description 35",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/description_of_birth":"Description of birth 43",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/estimated_gestational_age":{
+    "weeks":3,
+    "hours":0,
+    "minutes":0,
+    "seconds":0,
+    "years":0,
+    "days":4,
+    "months":0,
+    "millis":0,
+    "periodType":{
+      "name":"Standard"
+    },
+    "values":[
+      0,
+      0,
+      3,
+      4,
+      0,
+      0,
+      0,
+      0
+    ],
+    "fieldTypes":[
+      {
+        "name":"years"
+      },
+      {
+        "name":"months"
+      },
+      {
+        "name":"weeks"
+      },
+      {
+        "name":"days"
+      },
+      {
+        "name":"hours"
+      },
+      {
+        "name":"minutes"
+      },
+      {
+        "name":"seconds"
+      },
+      {
+        "name":"millis"
+      }
+    ]
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/feeding/description_of_feeding":"Description of feeding 78",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/feeding/breast_fed":false,
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/feeding/date_ceased_breast_feeding":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":311000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/feeding/age_ceased_breast_feeding":{
+    "weeks":0,
+    "hours":0,
+    "minutes":0,
+    "seconds":0,
+    "years":2,
+    "days":4,
+    "months":4,
+    "millis":0,
+    "periodType":{
+      "name":"Standard"
+    },
+    "values":[
+      2,
+      4,
+      0,
+      4,
+      0,
+      0,
+      0,
+      0
+    ],
+    "fieldTypes":[
+      {
+        "name":"years"
+      },
+      {
+        "name":"months"
+      },
+      {
+        "name":"weeks"
+      },
+      {
+        "name":"days"
+      },
+      {
+        "name":"hours"
+      },
+      {
+        "name":"minutes"
+      },
+      {
+        "name":"seconds"
+      },
+      {
+        "name":"millis"
+      }
+    ]
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/details_of_the_offspring":"Details of the offspring 70",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/age_of_onset_of_breast_feeding":{
+    "weeks":1,
+    "hours":1,
+    "minutes":0,
+    "seconds":0,
+    "years":2,
+    "days":0,
+    "months":2,
+    "millis":0,
+    "periodType":{
+      "name":"Standard"
+    },
+    "values":[
+      2,
+      2,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "fieldTypes":[
+      {
+        "name":"years"
+      },
+      {
+        "name":"months"
+      },
+      {
+        "name":"weeks"
+      },
+      {
+        "name":"days"
+      },
+      {
+        "name":"hours"
+      },
+      {
+        "name":"minutes"
+      },
+      {
+        "name":"seconds"
+      },
+      {
+        "name":"millis"
+      }
+    ]
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/fetal_or_neontal_complications/fetal_or_neonatal_complication:0/date_of_onset":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":312000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/labour_or_delivery:0/offspring:0/fetal_or_neontal_complications/fetal_or_neonatal_complication:0/clinical_description":"Clinical description 20",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/complications/complication:0/date_of_onset":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":312000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/current_pregnancy/complications/complication:0/clinical_description":"Clinical description 30",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/pregnancy_synopsis":"Pregnancy synopsis 52",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/date_of_last_update":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":312000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/language|code":"en",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/language|terminology":"ISO_639-1",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/encoding|code":"UTF-8",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/gestante/pregnancy_summary:0/encoding|terminology":"IANA_character-sets",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/aleitamento_materno/_uid":"3c608307-614f-4406-a429-ea9d24964342",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/aleitamento_materno/infant_feeding_summary:0/_uid":"da0245a2-2d49-4711-8d33-4c4d67ab6252",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/aleitamento_materno/infant_feeding_summary:0/_other_participation:0|function":"performer",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/aleitamento_materno/infant_feeding_summary:0/_other_participation:0|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/aleitamento_materno/infant_feeding_summary:0/_other_participation:0|name":"Nurse Bailey",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/aleitamento_materno/infant_feeding_summary:0/_other_participation:1|function":"requester",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/aleitamento_materno/infant_feeding_summary:0/_other_participation:1|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/aleitamento_materno/infant_feeding_summary:0/_other_participation:1|name":"Dr. Stiles",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/aleitamento_materno/infant_feeding_summary:0/description":"Description 55",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/aleitamento_materno/infant_feeding_summary:0/feeding:0/type|code":"at0013",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/aleitamento_materno/infant_feeding_summary:0/feeding:0/type|value":"Mixed",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/aleitamento_materno/infant_feeding_summary:0/feeding:0/type|terminology":"local",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/aleitamento_materno/infant_feeding_summary:0/feeding:0/age_commenced":{
+    "weeks":4,
+    "hours":0,
+    "minutes":0,
+    "seconds":0,
+    "years":3,
+    "days":1,
+    "months":1,
+    "millis":0,
+    "periodType":{
+      "name":"Standard"
+    },
+    "values":[
+      3,
+      1,
+      4,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "fieldTypes":[
+      {
+        "name":"years"
+      },
+      {
+        "name":"months"
+      },
+      {
+        "name":"weeks"
+      },
+      {
+        "name":"days"
+      },
+      {
+        "name":"hours"
+      },
+      {
+        "name":"minutes"
+      },
+      {
+        "name":"seconds"
+      },
+      {
+        "name":"millis"
+      }
+    ]
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/aleitamento_materno/infant_feeding_summary:0/feeding:0/age_ceased":{
+    "weeks":0,
+    "hours":5,
+    "minutes":59,
+    "seconds":0,
+    "years":0,
+    "days":3,
+    "months":0,
+    "millis":0,
+    "periodType":{
+      "name":"Standard"
+    },
+    "values":[
+      0,
+      0,
+      0,
+      3,
+      5,
+      59,
+      0,
+      0
+    ],
+    "fieldTypes":[
+      {
+        "name":"years"
+      },
+      {
+        "name":"months"
+      },
+      {
+        "name":"weeks"
+      },
+      {
+        "name":"days"
+      },
+      {
+        "name":"hours"
+      },
+      {
+        "name":"minutes"
+      },
+      {
+        "name":"seconds"
+      },
+      {
+        "name":"millis"
+      }
+    ]
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/aleitamento_materno/infant_feeding_summary:0/feeding:0/comment":"Comment 62",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/aleitamento_materno/infant_feeding_summary:0/total_duration_of_breast_feeding":{
+    "weeks":0,
+    "hours":0,
+    "minutes":0,
+    "seconds":0,
+    "years":0,
+    "days":0,
+    "months":3,
+    "millis":0,
+    "periodType":{
+      "name":"Standard"
+    },
+    "values":[
+      0,
+      3,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "fieldTypes":[
+      {
+        "name":"years"
+      },
+      {
+        "name":"months"
+      },
+      {
+        "name":"weeks"
+      },
+      {
+        "name":"days"
+      },
+      {
+        "name":"hours"
+      },
+      {
+        "name":"minutes"
+      },
+      {
+        "name":"seconds"
+      },
+      {
+        "name":"millis"
+      }
+    ]
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/aleitamento_materno/infant_feeding_summary:0/age_commenced_solid_foods":{
+    "weeks":2,
+    "hours":0,
+    "minutes":0,
+    "seconds":0,
+    "years":0,
+    "days":2,
+    "months":0,
+    "millis":0,
+    "periodType":{
+      "name":"Standard"
+    },
+    "values":[
+      0,
+      0,
+      2,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "fieldTypes":[
+      {
+        "name":"years"
+      },
+      {
+        "name":"months"
+      },
+      {
+        "name":"weeks"
+      },
+      {
+        "name":"days"
+      },
+      {
+        "name":"hours"
+      },
+      {
+        "name":"minutes"
+      },
+      {
+        "name":"seconds"
+      },
+      {
+        "name":"millis"
+      }
+    ]
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/aleitamento_materno/infant_feeding_summary:0/age_weaned":{
+    "weeks":0,
+    "hours":0,
+    "minutes":0,
+    "seconds":0,
+    "years":2,
+    "days":0,
+    "months":4,
+    "millis":0,
+    "periodType":{
+      "name":"Standard"
+    },
+    "values":[
+      2,
+      4,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "fieldTypes":[
+      {
+        "name":"years"
+      },
+      {
+        "name":"months"
+      },
+      {
+        "name":"weeks"
+      },
+      {
+        "name":"days"
+      },
+      {
+        "name":"hours"
+      },
+      {
+        "name":"minutes"
+      },
+      {
+        "name":"seconds"
+      },
+      {
+        "name":"millis"
+      }
+    ]
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/aleitamento_materno/infant_feeding_summary:0/language|code":"en",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/aleitamento_materno/infant_feeding_summary:0/language|terminology":"ISO_639-1",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/aleitamento_materno/infant_feeding_summary:0/encoding|code":"UTF-8",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/aleitamento_materno/infant_feeding_summary:0/encoding|terminology":"IANA_character-sets",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/classificação_estratificação_de_risco/_uid":"3bdf2ce3-9da9-4c10-9d52-ba324e9af62e",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/classificação_estratificação_de_risco/evaluation_of_risk_of_condition:0/_uid":"47de6d29-c364-407d-bae5-46cd80493a37",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/classificação_estratificação_de_risco/evaluation_of_risk_of_condition:0/_other_participation:0|function":"performer",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/classificação_estratificação_de_risco/evaluation_of_risk_of_condition:0/_other_participation:0|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/classificação_estratificação_de_risco/evaluation_of_risk_of_condition:0/_other_participation:0|name":"Nurse Bailey",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/classificação_estratificação_de_risco/evaluation_of_risk_of_condition:0/_other_participation:1|function":"requester",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/classificação_estratificação_de_risco/evaluation_of_risk_of_condition:0/_other_participation:1|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/classificação_estratificação_de_risco/evaluation_of_risk_of_condition:0/_other_participation:1|name":"Dr. Stiles",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/classificação_estratificação_de_risco/evaluation_of_risk_of_condition:0/new_cluster_en/new_element_en":"*New element(en) 93",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/classificação_estratificação_de_risco/evaluation_of_risk_of_condition:0/new_cluster_en/new_element_en2":"*New element(en) 65",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/classificação_estratificação_de_risco/evaluation_of_risk_of_condition:0/rationale":"Rationale 7",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/classificação_estratificação_de_risco/evaluation_of_risk_of_condition:0/significance_of_risk|code":"at0006",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/classificação_estratificação_de_risco/evaluation_of_risk_of_condition:0/significance_of_risk|value":"Not significant",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/classificação_estratificação_de_risco/evaluation_of_risk_of_condition:0/significance_of_risk|terminology":"local",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/classificação_estratificação_de_risco/evaluation_of_risk_of_condition:0/risk_calculation":"Risk calculation 44",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/classificação_estratificação_de_risco/evaluation_of_risk_of_condition:0/language|code":"en",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/classificação_estratificação_de_risco/evaluation_of_risk_of_condition:0/language|terminology":"ISO_639-1",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/classificação_estratificação_de_risco/evaluation_of_risk_of_condition:0/encoding|code":"UTF-8",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/classificação_estratificação_de_risco/evaluation_of_risk_of_condition:0/encoding|terminology":"IANA_character-sets",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/elegibilidade_para_atenção_domiciliar/_uid":"1fa19482-eeeb-4317-9f73-f55c74d0e78a",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/elegibilidade_para_atenção_domiciliar/elegibilidade_atencao_domiciliar:0/_uid":"8b5fd3c8-f484-4bf2-88b2-2e1ba6a990d4",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/elegibilidade_para_atenção_domiciliar/elegibilidade_atencao_domiciliar:0/_other_participation:0|function":"performer",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/elegibilidade_para_atenção_domiciliar/elegibilidade_atencao_domiciliar:0/_other_participation:0|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/elegibilidade_para_atenção_domiciliar/elegibilidade_atencao_domiciliar:0/_other_participation:0|name":"Nurse Bailey",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/elegibilidade_para_atenção_domiciliar/elegibilidade_atencao_domiciliar:0/_other_participation:1|function":"requester",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/elegibilidade_para_atenção_domiciliar/elegibilidade_atencao_domiciliar:0/_other_participation:1|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/elegibilidade_para_atenção_domiciliar/elegibilidade_atencao_domiciliar:0/_other_participation:1|name":"Dr. Stiles",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/elegibilidade_para_atenção_domiciliar/elegibilidade_atencao_domiciliar:0/elegibilidade_de_atenção_domiciliar|code":"at0003",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/elegibilidade_para_atenção_domiciliar/elegibilidade_atencao_domiciliar:0/elegibilidade_de_atenção_domiciliar|value":"AD1",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/elegibilidade_para_atenção_domiciliar/elegibilidade_atencao_domiciliar:0/elegibilidade_de_atenção_domiciliar|terminology":"local",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/elegibilidade_para_atenção_domiciliar/elegibilidade_atencao_domiciliar:0/language|code":"en",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/elegibilidade_para_atenção_domiciliar/elegibilidade_atencao_domiciliar:0/language|terminology":"ISO_639-1",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/elegibilidade_para_atenção_domiciliar/elegibilidade_atencao_domiciliar:0/encoding|code":"UTF-8",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/elegibilidade_para_atenção_domiciliar/elegibilidade_atencao_domiciliar:0/encoding|terminology":"IANA_character-sets",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/_uid":"72b68fbe-d00c-456c-92d2-5158b943ea69",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/_uid":"d0adc148-0bb8-4166-a797-807de302f632",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/_uid":"b4f05606-5f3b-4bbe-8bab-9da00e8eeecc",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/_other_participation:0|function":"performer",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/_other_participation:0|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/_other_participation:0|name":"Nurse Bailey",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/_other_participation:1|function":"requester",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/_other_participation:1|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/_other_participation:1|name":"Dr. Stiles",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/request:0/examination_requested|code":"T.81",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/request:0/examination_requested|value":"T.81 description",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/request:0/examination_requested|terminology":"SIGTAP?subset=Angela&language=Portugues\n                                                                                ",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/request:0/description_of_examination":"Description of examination 60",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/request:0/reason_for_request":"Reason for request 13",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/request:0/reason_description":"Reason description 13",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/request:0/intent":"Intent 89",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/request:0/urgency":"at0136",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/request:0/date_or_time_service_required":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":315000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/request:0/latest_date_service_required":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":316000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/request:0/supplementary_information_to_follow":true,
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/request:0/-_informação_suplementar_esperada_en":"*! - Informação suplementar esperada(en) 29",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/request:0/order_date":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":316000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/request:0/timing":"R3/2020-11-13T11:00:00+01:00/P2M",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/request:0/timing|formalism":"timing",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/requestor_identifier":"Ident. 39",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/receiver_identifier":"Ident. 79",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/request_status":"Request status 28",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/expiry_time":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":329000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/narrative":"Human readable instruction narrative",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/language|code":"en",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/language|terminology":"ISO_639-1",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/encoding|code":"UTF-8",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/imaging_examination_request:0/encoding|terminology":"IANA_character-sets",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/_uid":"749195c3-08ed-4a4d-9685-a740cd2bfdcc",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/_other_participation:0|function":"performer",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/_other_participation:0|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/_other_participation:0|name":"Nurse Bailey",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/_other_participation:1|function":"requester",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/_other_participation:1|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/_other_participation:1|name":"Dr. Stiles",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/request:0/service_requested|code":"B.75",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/request:0/service_requested|value":"B.75 description",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/request:0/service_requested|terminology":"SIGTAP?subset=Angela&language=Portugues\n                                                                                ",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/request:0/description_of_service":"Description of service 20",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/request:0/reason_for_request":"Reason for request 48",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/request:0/reason_description":"Reason description 66",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/request:0/intent":"Intent 38",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/request:0/urgency|code":"at0136",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/request:0/urgency|value":"Emergency",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/request:0/urgency|terminology":"local",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/request:0/datetime_test_preferred":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":329000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/request:0/latest_datetime_test_required":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":329000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/request:0/supplementary_information_to_follow":true,
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/request:0/supplementary_information_expected":"Supplementary information expected 32",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/request:0/timing":"R5/2020-11-13T11:00:00+01:00/P1M",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/request:0/timing|formalism":"timing",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/requestor_identifier":"Ident. 5",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/receiver_identifier":"Ident. 86",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/request_status":"Request status 37",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/expiry_time":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":330000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/narrative":"Human readable instruction narrative",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/language|code":"en",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/language|terminology":"ISO_639-1",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/encoding|code":"UTF-8",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_solicitados/laboratory_test_request:0/encoding|terminology":"IANA_character-sets",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/_uid":"6e59a162-af25-4d42-a2f5-c47249242be7",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/imaging_test:0/_uid":"18021746-cda1-4e0f-b4b1-b48a5cff4ef2",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/imaging_test:0/_other_participation:0|function":"performer",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/imaging_test:0/_other_participation:0|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/imaging_test:0/_other_participation:0|name":"Nurse Bailey",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/imaging_test:0/_other_participation:1|function":"requester",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/imaging_test:0/_other_participation:1|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/imaging_test:0/_other_participation:1|name":"Dr. Stiles",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/imaging_test:0/any_event:0/overall_findings":"Overall findings 19",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/imaging_test:0/any_event:0/imaging_quality":"Imaging quality 11",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/imaging_test:0/any_event:0/link_to_images:0":"Link to images 35",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/imaging_test:0/any_event:0/time":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":330000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/imaging_test:0/identification/request_identification":"Request identification 80",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/imaging_test:0/identification/study_identifier":"Ident. 96",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/imaging_test:0/language|code":"en",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/imaging_test:0/language|terminology":"ISO_639-1",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/imaging_test:0/encoding|code":"UTF-8",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/imaging_test:0/encoding|terminology":"IANA_character-sets",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/_uid":"f92ebc3c-8233-4884-92fa-84d85420cf11",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/_other_participation:0|function":"performer",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/_other_participation:0|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/_other_participation:0|name":"Nurse Bailey",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/_other_participation:1|function":"requester",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/_other_participation:1|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/_other_participation:1|name":"Dr. Stiles",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/any_event:0/test_result_name|code":"I.32",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/any_event:0/test_result_name|value":"I.32 description",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/any_event:0/test_result_name|terminology":"\n                                                                                            terminology:SIGTAP?subset=Angela&language=Portugues\n                                                                                        ",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/any_event:0/diagnostic_service":"Diagnostic Service 25",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/any_event:0/overall_test_result_status|code":"at0074",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/any_event:0/overall_test_result_status|value":"Cancelled/Aborted",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/any_event:0/overall_test_result_status|terminology":"local",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/any_event:0/datetime_result_issued":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":331000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/any_event:0/clinical_information_provided":"Clinical Information Provided 79",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/any_event:0/result_group:0/result:0/result_value/coded_text_value|code":"F.94",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/any_event:0/result_group:0/result:0/result_value/coded_text_value|value":"F.94 description",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/any_event:0/result_group:0/result:0/result_value/coded_text_value|terminology":"external_terminology",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/any_event:0/result_group:0/result:0/result_comment:0":"Result Comment 44",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/any_event:0/result_group:0/result:0/reference_range_guidance":"Reference Range Guidance 79",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/any_event:0/result_group:0/result:0/result_value_status|code":"at0074",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/any_event:0/result_group:0/result:0/result_value_status|value":"Cancelled/Aborted",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/any_event:0/result_group:0/result:0/result_value_status|terminology":"local",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/any_event:0/conclusion":"Conclusion 43",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/any_event:0/pathological_diagnosis:0":"Pathological Diagnosis 35",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/any_event:0/test_result_representation:0":"http://med.tube.com/sample",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/any_event:0/test_result_representation:0|mediatype":"application/msword",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/any_event:0/test_result_representation:0|alternatetext":"alternate text",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/any_event:0/test_result_representation:0|size":504903212,
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/any_event:0/test_comment":"Test Comment 26",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/any_event:0/time":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":331000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/test_request_details:0/requester_order_identifier":"2b34793e-e023-43c9-8ba0-c530dd0c9328",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/test_request_details:0/requester_order_identifier|issuer":"Issuer",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/test_request_details:0/requester_order_identifier|assigner":"Assigner",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/test_request_details:0/requester_order_identifier|type":"Prescription",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/test_request_details:0/test_requested_name:0":"Test Requested Name 20",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/test_request_details:0/receiver_order_identifier":"8c269c64-d3ce-4b76-afc8-5b7ead1102f0",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/test_request_details:0/receiver_order_identifier|issuer":"Issuer",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/test_request_details:0/receiver_order_identifier|assigner":"Assigner",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/test_request_details:0/receiver_order_identifier|type":"Prescription",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/test_request_details:0/laboratory_test_result_identifier":"02e94bf8-412c-4f79-91b3-137510b3c039",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/test_request_details:0/laboratory_test_result_identifier|issuer":"Issuer",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/test_request_details:0/laboratory_test_result_identifier|assigner":"Assigner",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/test_request_details:0/laboratory_test_result_identifier|type":"Prescription",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/language|code":"en",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/language|terminology":"ISO_639-1",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/encoding|code":"UTF-8",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/exames/exames_avaliados/pathology_test_result:0/encoding|terminology":"IANA_character-sets",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/conduta/_uid":"24cce147-3907-4716-b6ee-eb0268b47344",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/conduta/patient_discharge:0/discharge/discharge_date_time":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":332000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/conduta/patient_discharge:0/discharge/discharge_condition|code":"E.89",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/conduta/patient_discharge:0/discharge/discharge_condition|value":"E.89 description",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/conduta/patient_discharge:0/discharge/discharge_condition|terminology":"external_terminology",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/conduta/patient_discharge:0/discharge/new_element_en|code":"at0020",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/conduta/patient_discharge:0/discharge/new_element_en|value":"*Encaminhamento p/ Internação Hospitalar(en)",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/conduta/patient_discharge:0/discharge/new_element_en|terminology":"local",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/conduta/patient_discharge:0/discharge/new_element_en2":true,
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/conduta/patient_discharge:0/attending_doctor/login":"Login 37",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/conduta/patient_discharge:0/attending_doctor/given_name":"Given name 9",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/conduta/patient_discharge:0/attending_doctor/last_name":"Last name 43",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/conduta/patient_discharge:0/attending_doctor/full_name":"Full name 74",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/conduta/patient_discharge:0/language|code":"en",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/conduta/patient_discharge:0/language|terminology":"ISO_639-1",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/conduta/patient_discharge:0/encoding|code":"UTF-8",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/conduta/patient_discharge:0/encoding|terminology":"IANA_character-sets",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/_uid":"81f567cc-82f8-459c-8e56-72ac7c6a0b0a",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/vaccination_summary:0/_uid":"ee93de46-edb1-47b0-b7b0-207bcdce8863",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/vaccination_summary:0/_other_participation:0|function":"performer",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/vaccination_summary:0/_other_participation:0|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/vaccination_summary:0/_other_participation:0|name":"Nurse Bailey",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/vaccination_summary:0/_other_participation:1|function":"requester",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/vaccination_summary:0/_other_participation:1|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/vaccination_summary:0/_other_participation:1|name":"Dr. Stiles",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/vaccination_summary:0/infectious_disease_or_agent:0":"Infectious Disease or Agent 65",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/vaccination_summary:0/primary_course_status":"at0007",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/vaccination_summary:0/date_primary_course_completed":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":333000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/vaccination_summary:0/date_of_last_booster":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":333000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/vaccination_summary:0/vaccination_status|code":"at0017",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/vaccination_summary:0/vaccination_status|value":"*Sim(en)",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/vaccination_summary:0/vaccination_status|terminology":"local",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/vaccination_summary:0/next_review_due":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":334000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/vaccination_summary:0/last_updated":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":334000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/vaccination_summary:0/language|code":"en",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/vaccination_summary:0/language|terminology":"ISO_639-1",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/vaccination_summary:0/encoding|code":"UTF-8",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/vaccination_summary:0/encoding|terminology":"IANA_character-sets",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/_uid":"95d5aac9-547c-490f-82fd-ca59bd5604d0",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/_other_participation:0|function":"performer",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/_other_participation:0|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/_other_participation:0|name":"Nurse Bailey",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/_other_participation:1|function":"requester",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/_other_participation:1|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/_other_participation:1|name":"Dr. Stiles",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/_instruction_details|composition_uid":"8db591a9-fce5-4298-9852-6f6b3ab06ef9::example::1",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/_instruction_details|path":"aql/path/to/the/instruction",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/_instruction_details|activity_id":"activities[at0001]",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/ism_transition/current_state|code":"530",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/ism_transition/current_state|value":"suspended",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/ism_transition/current_state|terminology":"openehr",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/ism_transition/transition|code":"N.35",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/ism_transition/transition|value":"N.35 description",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/ism_transition/transition|terminology":"external_terminology",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/ism_transition/careflow_step|code":"at0038",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/ism_transition/careflow_step|value":"Request postponed",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/ism_transition/careflow_step|terminology":"local",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/-_procedimento_en|code":"at0.67",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/-_procedimento_en|value":"*Técnicas Manuais em PICs(en)",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/-_procedimento_en|terminology":"local",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/reason_s_for_procedure:0":"Reason/s for procedure 31",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/intent":"Intent 61",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/method_technique:0":"Method/Technique 84",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/description":"Description 67",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/additional_tasks/task":"Task 70",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/additional_tasks/task_description:0":"Task description 90",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/additional_tasks/record_of_additional_task:0":"ehr://2e4e9b75-c2fc-4c5f-9f4f-1993eff41c7e",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/outcome":"Outcome 28",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/procedure_unsuccessful":true,
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/failed_attempts/coded_text_value|code":"E.57",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/failed_attempts/coded_text_value|value":"E.57 description",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/failed_attempts/coded_text_value|terminology":"external_terminology",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/unplanned_event:0":"Unplanned event 22",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/complication:0":"Complication 34",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/emergency":false,
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/comments":"Comments 60",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/multimedia:0":"http://med.tube.com/sample",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/multimedia:0|mediatype":"video/mp4",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/multimedia:0|alternatetext":"alternate text",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/multimedia:0|size":504903212,
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/new_element_en":"*New element(en) 29",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/requestor_order_identifier":"Ident. 79",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/receiver_order_identifier":"Ident. 68",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/time":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":337000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/language|code":"en",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/language|terminology":"ISO_639-1",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/encoding|code":"UTF-8",
+  "ficha_individual_da_aten_cao_basica/resumo_do_atendimento/outras_informações/procedimento_pic/encoding|terminology":"IANA_character-sets",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/_uid":"46a3e772-1b8e-4fa3-8c5a-5fd80d60cc9e",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/_uid":"6f178de5-b45b-46c9-8215-616ec6b42b2b",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/_other_participation:0|function":"performer",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/_other_participation:0|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/_other_participation:0|name":"Nurse Bailey",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/_other_participation:1|function":"requester",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/_other_participation:1|mode":"not specified",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/_other_participation:1|name":"Dr. Stiles",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/_instruction_details|composition_uid":"23557df2-d7ff-435d-a392-53c0497e642d::example::1",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/_instruction_details|path":"aql/path/to/the/instruction",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/_instruction_details|activity_id":"activities[at0001]",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/ism_transition/current_state|code":"530",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/ism_transition/current_state|value":"suspended",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/ism_transition/current_state|terminology":"openehr",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/ism_transition/transition|code":"E.1",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/ism_transition/transition|value":"E.1 description",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/ism_transition/transition|terminology":"external_terminology",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/ism_transition/careflow_step|code":"at0045",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/ism_transition/careflow_step|value":"Report attested",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/ism_transition/careflow_step|terminology":"local",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/procedure|code":"S.83",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/procedure|value":"S.83 description",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/procedure|terminology":"SIGTAP?subset=Angela&language=Portugues",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/reason_s_for_procedure:0":"Reason/s for procedure 55",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/method_technique:0":"Method/Technique 34",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/description":"Description 51",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/additional_tasks/task":"Task 95",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/additional_tasks/task_description:0":"Task description 59",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/additional_tasks/record_of_additional_task:0":"ehr://f93cf5e9-b8eb-492b-9212-17ae8fed59aa",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/outcome":"Outcome 45",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/procedure_unsuccessful":true,
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/failed_attempts/coded_text_value|code":"E.88",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/failed_attempts/coded_text_value|value":"E.88 description",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/failed_attempts/coded_text_value|terminology":"external_terminology",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/unplanned_event:0":"Unplanned event 32",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/complication:0":"Complication 2",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/emergency":true,
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/comments":"Comments 42",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/multimedia:0":"http://med.tube.com/sample",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/multimedia:0|mediatype":"video/mp4",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/multimedia:0|alternatetext":"alternate text",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/multimedia:0|size":504903212,
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/requestor_order_identifier":"Ident. 6",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/receiver_order_identifier":"Ident. 73",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/time":{
+    "offset":{
+      "totalSeconds":3600,
+      "id":"+01:00",
+      "rules":{
+        "transitions":[
+
+        ],
+        "fixedOffset":true,
+        "transitionRules":[
+
+        ]
+      }
+    },
+    "year":2020,
+    "month":"NOVEMBER",
+    "nano":338000000,
+    "monthValue":11,
+    "dayOfMonth":13,
+    "hour":11,
+    "minute":33,
+    "second":14,
+    "dayOfYear":318,
+    "dayOfWeek":"FRIDAY"
+  },
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/language|code":"en",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/language|terminology":"ISO_639-1",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/encoding|code":"UTF-8",
+  "ficha_individual_da_aten_cao_basica/procedimento_ou_pequena_cirurgia/procedure_undertaken:0/encoding|terminology":"IANA_character-sets",
+  "ficha_individual_da_aten_cao_basica/anexos/_uid":"78d87167-9c41-4aa7-8ddc-e0f89347daca",
+  "ficha_individual_da_aten_cao_basica/category|code":"433",
+  "ficha_individual_da_aten_cao_basica/category|value":"event",
+  "ficha_individual_da_aten_cao_basica/category|terminology":"openehr",
+  "ficha_individual_da_aten_cao_basica/language|code":"en",
+  "ficha_individual_da_aten_cao_basica/language|terminology":"ISO_639-1",
+  "ficha_individual_da_aten_cao_basica/territory|code":"SI",
+  "ficha_individual_da_aten_cao_basica/territory|terminology":"ISO_3166-1"
+}

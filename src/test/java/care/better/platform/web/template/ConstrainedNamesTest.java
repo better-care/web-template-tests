@@ -28,6 +28,9 @@ import java.util.Map;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.entry;
 
+/**
+ * @author Marko Narat
+ */
 @ExtendWith(WebTemplateTestExtension.class)
 public class ConstrainedNamesTest extends AbstractWebTemplateTest {
 
@@ -44,21 +47,20 @@ public class ConstrainedNamesTest extends AbstractWebTemplateTest {
 
     @Test
     public void relaxedNamesConversion() throws Exception {
-        String template = getFileContent("/openEHR-EHR-COMPOSITION.t_specialist_examination.opt");
-        String rawComposition = getFileContent("/ru-compositionWithRelaxedNames.json");
+        String template = getFileContent("/res/openEHR-EHR-COMPOSITION.t_specialist_examination.opt");
+        String rawComposition = getFileContent("/res/ru-compositionWithRelaxedNames.json");
 
         Map<String, Object> flatCompostion = getCompositionConverter().convertRawToFlat(template, "ru", rawComposition, objectMapper);
         assertThat(flatCompostion).containsKeys(
                 "осмотр_специалиста/диагноз/сопутствующие_заболевания/сопутствующее_заболевание:0/код_по_мкб_10|code",
-                "осмотр_специалиста/диагноз/сопутствующие_заболевания/сопутствующее_заболевание:1/код_по_мкб_10|code"
-        );
+                "осмотр_специалиста/диагноз/сопутствующие_заболевания/сопутствующее_заболевание:1/код_по_мкб_10|code");
     }
 
     @Test
     public void namesWithTerminologies() throws Exception {
-        String template = getFileContent("/Laboratory report.xml");
+        String template = getFileContent("/res/Laboratory report.xml");
 
-        String rawComposition = getFileContent("/namesExtTerminology.json");
+        String rawComposition = getFileContent("/res/namesExtTerminology.json");
         Map<String, Object> flatComposition = getCompositionConverter().convertRawToFlat(template, "en", rawComposition, objectMapper);
 
         assertThat(flatComposition).contains(
@@ -67,8 +69,7 @@ public class ConstrainedNamesTest extends AbstractWebTemplateTest {
                 entry("report/laboratory_test_result:0/_name|terminology", "LOINC"),
                 entry("report/laboratory_test_result:0/any_event:0/laboratory_test_analyte:0/_name|value", "HDL"),
                 entry("report/laboratory_test_result:0/any_event:0/laboratory_test_analyte:0/_name|code", "3218"),
-                entry("report/laboratory_test_result:0/any_event:0/laboratory_test_analyte:0/_name|terminology", "LOINC")
-        );
+                entry("report/laboratory_test_result:0/any_event:0/laboratory_test_analyte:0/_name|terminology", "LOINC"));
     }
 
 }

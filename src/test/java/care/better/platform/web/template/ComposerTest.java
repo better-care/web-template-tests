@@ -29,6 +29,9 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * @author Marko Narat
+ */
 @ExtendWith(WebTemplateTestExtension.class)
 public class ComposerTest extends AbstractWebTemplateTest {
 
@@ -45,7 +48,7 @@ public class ComposerTest extends AbstractWebTemplateTest {
 
     @Test
     public void composer() throws Exception {
-        String template = getFileContent("/Demo Vitals.opt");
+        String template = getFileContent("/res/Demo Vitals.opt");
 
         ImmutableMap<String, String> flatCompositionMap = ImmutableMap.<String, String>builder()
                 .put("ctx/language", "sl")
@@ -73,7 +76,7 @@ public class ComposerTest extends AbstractWebTemplateTest {
 
     @Test
     public void composerSelf() throws Exception {
-        String template = getFileContent("/Demo Vitals.opt");
+        String template = getFileContent("/res/Demo Vitals.opt");
 
         ImmutableMap<String, String> flatCompositionMap = ImmutableMap.<String, String>builder()
                 .put("ctx/language", "sl")

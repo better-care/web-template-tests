@@ -1,0 +1,401 @@
+// Copyright 2020-2021 Better Ltd (www.better.care)
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+{
+  "@class":"COMPOSITION",
+  "name":{
+    "@class":"DV_TEXT",
+    "value":"Vital functions",
+    "hyperlink":null,
+    "formatting":null,
+    "mappings":[
+
+    ],
+    "language":null,
+    "encoding":null
+  },
+  "uid":null,
+  "links":[
+
+  ],
+  "archetype_details":{
+    "@class":"ARCHETYPED",
+    "archetype_id":{
+      "@class":"ARCHETYPE_ID",
+      "value":"openEHR-EHR-COMPOSITION.encounter.v1"
+    },
+    "template_id":{
+      "@class":"TEMPLATE_ID",
+      "value":"ISPEK - ZN - Vital Functions Encounter"
+    },
+    "rm_version":"1.0.4"
+  },
+  "feeder_audit":null,
+  "archetype_node_id":"openEHR-EHR-COMPOSITION.encounter.v1",
+  "language":{
+    "@class":"CODE_PHRASE",
+    "terminology_id":{
+      "@class":"TERMINOLOGY_ID",
+      "value":"ISO_639-1"
+    },
+    "code_string":"sl"
+  },
+  "territory":{
+    "@class":"CODE_PHRASE",
+    "terminology_id":{
+      "@class":"TERMINOLOGY_ID",
+      "value":"ISO_3166-1"
+    },
+    "code_string":"SI"
+  },
+  "category":{
+    "@class":"DV_CODED_TEXT",
+    "value":"event",
+    "hyperlink":null,
+    "formatting":null,
+    "mappings":[
+
+    ],
+    "language":null,
+    "encoding":null,
+    "defining_code":{
+      "@class":"CODE_PHRASE",
+      "terminology_id":{
+        "@class":"TERMINOLOGY_ID",
+        "value":"openehr"
+      },
+      "code_string":"433"
+    }
+  },
+  "composer":{
+    "@class":"PARTY_IDENTIFIED",
+    "external_ref":null,
+    "name":"Name",
+    "identifiers":[
+
+    ]
+  },
+  "context":{
+    "@class":"EVENT_CONTEXT",
+    "start_time":{
+      "@class":"DV_DATE_TIME",
+      "normal_range":null,
+      "other_reference_ranges":[
+
+      ],
+      "normal_status":null,
+      "magnitude_status":null,
+      "accuracy":null,
+      "value":"2020-11-09T15:35:22.37+01:00"
+    },
+    "end_time":null,
+    "location":null,
+    "setting":{
+      "@class":"DV_CODED_TEXT",
+      "value":"other care",
+      "hyperlink":null,
+      "formatting":null,
+      "mappings":[
+
+      ],
+      "language":null,
+      "encoding":null,
+      "defining_code":{
+        "@class":"CODE_PHRASE",
+        "terminology_id":{
+          "@class":"TERMINOLOGY_ID",
+          "value":"openehr"
+        },
+        "code_string":"238"
+      }
+    },
+    "other_context":null,
+    "health_care_facility":null,
+    "participations":[
+
+    ]
+  },
+  "content":[
+    {
+      "@class":"SECTION",
+      "name":{
+        "@class":"DV_TEXT",
+        "value":"General bodily fluid",
+        "hyperlink":null,
+        "formatting":null,
+        "mappings":[
+
+        ],
+        "language":null,
+        "encoding":null
+      },
+      "uid":null,
+      "links":[
+
+      ],
+      "archetype_details":{
+        "@class":"ARCHETYPED",
+        "archetype_id":{
+          "@class":"ARCHETYPE_ID",
+          "value":"openEHR-EHR-SECTION.ispek_dialog.v1"
+        },
+        "template_id":null,
+        "rm_version":"1.0.4"
+      },
+      "feeder_audit":null,
+      "archetype_node_id":"openEHR-EHR-SECTION.ispek_dialog.v1",
+      "items":[
+        {
+          "@class":"OBSERVATION",
+          "name":{
+            "@class":"DV_TEXT",
+            "value":"Fluid output",
+            "hyperlink":null,
+            "formatting":null,
+            "mappings":[
+
+            ],
+            "language":null,
+            "encoding":null
+          },
+          "uid":null,
+          "links":[
+
+          ],
+          "archetype_details":{
+            "@class":"ARCHETYPED",
+            "archetype_id":{
+              "@class":"ARCHETYPE_ID",
+              "value":"openEHR-EHR-OBSERVATION.fluid_output.v1"
+            },
+            "template_id":null,
+            "rm_version":"1.0.4"
+          },
+          "feeder_audit":null,
+          "archetype_node_id":"openEHR-EHR-OBSERVATION.fluid_output.v1",
+          "language":{
+            "@class":"CODE_PHRASE",
+            "terminology_id":{
+              "@class":"TERMINOLOGY_ID",
+              "value":"ISO_639-1"
+            },
+            "code_string":"sl"
+          },
+          "encoding":{
+            "@class":"CODE_PHRASE",
+            "terminology_id":{
+              "@class":"TERMINOLOGY_ID",
+              "value":"IANA_character-sets"
+            },
+            "code_string":"UTF-8"
+          },
+          "subject":{
+            "@class":"PARTY_SELF",
+            "external_ref":null
+          },
+          "provider":null,
+          "other_participations":[
+
+          ],
+          "work_flow_id":null,
+          "protocol":null,
+          "guideline_id":null,
+          "data":{
+            "@class":"HISTORY",
+            "name":{
+              "@class":"DV_TEXT",
+              "value":"Event Series",
+              "hyperlink":null,
+              "formatting":null,
+              "mappings":[
+
+              ],
+              "language":null,
+              "encoding":null
+            },
+            "uid":null,
+            "links":[
+
+            ],
+            "archetype_details":null,
+            "feeder_audit":null,
+            "archetype_node_id":"at0001",
+            "origin":{
+              "@class":"DV_DATE_TIME",
+              "normal_range":null,
+              "other_reference_ranges":[
+
+              ],
+              "normal_status":null,
+              "magnitude_status":null,
+              "accuracy":null,
+              "value":"2020-11-09T15:35:22.375+01:00"
+            },
+            "period":null,
+            "duration":null,
+            "events":[
+              {
+                "@class":"INTERVAL_EVENT",
+                "name":{
+                  "@class":"DV_TEXT",
+                  "value":"Total",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null
+                },
+                "uid":null,
+                "links":[
+
+                ],
+                "archetype_details":null,
+                "feeder_audit":null,
+                "archetype_node_id":"at0006",
+                "time":{
+                  "@class":"DV_DATE_TIME",
+                  "normal_range":null,
+                  "other_reference_ranges":[
+
+                  ],
+                  "normal_status":null,
+                  "magnitude_status":null,
+                  "accuracy":null,
+                  "value":"2020-11-09T15:35:22.37+01:00"
+                },
+                "data":{
+                  "@class":"ITEM_TREE",
+                  "name":{
+                    "@class":"DV_TEXT",
+                    "value":"List",
+                    "hyperlink":null,
+                    "formatting":null,
+                    "mappings":[
+
+                    ],
+                    "language":null,
+                    "encoding":null
+                  },
+                  "uid":null,
+                  "links":[
+
+                  ],
+                  "archetype_details":null,
+                  "feeder_audit":null,
+                  "archetype_node_id":"at0003",
+                  "items":[
+                    {
+                      "@class":"CLUSTER",
+                      "name":{
+                        "@class":"DV_TEXT",
+                        "value":"Bodily substance",
+                        "hyperlink":null,
+                        "formatting":null,
+                        "mappings":[
+
+                        ],
+                        "language":null,
+                        "encoding":null
+                      },
+                      "uid":null,
+                      "links":[
+
+                      ],
+                      "archetype_details":{
+                        "@class":"ARCHETYPED",
+                        "archetype_id":{
+                          "@class":"ARCHETYPE_ID",
+                          "value":"openEHR-EHR-CLUSTER.bodily_substance.v1"
+                        },
+                        "template_id":null,
+                        "rm_version":"1.0.4"
+                      },
+                      "feeder_audit":null,
+                      "archetype_node_id":"openEHR-EHR-CLUSTER.bodily_substance.v1",
+                      "items":[
+                        {
+                          "@class":"ELEMENT",
+                          "name":{
+                            "@class":"DV_TEXT",
+                            "value":"Substance present",
+                            "hyperlink":null,
+                            "formatting":null,
+                            "mappings":[
+
+                            ],
+                            "language":null,
+                            "encoding":null
+                          },
+                          "uid":null,
+                          "links":[
+
+                          ],
+                          "archetype_details":null,
+                          "feeder_audit":null,
+                          "archetype_node_id":"at0075",
+                          "value":{
+                            "@class":"DV_BOOLEAN",
+                            "value":true
+                          },
+                          "null_flavour":null
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "state":null,
+                "width":{
+                  "@class":"DV_DURATION",
+                  "normal_range":null,
+                  "other_reference_ranges":[
+
+                  ],
+                  "normal_status":null,
+                  "magnitude_status":null,
+                  "accuracy":null,
+                  "accuracy_is_percent":null,
+                  "value":"PT1H"
+                },
+                "sample_count":null,
+                "math_function":{
+                  "@class":"DV_CODED_TEXT",
+                  "value":"total",
+                  "hyperlink":null,
+                  "formatting":null,
+                  "mappings":[
+
+                  ],
+                  "language":null,
+                  "encoding":null,
+                  "defining_code":{
+                    "@class":"CODE_PHRASE",
+                    "terminology_id":{
+                      "@class":"TERMINOLOGY_ID",
+                      "value":"openehr"
+                    },
+                    "code_string":"148"
+                  }
+                }
+              }
+            ],
+            "summary":null
+          },
+          "state":null
+        }
+      ]
+    }
+  ]
+}

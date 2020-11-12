@@ -17,6 +17,7 @@ package care.better.platform.web.template;
 
 import care.better.platform.web.template.context.CompositionBuilderContextKey;
 import care.better.platform.web.template.extension.WebTemplateTestExtension;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -30,6 +31,9 @@ import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * @author Marko Narat
+ */
 @ExtendWith(WebTemplateTestExtension.class)
 public class DoraBuilderTest extends AbstractWebTemplateTest {
 
@@ -44,12 +48,14 @@ public class DoraBuilderTest extends AbstractWebTemplateTest {
         objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
     }
 
+    @SuppressWarnings("AnonymousInnerClassMayBeStatic")
     @Test
     public void occurencesBug() throws Exception {
-        String template = getFileContent("/TMDS Breast - Radiographer Mammography Report.xml");
-        String flatCompositionString = getFileContent("/Radiographer_Mammography.json");
+        String template = getFileContent("/res/TMDS Breast - Radiographer Mammography Report.xml");
+        String flatCompositionString = getFileContent("/res/Radiographer_Mammography.json");
 
-        Map<String, Object> flatComposition = objectMapper.readValue(flatCompositionString, Map.class);
+        Map<String, Object> flatComposition = objectMapper.readValue(flatCompositionString, new TypeReference<Map<String, Object>>() {});
+
         JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
                 template,
                 "en",
@@ -77,5 +83,4 @@ public class DoraBuilderTest extends AbstractWebTemplateTest {
                            .path("current_state").path(0).path("|code")
                            .asText()).isEqualTo("526");
     }
-
 }

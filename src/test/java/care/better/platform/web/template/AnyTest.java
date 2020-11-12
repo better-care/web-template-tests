@@ -31,6 +31,9 @@ import java.util.Map;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.entry;
 
+/**
+ * @author Marko Narat
+ */
 @ExtendWith(WebTemplateTestExtension.class)
 public class AnyTest extends AbstractWebTemplateTest {
 
@@ -55,7 +58,7 @@ public class AnyTest extends AbstractWebTemplateTest {
                 .put("encounter/test_any/any_element/quantity_value|unit", "mm")
                 .build();
 
-        String template = getFileContent("/any_element.opt");
+        String template = getFileContent("/res/any_element.opt");
 
         JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
                 template,
@@ -82,7 +85,7 @@ public class AnyTest extends AbstractWebTemplateTest {
                 .put("encounter/test_any/any_element/text_value", "Hello world!")
                 .build();
 
-        String template = getFileContent("/any_element.opt");
+        String template = getFileContent("/res/any_element.opt");
 
         JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
                 template,
@@ -109,7 +112,7 @@ public class AnyTest extends AbstractWebTemplateTest {
                 .put("encounter/test_any/any_element/coded_text_value|terminology", "mine")
                 .build();
 
-        String template = getFileContent("/any_element.opt");
+        String template = getFileContent("/res/any_element.opt");
 
         JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
                 template,
@@ -132,5 +135,4 @@ public class AnyTest extends AbstractWebTemplateTest {
     private JsonNode getValueNode(JsonNode rawComposition) {
         return rawComposition.get("content").get(0).get("data").get("events").get(0).get("data").get("items").get(0).get("value");
     }
-
 }

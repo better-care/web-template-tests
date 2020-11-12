@@ -31,6 +31,9 @@ import java.util.Map;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.entry;
 
+/**
+ * @author Marko Narat
+ */
 @ExtendWith(WebTemplateTestExtension.class)
 public class AnySomeConstrainedTest extends AbstractWebTemplateTest {
 
@@ -54,8 +57,8 @@ public class AnySomeConstrainedTest extends AbstractWebTemplateTest {
                 .put("ctx/composer_name", "John")
                 .build();
 
-        String template = getFileContent("/any_element_someconstrained.opt");
-        String templateValidator = getFileContent("/any_element.opt");
+        String template = getFileContent("/res/any_element_someconstrained.opt");
+        String templateValidator = getFileContent("/res/any_element.opt");
 
         JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
                 template,
@@ -82,8 +85,8 @@ public class AnySomeConstrainedTest extends AbstractWebTemplateTest {
                 .put("encounter/test_any/any_element/text_value", "Hello world!")
                 .build();
 
-        String template = getFileContent("/any_element_someconstrained.opt");
-        String templateValidator = getFileContent("/any_element.opt");
+        String template = getFileContent("/res/any_element_someconstrained.opt");
+        String templateValidator = getFileContent("/res/any_element.opt");
 
         JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
                 template,
@@ -110,8 +113,8 @@ public class AnySomeConstrainedTest extends AbstractWebTemplateTest {
                 .put("encounter/test_any/any_element/coded_text_value|terminology", "mine")
                 .build();
 
-        String template = getFileContent("/any_element_someconstrained.opt");
-        String templateValidator = getFileContent("/any_element.opt");
+        String template = getFileContent("/res/any_element_someconstrained.opt");
+        String templateValidator = getFileContent("/res/any_element.opt");
 
         JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
                 template,
