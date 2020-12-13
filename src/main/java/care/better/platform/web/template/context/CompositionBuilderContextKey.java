@@ -14,7 +14,9 @@ public enum CompositionBuilderContextKey {
     LOCATION("location"),
     ENCODING("encoding"),
     LOCALE("locale"),
-    ACTION_TO_INSTRUCTION_HANDLER("action_handler");
+    ACTION_TO_INSTRUCTION_HANDLER("action_handler"),
+    ID_SCHEME("id_scheme"),
+    ID_NAMESPACE("id_namespace");
 
     private final String key;
 
