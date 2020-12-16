@@ -79,8 +79,7 @@ public class WorkflowIdTest extends AbstractWebTemplateTest {
                 "sl",
                 objectMapper.writeValueAsString(flatComposition),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
 
         JsonNode workFlowId = rawComposition.get("content").get(0).get("items").get(0).get("work_flow_id");
         assertThat(workFlowId.get("id").get("@class").asText()).isEqualTo("GENERIC_ID");
@@ -113,8 +112,7 @@ public class WorkflowIdTest extends AbstractWebTemplateTest {
                 "sl",
                 objectMapper.writeValueAsString(flatComposition),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
 
         JsonNode workFlowId = rawComposition.get("content").get(0).get("items").get(0).get("work_flow_id");
         assertThat(workFlowId).isNotNull();
@@ -155,8 +153,7 @@ public class WorkflowIdTest extends AbstractWebTemplateTest {
                 "sl",
                 objectMapper.writeValueAsString(flatComposition),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
         
 
         JsonNode observation1 = rawComposition.get("content").get(0).get("items").get(0);

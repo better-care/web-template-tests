@@ -688,8 +688,6 @@ public class InstructionActionTest extends AbstractWebTemplateTest {
         );
     }
 
-    // todo speed test? Grouped as manual
-
     @Test
     public void instructionNoTimingNarrative() throws Exception {
         String template = getFileContent("/res/ISPEK - MED - Medication Order.opt");

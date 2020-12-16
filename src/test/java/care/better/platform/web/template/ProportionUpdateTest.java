@@ -54,8 +54,7 @@ public class ProportionUpdateTest extends AbstractWebTemplateTest {
                 "en",
                 structuredComposition.toString(),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
         assertThat(getCompositionValidator().validate(template, composition.toString())).isEmpty();
     }
 
@@ -69,8 +68,7 @@ public class ProportionUpdateTest extends AbstractWebTemplateTest {
                 "en",
                 structuredComposition.toString(),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
         assertThat(getCompositionValidator().validate(template, composition.toString())).isNotEmpty();
     }
 }

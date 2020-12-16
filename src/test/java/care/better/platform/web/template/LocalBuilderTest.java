@@ -20,7 +20,7 @@ import care.better.platform.web.template.extension.WebTemplateTestExtension;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.datatype.joda.JodaModule;
 import com.google.common.collect.ImmutableMap;
 import org.joda.time.DateTime;
@@ -59,8 +59,7 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
         Map<String, Object> flatComposition = ImmutableMap.of(
                 "test_encounter/testing/testing/count1", 12,
                 "test_encounter/testing/testing/count1/_name|code", "at0001",
-                "test_encounter/testing/testing/count1/_name|value", "Hello world"
-        );
+                "test_encounter/testing/testing/count1/_name|value", "Hello world");
 
         JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
                 template,
@@ -70,27 +69,12 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "en",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "CA",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "Joe"),
-                objectMapper
-        );
-//        TODO PATHEXTRACTOR 
-//        SimplePathValueExtractor extractor = new SimplePathValueExtractor(
-//                "/content[openEHR-EHR-OBSERVATION.testing.v1 and name/value='Testing']/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.testing.v1 and name/value='Testing']/items[at0064]");
-//        List<Object> value = extractor.getValue(composition);
-//
-//        Element actual = (Element)value.get(0);
-//        DvCodedText name = (DvCodedText)actual.getName();
-//        assertThat(name.getDefiningCode().getCodeString()).isEqualTo("at0001");
-//        assertThat(name.getValue()).isEqualTo("Hello world");
-    }
+                objectMapper);
 
-    @Test
-    public void testSerialization() throws Exception {
-        String template = getFileContent("/res/Testing.opt");
-
-        JsonNode jsonNode = objectMapper.valueToTree(template);
-
-        JsonNode node = jsonNode.path("tree").path("children").path(0);
-        assertThat(node.path("aqlPath").isMissingNode()).isFalse();
+        JsonNode nameNode = rawComposition.get("content").get(0).get("data").get("events").get(0).get("data").get("items").get(0).get("items").get(0).get("name");
+        assertThat(nameNode.get("@class").asText()).isEqualTo("DV_CODED_TEXT");
+        assertThat(nameNode.get("defining_code").get("code_string").asText()).isEqualTo("at0001");
+        assertThat(nameNode.get("value").asText()).isEqualTo("Hello world");
     }
 
     @Test
@@ -105,26 +89,22 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
 
 
         Map<String, Object> formatted = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(formatted).contains(entry("encounter/testing:0/boolean", true));
-//        Map<String, Object> actual = webTemplate.retrieve(composition);
-//        assertThat(actual).contains(entry("encounter/testing:0/boolean", true));
 
         JsonNode structuredComposition = getCompositionConverter().convertRawToStructured(
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
         assertThat(structuredComposition).isNotNull();
     }
 
@@ -157,22 +137,21 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
 
         Map<String, Object> formatted = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(formatted).contains(entry("encounter/testing:0/boolean", true));
         JsonNode retrievedJson = getCompositionConverter().convertRawToStructured(
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
+
         JsonNode booleanNode = retrievedJson.path("encounter").path("testing").path(0).path("boolean").path(0);
         assertThat(booleanNode.isMissingNode()).isFalse();
         assertThat(booleanNode.isBoolean()).isTrue();
@@ -190,8 +169,8 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        )).isInstanceOf(Exception.class);
+                objectMapper))
+                .isInstanceOf(Exception.class);
     }
 
     @Test
@@ -206,8 +185,8 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        )).isInstanceOf(Exception.class);
+                objectMapper))
+                .isInstanceOf(Exception.class);
     }
 
     @Test
@@ -239,15 +218,14 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
 
         Map<String, Object> formatted = getCompositionConverter().convertRawToFlat(
                 template,
                 "sl",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(formatted).contains(
                 entry("encounter/testing:0/identifier", "id"),
                 entry("encounter/testing:0/identifier|issuer", "issuer"),
@@ -258,7 +236,6 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                 entry("encounter/testing:0/quantity|unit", "mm[Hg]"),
                 entry("encounter/testing:0/count", 1),
                 entry("encounter/testing:0/datetime", "2013-01-01T01:00:17Z"),
-                entry("encounter/testing:0/duration|year", 1),
                 entry("encounter/testing:0/ordinal|code", "at0030"),
                 entry("encounter/testing:0/ordinal|ordinal", 2),
                 entry("encounter/testing:0/boolean", true),
@@ -270,7 +247,6 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
     @Test
     public void testEmptyIdentifier() throws Exception {
         String template = getFileContent("/res/Testing.opt");
-
         Map<String, String> flatComposition =
                 ImmutableMap.<String, String>builder()
                         .put("encounter/testing/identifier", "")
@@ -296,34 +272,31 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
 
         Map<String, Object> retrieved = getCompositionConverter().convertRawToFlat(
                 template,
                 "sl",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(retrieved).contains(
                 entry("encounter/testing:0/text", "hi there"),
                 entry("encounter/testing:0/quantity|magnitude", 17.1),
                 entry("encounter/testing:0/quantity|unit", "mm[Hg]"),
                 entry("encounter/testing:0/count", 1),
                 entry("encounter/testing:0/datetime", "2013-01-01T01:00:17Z"),
-                entry("encounter/testing:0/duration|year", 1),
                 entry("encounter/testing:0/ordinal|code", "at0030"),
                 entry("encounter/testing:0/ordinal|ordinal", 2),
                 entry("encounter/testing:0/boolean", true),
                 entry("encounter/testing:0/proportion", 0.37),
-                entry("encounter/testing:0/parsable", "<html><body>hello world!</body></html>")
-        );
+                entry("encounter/testing:0/parsable", "<html><body>hello world!</body></html>"));
+
         assertThat(retrieved).doesNotContain(
                 entry("encounter/testing:0/identifier", ""),
                 entry("encounter/testing:0/identifier|issuer", "issuer"),
                 entry("encounter/testing:0/identifier|assigner", "assigner"),
-                entry("encounter/testing:0/identifier|type", "type")
-        );
+                entry("encounter/testing:0/identifier|type", "type"));
     }
 
     @Test
@@ -338,15 +311,13 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
 
         Map<String, Object> formatted = getCompositionConverter().convertRawToFlat(
                 template,
                 "sl",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(getCompositionValidator().validate(template, rawComposition.toString())).isEmpty();
 
@@ -355,8 +326,8 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                 "sl",
                 objectMapper.writeValueAsString(formatted),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(rawComposition1).isNotNull();
         assertThat(getCompositionValidator().validate(template, rawComposition1.toString())).isEmpty();
     }
@@ -396,8 +367,7 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(rawComposition).isNotNull();
     }
@@ -420,21 +390,18 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
 
         Map<String, Object> retrieved = getCompositionConverter().convertRawToFlat(
                 template,
                 "sl",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(retrieved).contains(
                 entry("vitals/vitals/haemoglobin_a1c:0/any_event:0/test_status|terminology", "local"),
                 entry("vitals/vitals/haemoglobin_a1c:0/any_event:0/test_status|code", "at0037"),
-                entry("vitals/vitals/haemoglobin_a1c:0/any_event:0/test_status|value", "Začasen")
-        );
+                entry("vitals/vitals/haemoglobin_a1c:0/any_event:0/test_status|value", "Začasen"));
     }
 
     @Test
@@ -458,8 +425,7 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                 "sl",
                 objectMapper.writeValueAsString(flatComposition),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(getCompositionValidator().validate(template, rawComposition.toString()));
 
@@ -467,8 +433,7 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                 template,
                 "sl",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(retrieved).contains(
                 entry("vitals/vitals/body_temperature:0/any_event:0/time", "2014-01-17T22:10:13+01:00"),
@@ -499,15 +464,13 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                 "sl",
                 objectMapper.writeValueAsString(flatComposition),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
 
         Map<String, Object> retrieved = getCompositionConverter().convertRawToFlat(
                 template,
                 "sl",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(getCompositionValidator().validate(template, rawComposition.toString())).isEmpty();
 
@@ -537,21 +500,19 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
 
         Map<String, Object> retrieved = getCompositionConverter().convertRawToFlat(
                 template,
                 "sl",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(retrieved).contains(
                 entry("encounter/testing:0/intervalquantity/lower|magnitude", 101.0),
                 entry("encounter/testing:0/intervalquantity/lower|unit", "mm[Hg]"),
                 entry("encounter/testing:0/intervalquantity/upper|magnitude", 107.0),
-                entry("encounter/testing:0/intervalquantity/upper|unit", "mm[Hg]")
-        );
+                entry("encounter/testing:0/intervalquantity/upper|unit", "mm[Hg]"));
     }
 
     @Test
@@ -574,22 +535,20 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
 
         JsonNode link = objectMapper.readTree(
-                "{\"@class\":\"LINK\",\"meaning\":{\"@class\":\"DV_TEXT\",\"value\":\"meaning\",\"hyperlink\":null,\"formatting\":null,\"mappings\":[],\"language\":null,\"encoding\":null},\"type\":{\"@class\":\"DV_TEXT\",\"value\":\"type\",\"hyperlink\":null,\"formatting\":null,\"mappings\":[],\"language\":null,\"encoding\":null},\"target\":{\"@class\":\"DV_EHR_URI\",\"value\":\"ehr://abc/def/\"}}");
-        ObjectNode links = (ObjectNode)rawComposition.get("links");
-        // TODO
-//        links.put(link);
-//        composition.getLinks().add(link);
+                "{\"@class\":\"LINK\",\"meaning\":" +
+                        "{\"@class\":\"DV_TEXT\",\"value\":\"meaning\",\"hyperlink\":null,\"formatting\":null,\"mappings\":[],\"language\":null,\"encoding\":null},\"type\":" +
+                        "{\"@class\":\"DV_TEXT\",\"value\":\"type\",\"hyperlink\":null,\"formatting\":null,\"mappings\":[],\"language\":null,\"encoding\":null},\"target\":" +
+                        "{\"@class\":\"DV_EHR_URI\",\"value\":\"ehr://abc/def/\"}}");
+        ((ArrayNode)rawComposition.get("links")).add(link);
 
         Map<String, Object> retrieved = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(
                 getCompositionConverter().convertFlatToRaw(
@@ -600,9 +559,7 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                                 CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                                 CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                                 CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                        objectMapper
-                )
-        ).isNotNull();
+                        objectMapper)).isNotNull();
     }
 
     @Test
@@ -625,8 +582,7 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(rawComposition).isNotNull();
     }
@@ -649,8 +605,7 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(rawComposition).isNotNull();
 
@@ -658,8 +613,7 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(retrieved).contains(entry("diagnosis/diagnosis:0/diagnosis|terminology", "ICD10"));
     }
@@ -667,9 +621,6 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
     @Test
     public void codedTextWithOther() throws Exception {
         String template = getFileContent("/res/Forms Demo.opt");
-
-//        FdoNode node = webTemplate.findNode("forms_demo/vitals/body_temperature/any_event/symptoms");
-//        assertThat(node.getInput()).isNotNull();
 
         Map<String, String> flatComposition =
                 ImmutableMap.<String, String>builder()
@@ -689,8 +640,7 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(rawComposition).isNotNull();
 
@@ -698,11 +648,9 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(retrieved).contains(entry("forms_demo/vitals/body_temperature:0/any_event:0/symptoms|other", "other symptom"));
-
 
         Map<String, String> flatComposition1 = ImmutableMap.<String, String>builder()
                 .put("forms_demo/vitals/body_temperature/any_event/description_of_thermal_stress", "s1")
@@ -726,8 +674,7 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(rawComposition1).isNotNull();
 
@@ -735,8 +682,7 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition1.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(retrieved1).contains(
                 entry("forms_demo/vitals/body_temperature:0/any_event:0/symptoms|code", "at0.64"),
@@ -771,8 +717,7 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(getCompositionValidator().validate(template, rawComposition.toString())).isEmpty();
     }
@@ -794,8 +739,7 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(rawComposition).isNotNull();
 
@@ -803,8 +747,7 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                 template,
                 "sl",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(retrieved).contains(entry("simple_vital_functions/story_or_history/pain/observed_current_intensity/degree|value", "Nepomemben"));
     }
@@ -815,12 +758,9 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
 
         Map<String, Object> flatComposition =
                 new ImmutableMap.Builder<String, Object>()
-                        .put("inference_engine_result_set_composition/inference_engine_result_set_observation/inference_engine_result_set/result/likelihood|unit",
-                             "%")
-                        .put("inference_engine_result_set_composition/inference_engine_result_set_observation/inference_engine_result_set/result/likelihood",
-                             "0.1")
-                        .put("inference_engine_result_set_composition/inference_engine_result_set_observation/inference_engine_result_set/result/disease_code",
-                             "R81")
+                        .put("inference_engine_result_set_composition/inference_engine_result_set_observation/inference_engine_result_set/result/likelihood|unit", "%")
+                        .put("inference_engine_result_set_composition/inference_engine_result_set_observation/inference_engine_result_set/result/likelihood", "0.1")
+                        .put("inference_engine_result_set_composition/inference_engine_result_set_observation/inference_engine_result_set/result/disease_code", "R81")
                         .build();
 
         JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
@@ -831,8 +771,7 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
         assertThat(getCompositionValidator().validate(template, rawComposition.toString())).isEmpty();
     }
 
@@ -849,8 +788,8 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                 "en",
                 structuredComposition.toString(),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(rawComposition.get("content")).hasSize(1);
         assertThat(rawComposition.get("content").get(0).get("@class").asText()).isEqualTo("SECTION");
         JsonNode section = rawComposition.get("content").get(0);
@@ -874,8 +813,7 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(retrieve).contains(entry("clinical_notes_report/clinical_notes/clinical_synopses/synopsis/text_value", "matija je tukaj1"));
 
@@ -891,118 +829,62 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
 
         Map<String, Object> retrieve2 = getCompositionConverter().convertRawToFlat(
                 template,
                 "sl",
                 rawComposition2.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(retrieve2).contains(entry("clinical_notes_report/clinical_notes/clinical_synopses/synopsis/parsable_value", "html text"));
     }
 
-//    @Test
-//    public void runtimeNameConstraints() throws Exception {
-//        WebTemplateBuilderContext builderContext = new WebTemplateBuilderContext("en", ImmutableList.of("en", "sl"));
-//        String templateName = "local/TMC - ICU -Ventilator device Report.opt";
-//        WebTemplate webTemplate = WTBuilder.build(getTemplate(templateName), builderContext);
-//
-//        BuilderContext context = new BuilderContext();
-//        context.setLanguage("sl");
-//        context.setTerritory("SI");
-//        context.setComposerName("composer");
-//
-//        Map<String, String> flatComposition = 
-//                new ImmutableMap.Builder<String, Object>()
-//                        .put("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/epap|magnitude", 101.0)
-//                        .put("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/epap|unit", "mbar")
-//                        .put("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/ipap|magnitude", 102.0)
-//                        .put("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/ipap|unit", "mbar")
-//                        .put("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/peep|magnitude", 103.0)
-//                        .put("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/peep|unit", "mbar")
-//                        .put("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/map_-_mean_airway_pressure_central_pressure|magnitude",
-//                             104.0)
-//                        .put("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/map_-_mean_airway_pressure_central_pressure|unit", "mbar")
-//                        .build(), context
-//        );
-//
-//        SimplePathValueExtractor extractor = new SimplePathValueExtractor(
-//                "﻿/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='NBP840']/items[openEHR-EHR-OBSERVATION.ventilator_vital_signs.v1 and name/value='NBP840  observtions']/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.ventilator_settings2.v1]/items[at0015]");
-//        List<Object> flatComposition = extractor.getValue(composition);
-//
-//        assertThat(flatComposition).hasSize(4);
-//        Element element1 = (Element)flatComposition.get(0);
-//        assertThat(element1.getName().getValue()).isEqualTo("PEEP");
-//        Element element2 = (Element)flatComposition.get(1);
-//        assertThat(element2.getName().getValue()).isEqualTo("IPAP");
-//        Element element3 = (Element)flatComposition.get(2);
-//        assertThat(element3.getName().getValue()).isEqualTo("EPAP");
-//        Element element4 = (Element)flatComposition.get(3);
-//        assertThat(element4.getName().getValue()).isEqualTo("MAP - Mean airway pressure / central pressure");
-//
-//        Map<String, Object> retrieve = webTemplate.retrieve(composition);
-//        assertThat(retrieve).contains(
-//                entry("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/epap:0|magnitude", 101.0),
-//                entry("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/ipap:0|magnitude", 102.0),
-//                entry("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/peep:0|magnitude", 103.0),
-//                entry(
-//                        "ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/map_-_mean_airway_pressure_central_pressure:0|magnitude",
-//                        104.0)
-//        );
-//    }
-//
-//    @Test
-//    public void runtimeNameConstraintsWT() throws Exception {
-//        WebTemplateBuilderContext builderContext = new WebTemplateBuilderContext("en", ImmutableList.of("en", "sl"));
-//        String templateName = "local/TMC - ICU -Ventilator device Report.opt";
-//        WebTemplate webTemplate = WTBuilder.build(getTemplate(templateName), builderContext);
-//
-//        BuilderContext context = new BuilderContext();
-//        context.setLanguage("sl");
-//        context.setTerritory("SI");
-//        context.setComposerName("composer");
-//
-//        Map<String, String> flatComposition = 
-//                new ImmutableMap.Builder<String, Object>()
-//                        .put("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/epap|magnitude", 101.0)
-//                        .put("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/epap|unit", "mbar")
-//                        .put("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/ipap|magnitude", 102.0)
-//                        .put("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/ipap|unit", "mbar")
-//                        .put("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/peep|magnitude", 103.0)
-//                        .put("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/peep|unit", "mbar")
-//                        .put("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/map_-_mean_airway_pressure_central_pressure|magnitude",
-//                             104.0)
-//                        .put("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/map_-_mean_airway_pressure_central_pressure|unit", "mbar")
-//                        .build(), context
-//        );
-//
-//        SimplePathValueExtractor extractor = new SimplePathValueExtractor(
-//                "﻿/content[openEHR-EHR-SECTION.adhoc.v1 and name/value='NBP840']/items[openEHR-EHR-OBSERVATION.ventilator_vital_signs.v1 and name/value='NBP840  observtions']/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.ventilator_settings2.v1]/items[at0015]");
-//        List<Object> flatComposition = extractor.getValue(composition);
-//
-//        assertThat(flatComposition).hasSize(4);
-//        Element element1 = (Element)flatComposition.get(0);
-//        assertThat(element1.getName().getValue()).isEqualTo("PEEP");
-//        Element element2 = (Element)flatComposition.get(1);
-//        assertThat(element2.getName().getValue()).isEqualTo("IPAP");
-//        Element element3 = (Element)flatComposition.get(2);
-//        assertThat(element3.getName().getValue()).isEqualTo("EPAP");
-//        Element element4 = (Element)flatComposition.get(3);
-//        assertThat(element4.getName().getValue()).isEqualTo("MAP - Mean airway pressure / central pressure");
-//
-//        Map<String, Object> retrieve = webTemplate.retrieve(composition);
-//        assertThat(retrieve).contains(
-//                entry("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/epap:0|magnitude", 101.0),
-//                entry("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/ipap:0|magnitude", 102.0),
-//                entry("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/peep:0|magnitude", 103.0),
-//                entry(
-//                        "ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/map_-_mean_airway_pressure_central_pressure:0|magnitude",
-//                        104.0)
-//        );
-//    }
+    @Test
+    public void runtimeNameConstraints() throws Exception {
+        String template = getFileContent("/res/TMC - ICU -Ventilator device Report.opt");
+
+        Map<String, Object> flatComposition =
+                new ImmutableMap.Builder<String, Object>()
+                        .put("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/epap|magnitude", 101.0)
+                        .put("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/epap|unit", "mbar")
+                        .put("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/ipap|magnitude", 102.0)
+                        .put("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/ipap|unit", "mbar")
+                        .put("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/peep|magnitude", 103.0)
+                        .put("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/peep|unit", "mbar")
+                        .put("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/map_-_mean_airway_pressure_central_pressure|magnitude", 104.0)
+                        .put("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/map_-_mean_airway_pressure_central_pressure|unit", "mbar")
+                        .build();
+
+        JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
+                template,
+                "en",
+                objectMapper.writeValueAsString(flatComposition),
+                ImmutableMap.of(
+                        CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
+                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
+                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
+                objectMapper);
+
+        JsonNode itemsNode = rawComposition.get("content").get(0).get("items").get(0).get("data").get("events").get(0).get("data").get("items").get(0).get(
+                "items");
+        assertThat(itemsNode.get(0).get("name").get("value").asText()).isEqualTo("PEEP");
+        assertThat(itemsNode.get(1).get("name").get("value").asText()).isEqualTo("IPAP");
+        assertThat(itemsNode.get(2).get("name").get("value").asText()).isEqualTo("EPAP");
+        assertThat(itemsNode.get(3).get("name").get("value").asText()).isEqualTo("MAP - Mean airway pressure / central pressure");
+
+        Map<String, Object> retrieve = getCompositionConverter().convertRawToFlat(
+                template,
+                "sl",
+                rawComposition.toString(),
+                objectMapper);
+
+        assertThat(retrieve).contains(
+                entry("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/epap:0|magnitude", 101.0),
+                entry("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/ipap:0|magnitude", 102.0),
+                entry("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/peep:0|magnitude", 103.0),
+                entry("ventilator_device_report/nbp840/nbp840_observtions/ventilator_findings/map_-_mean_airway_pressure_central_pressure:0|magnitude", 104.0));
+    }
 
     @Test
     public void dvTextListOfValuesFixedValue() throws Exception {
@@ -1023,15 +905,13 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
 
         Map<String, Object> retrieved = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(retrieved).contains(entry("vitals/vitals/body_temperature:0/any_event:0/description_of_thermal_stress", "Fixed value"));
     }
@@ -1045,44 +925,23 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
-        assertThat(structuredComposition.path("vital_signs").path("indirect_oximetry").path(0).path("spo2").path(0).path("|numerator").floatValue()).isEqualTo(
-                79.21f);
+        assertThat(structuredComposition.path("vital_signs").path("indirect_oximetry").path(0).path("spo2").path(0).path("|numerator").floatValue()).isEqualTo(79.21f);
     }
 
     @Test
     public void durationValidation() throws Exception {
         String template = getFileContent("/res/Patient Diagnosis (composition).xml");
 
-        String jsonString = "{ \"ctx/composer_name\" : \"Dr Louise Jones\",\n" +
-                "  \"ctx/health_care_facility|id\" : \"9091\",\n" +
-                "  \"ctx/health_care_facility|name\" : \"St James Hospital, Leeds\",\n" +
-                "  \"ctx/id_namespace\" : \"NHSEngland\",\n" +
-                "  \"ctx/id_scheme\" : \"NhsNumber\",\n" +
-                "  \"ctx/language\" : \"en\",\n" +
-                "  \"ctx/territory\" : \"GB\",\n" +
-                "  \"oncology_diagnosis\" : \n" +
-                " \t{ \"problem_diagnosis\" : \n" +
-                "     \t[ \n" +
-                "      \t  { \n" +
-                "          \t\"age_at_onset\" : [ \"P3Y6M4DT12H30M5S\" ],\n" +
-                "          \t\"body_site\" : [ \"Left Breast\" ],\n" +
-                "          \t\"description\" : [ \"Description 75\" ],\n" +
-                "          \t\"problem_diagnosis\" : [ \"Breast Cancer\" ]\n" +
-                "          } \n" +
-                "        ] \n" +
-                "    }\n" +
-                '}';
+        String jsonString = getFileContent("/res/Local1.json");
 
         JsonNode rawComposition = getCompositionConverter().convertStructuredToRaw(
                 template,
                 "en",
                 jsonString,
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
         assertThat(getCompositionValidator().validate(template, rawComposition.toString())).isEmpty();
     }
 
@@ -1090,33 +949,14 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
     public void idNamespace() throws Exception {
         String template = getFileContent("/res/Patient Diagnosis (composition).xml");
 
-        String jsonString = "{ \"ctx/composer_name\" : \"Dr Louise Jones\",\n" +
-                "  \"ctx/health_care_facility|id\" : \"9091\",\n" +
-                "  \"ctx/health_care_facility|name\" : \"St James Hospital, Leeds\",\n" +
-                "  \"ctx/id_namespace\" : \"NHSEngland\",\n" +
-                "  \"ctx/id_scheme\" : \"NhsNumber\",\n" +
-                "  \"ctx/language\" : \"en\",\n" +
-                "  \"ctx/territory\" : \"GB\",\n" +
-                "  \"oncology_diagnosis\" : \n" +
-                " \t{ \"problem_diagnosis\" : \n" +
-                "     \t[ \n" +
-                "      \t  { \n" +
-                "          \t\"age_at_onset\" : [ \"P3Y6M4DT12H30M5S\" ],\n" +
-                "          \t\"body_site\" : [ \"Left Breast\" ],\n" +
-                "          \t\"description\" : [ \"Description 75\" ],\n" +
-                "          \t\"problem_diagnosis\" : [ \"Breast Cancer\" ]\n" +
-                "          } \n" +
-                "        ] \n" +
-                "    }\n" +
-                '}';
+        String jsonString = getFileContent("/res/Local2.json");
 
         JsonNode rawComposition = getCompositionConverter().convertStructuredToRaw(
                 template,
                 "en",
                 jsonString,
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(rawComposition.get("context").get("health_care_facility").get("external_ref").get("namespace").asText()).isEqualTo("NHSEngland");
     }
@@ -1141,8 +981,7 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(rawComposition).isNotNull();
         assertThat(getCompositionValidator().validate(template, rawComposition.toString())).isEmpty();
@@ -1158,8 +997,8 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(rawComposition2).isNotNull();
         assertThat(getCompositionValidator().validate(template, rawComposition2.toString())).isEmpty();
     }
@@ -1176,15 +1015,14 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
 
         Map<String, Object> retrieved = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(retrieved.get("test_encounter/testing:0/testing:0/partial_date")).isEqualTo("2016-01");
 
         JsonNode rawComposition2 = getCompositionConverter().convertFlatToRaw(
@@ -1195,15 +1033,13 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
 
         Map<String, Object> retrieved2 = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition2.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(retrieved2.get("test_encounter/testing:0/testing:0/partial_date")).isEqualTo(LocalDate.of(2016, 1, 1).toString());
     }
@@ -1220,8 +1056,8 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "en",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "test"),
-                objectMapper
-        )).isInstanceOf(Exception.class);
+                objectMapper))
+                .isInstanceOf(Exception.class);
     }
 
     @Test
@@ -1236,8 +1072,8 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "en",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "test"),
-                objectMapper
-        )).isInstanceOf(Exception.class);
+                objectMapper))
+                .isInstanceOf(Exception.class);
     }
 
     @Test
@@ -1252,15 +1088,13 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "en",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "test"),
-                objectMapper
-        );
+                objectMapper);
 
         Map<String, Object> retrieved = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(retrieved.get("test_encounter/testing:0/testing:0/partial_date")).isEqualTo("2016-01");
 
@@ -1272,15 +1106,13 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "en",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "test"),
-                objectMapper
-        );
+                objectMapper);
 
         Map<String, Object> retrieved2 = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition2.toString(),
-                objectMapper
-        );
+                objectMapper);
         assertThat(retrieved2.get("test_encounter/testing:0/testing:0/partial_date")).isEqualTo("2016-12");
     }
 
@@ -1296,353 +1128,47 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "en",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "test"),
-                objectMapper
-        )).isInstanceOf(Exception.class);
+                objectMapper))
+                .isInstanceOf(Exception.class);
     }
 
-//    @Test
-//    public void missingValue() throws Exception {
-//        WebTemplateBuilderContext builderContext = new WebTemplateBuilderContext("en", ImmutableList.of("en", "sl"));
-//        WebTemplate webTemplate = WTBuilder.build(getTemplate("critical/clinical-summary-events2.opt"), builderContext);
-//
-//        BuilderContext context = new BuilderContext();
-//        context.setTerritory("SI");
-//        context.setLanguage("en");
-//        context.setComposerName("Test");
-//
-//        Composition composition = getComposition("/critical/csdfomposition.xml");
-//
-//        Map<String, Object> retrieve = webTemplate.retrieve(composition);
-//
-//        assertThat(retrieve.get(
-//                "clinical_summary_events/laboratory_exams/laboratory_exams_results/pathology_test_result:1/any_event:1/result_group/result/result_value/quantity_value|magnitude"))
-//                .isNotNull();
-//
-//        Composition composition1 = webTemplate.build(retrieve, context);
-//        NameAndNodeMatchingPathValueExtractor pathValueExtractor = new NameAndNodeMatchingPathValueExtractor(
-//                "/content[openEHR-EHR-SECTION.adhoc_ubr.v1,'Laboratory exams']/items[openEHR-EHR-SECTION.adhoc_ubr.v1,'Laboratory exams results']/items[openEHR-EHR-OBSERVATION.pathology_test-ubr.v1, 'Pathology Test Result #2']/data[at0001]/events[at0002, 'Any event #2']/data[at0003]/items[at0095,'Result Group']/items[at0096,'Result']/items[at0078]");
-//        List<Object> flatComposition = pathValueExtractor.getValue(composition1);
-//        assertThat(flatComposition.get(0)).isInstanceOf(Element.class);
-//        Element element = (Element)flatComposition.get(0);
-//        assertThat(element.getName().getValue()).isEqualTo("Result Value");
-//        assertThat(element.getValue()).isInstanceOf(DvQuantity.class);
-//        DvQuantity quantity = (DvQuantity)element.getValue();
-//        assertThat(quantity.getMagnitude()).isEqualTo(7.6);
-//    }
+    @Test
+    public void missingValue() throws Exception {
+        String template = getFileContent("/res/clinical-summary-events2.opt");
+
+        String rawCompositionString = getFileContent("/res/localMissingValue.json");
+
+        Map<String, Object> retrieve = getCompositionConverter().convertRawToFlat(
+                template,
+                "en",
+                rawCompositionString,
+                objectMapper);
+
+        assertThat(retrieve.get("clinical_summary_events/laboratory_exams/laboratory_exams_results/pathology_test_result:1/any_event:1/result_group/result/result_value/quantity_value|magnitude"))
+                .isNotNull();
+
+        JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
+                template,
+                "en",
+                objectMapper.writeValueAsString(retrieve),
+                ImmutableMap.of(
+                        CompositionBuilderContextKey.LANGUAGE.getKey(), "en",
+                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
+                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "test"),
+                objectMapper);
+
+        JsonNode itemsNode = rawComposition.get("content").get(7).get("items").get(1).get("items").get(1).get("data").get("events").get(1).get("data").get("items").get(5).get("items").get(0).get("items");
+        assertThat(itemsNode.get(0).get("@class").asText()).isEqualTo("ELEMENT");
+        assertThat(itemsNode.get(0).get("name").get("value").asText()).isEqualTo("Result Value");
+        assertThat(itemsNode.get(0).get("value").get("@class").asText()).isEqualTo("DV_QUANTITY");
+        assertThat(itemsNode.get(0).get("value").get("magnitude").asDouble()).isEqualTo(7.6);
+    }
 
     @Test
     public void intervalEventWidth() throws Exception {
         String template = getFileContent("/res/Liver Donor.xml");
 
-        String jsonString = "{\n" +
-                "\t\"review\": {\n" +
-                "\t\t\"general_data\": [\n" +
-                "\t\t\t{\n" +
-                "\t\t\t\t\"blood_matching\": [\n" +
-                "\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\"abo\": [\n" +
-                '\n' +
-                "\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\"rhesus\": [\n" +
-                '\n' +
-                "\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t}\n" +
-                "\t\t\t\t],\n" +
-                "\t\t\t\t\"body_weight\": [\n" +
-                "\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\"any_event\": [\n" +
-                "\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\"weight\": [\n" +
-                "\t\t\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\t\t\"|unit\": \"kg\"\n" +
-                "\t\t\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t}\n" +
-                "\t\t\t\t],\n" +
-                "\t\t\t\t\"height_length\": [\n" +
-                "\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\"any_event\": [\n" +
-                "\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\"height_length\": [\n" +
-                "\t\t\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\t\t\"|unit\": \"cm\"\n" +
-                "\t\t\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t}\n" +
-                "\t\t\t\t],\n" +
-                "\t\t\t\t\"body_mass_index\": [\n" +
-                "\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\"any_event\": [\n" +
-                "\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\"body_mass_index\": [\n" +
-                "\t\t\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\t\t\"|unit\": \"kg/m2\"\n" +
-                "\t\t\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t}\n" +
-                "\t\t\t\t],\n" +
-                "\t\t\t\t\"pulmonary_function_testing\": [\n" +
-                "\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\"result_details\": [\n" +
-                "\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\"pulmonary_volume_result\": [\n" +
-                "\t\t\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\t\t\"actual_result\": [\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\t\"|unit\": \"l\"\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t}\n" +
-                "\t\t\t\t]\n" +
-                "\t\t\t}\n" +
-                "\t\t],\n" +
-                "\t\t\"clinical_data\": [\n" +
-                "\t\t\t{\n" +
-                "\t\t\t\t\"organ_donor_summary\": [\n" +
-                "\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\"brain_death_date\": [\n" +
-                '\n' +
-                "\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\"cause_of_death\": [\n" +
-                '\n' +
-                "\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\"comment_cause_of_death\": [\n" +
-                '\n' +
-                "\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\"additional_diagnosis\": [\n" +
-                '\n' +
-                "\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\"mechanical_ventilation\": [\n" +
-                "\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\"daily_timing\": [\n" +
-                "\t\t\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\t\t\"specific_time\": [\n" +
-                '\n' +
-                "\t\t\t\t\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\"urine_catheter\": [\n" +
-                "\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\"daily_timing\": [\n" +
-                "\t\t\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\t\t\"specific_time\": [\n" +
-                '\n' +
-                "\t\t\t\t\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\"cardiac_arrest\": [\n" +
-                '\n' +
-                "\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\"total_duration_of_cardiac_arrest_s\": [\n" +
-                '\n' +
-                "\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\"hypotensive_periods\": [\n" +
-                '\n' +
-                "\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\"total_duration_of_hypotensive_episodes\": [\n" +
-                '\n' +
-                "\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\"date_of_last_reanimation\": [\n" +
-                '\n' +
-                "\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\"duration_of_last_reanimation\": [\n" +
-                '\n' +
-                "\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\"number_of_times_the_donor_was_reanimated\": [\n" +
-                '\n' +
-                "\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t}\n" +
-                "\t\t\t\t],\n" +
-                "\t\t\t\t\"patient_admission\": [\n" +
-                "\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\"admit_date_time\": [\n" +
-                '\n' +
-                "\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t}\n" +
-                "\t\t\t\t],\n" +
-                "\t\t\t\t\"patient_admission_to_the_icu\": [\n" +
-                "\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\"admit_date_time_to_the_icu\": [\n" +
-                '\n' +
-                "\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t}\n" +
-                "\t\t\t\t],\n" +
-                "\t\t\t\t\"measurements\": [\n" +
-                "\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\"body_temperature\": [\n" +
-                "\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\"any_event\": [\n" +
-                "\t\t\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\t\t\"temperature\": [\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\t\"|unit\": \"°C\"\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\t\t\t\t\"time\": [\n" +
-                '\n' +
-                "\t\t\t\t\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\"pulse_heart_beat\": [\n" +
-                "\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\"any_event\": [\n" +
-                "\t\t\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\t\t\"heart_rate\": [\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\t\"|unit\": \"/min\",\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\t\"|magnitude\": 5\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\t\t\t\t\"time\": [\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\"2016-07-06T00:00:00.000+0200\"\n" +
-                "\t\t\t\t\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\"blood_pressure\": [\n" +
-                "\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\"any_event\": [\n" +
-                "\t\t\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\t\t\"systolic\": [\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\t\"|unit\": \"mm[Hg]\",\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\t\"|magnitude\": 3\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\t\t\t\t\"diastolic\": [\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\t\"|unit\": \"mm[Hg]\",\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\t\"|magnitude\": 3\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\t\t\t\t\"time\": [\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\"2016-07-08T00:00:00.000+0200\"\n" +
-                "\t\t\t\t\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\"lowest_blood_pressure\": [\n" +
-                "\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\"any_event\": [\n" +
-                "\t\t\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\t\t\"systolic\": [\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\t\"|unit\": \"mm[Hg]\",\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\t\"|magnitude\": 2\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\t\t\t\t\"diastolic\": [\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\t\"|unit\": \"mm[Hg]\",\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\t\"|magnitude\": 4\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\t\t\t\t\"width\": [\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\"PT8M\"\n" +
-                "\t\t\t\t\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\t\t\t\t\"time\": [\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\"2016-07-20T00:00:00.000+0200\"\n" +
-                "\t\t\t\t\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\"cardiac_arrest\": [\n" +
-                "\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\"pulse_heart_beat\": [\n" +
-                "\t\t\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\t\t\"any_event\": [\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\t\"width\": [\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\t\t\"PT5M\"\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\t\"time\": [\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\t\t\"2016-07-14T00:00:00.000+0200\"\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\"central_venous_pressure\": [\n" +
-                "\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\"any_event\": [\n" +
-                "\t\t\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\t\t\"pressure\": [\n" +
-                '\n' +
-                "\t\t\t\t\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\t\t\t\t\"time\": [\n" +
-                '\n' +
-                "\t\t\t\t\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\"urine_output\": [\n" +
-                "\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\"total\": [\n" +
-                "\t\t\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\t\t\"urine_output\": [\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\t\"|unit\": \"ml\"\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\t\t\t\t\"width\": [\n" +
-                '\n' +
-                "\t\t\t\t\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\t\t\t\t\"time\": [\n" +
-                '\n' +
-                "\t\t\t\t\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\t\t\"actual\": [\n" +
-                "\t\t\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\t\t\"urine_output\": [\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t{\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\t\"|unit\": \"ml\",\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\t\"|magnitude\": 6\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\t\t\t\t\"time\": [\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\"2016-07-13T00:00:00.000+0200\"\n" +
-                "\t\t\t\t\t\t\t\t\t\t],\n" +
-                "\t\t\t\t\t\t\t\t\t\t\"width\": [\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\"PT1H\"\n" +
-                "\t\t\t\t\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t\t\t}\n" +
-                "\t\t\t\t\t\t]\n" +
-                "\t\t\t\t\t}\n" +
-                "\t\t\t\t]\n" +
-                "\t\t\t}\n" +
-                "\t\t]\n" +
-                "\t},\n" +
-                "\t\"ctx\": {\n" +
-                "\t\t\"language\": \"en\",\n" +
-                "\t\t\"territory\": \"GB\",\n" +
-                "\t\t\"composer_name\": \"Jane\"\n" +
-                "\t}\n" +
-                '}';
+        String jsonString = getFileContent("/res/Local3.json");
 
         JsonNode rawComposition = getCompositionConverter().convertStructuredToRaw(
                 template,
@@ -1658,105 +1184,49 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
     public void structuredNoPipes() throws Exception {
         String template = getFileContent("/res/Liver Recipient Information.xml");
 
-        String jsonString = "{\n" +
-                "  \"ctx\": {\n" +
-                "  \"language\": \"en\",\n" +
-                "  \"territory\": \"NL\",\n" +
-                "  \"composer_name\": \"John Smith\"\n" +
-                "  },\n" +
-                "  \"encounter\": {\n" +
-                "    \"meld\": \n" +
-                "      {\n" +
-                "        \"meld_score\": \n" +
-                "          {\n" +
-                "            \"sample_date\": \n" +
-                "              \"2016-08-24T09:02:08.127+02:00\"\n" +
-                "            ,\n" +
-                "            \"creatinine\": \n" +
-                "              {\n" +
-                "                \"magnitude\": 95.69,\n" +
-                "                \"unit\": \"mg/dl\"\n" +
-                "              }\n" +
-                "            ,\n" +
-                "            \"bilirubin\": \n" +
-                "              {\n" +
-                "                \"magnitude\": 34,\n" +
-                "                \"unit\": \"mg/dl\"\n" +
-                "              }\n" +
-                "            ,\n" +
-                "            \"albumin\": \n" +
-                "              {\n" +
-                "                \"magnitude\": 35.35,\n" +
-                "                \"unit\": \"mg/dl\"\n" +
-                "              }\n" +
-                "            ,\n" +
-                "            \"sodium\": \n" +
-                "              {\n" +
-                "                \"magnitude\": 58.116,\n" +
-                "                \"unit\": \"mmol/l\"\n" +
-                "              }\n" +
-                "            ,\n" +
-                "            \"inr\": \n" +
-                "              {\n" +
-                "                \"magnitude\": 47.5,\n" +
-                "                \"unit\": \"\"\n" +
-                "              }\n" +
-                "            ,\n" +
-                "            \"dialysis_at_least_twice_in_the_past_week\": \n" +
-                "              \"true\",\n" +
-                "            \"initiated_mars_therapy\": \n" +
-                "              \"true\"\n" +
-                "            \n" +
-                "          }\n" +
-                "        \n" +
-                "      }\n" +
-                "    \n" +
-                "  }\n" +
-                '}';
+        String jsonString = getFileContent("/res/Local4.json");
 
         JsonNode rawComposition = getCompositionConverter().convertStructuredToRaw(
                 template,
                 "en",
                 jsonString,
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
         assertThat(rawComposition).isNotNull();
         assertThat(getCompositionValidator().validate(template, rawComposition.toString())).isEmpty();
     }
 
-//    @Test
-//    public void termMappings() throws Exception {
-//        WebTemplateBuilderContext builderContext = new WebTemplateBuilderContext("en", ImmutableList.of("en"));
-//        WebTemplate webTemplate = WTBuilder.build(getTemplate("local/Demo Vitals term mapping.opt"), builderContext);
-//
-//        BuilderContext context = new BuilderContext();
-//        context.setLanguage("sl");
-//        context.setTerritory("SI");
-//        context.setComposerName("composer");
-//        context.getTermBindingTerminologies().add("*");
-//
-//        Map<String, String> flatComposition = 
-//                ImmutableMap.<String, Object>builder()
-//                        .put("vitals/vitals/body_temperature/any_event/temperature|magnitude", 39.1)
-//                        .put("vitals/vitals/body_temperature/any_event/temperature|unit", "°C")
-//                        .put("vitals/vitals/body_temperature/any_event/symptoms", "at0.64")
-//                        .put("vitals/vitals/body_temperature/any_event/body_exposure", "at0031")
-//                        .build(), context);
-//
-//        TemplateValidator validator = getValidator("local/Demo Vitals term mapping.opt");
-//        assertThat(validator.getValidator().validate(composition)).isEmpty();
-//
-//        NameAndNodeMatchingPathValueExtractor pathValueExtractor = new NameAndNodeMatchingPathValueExtractor(
-//                "/content[openEHR-EHR-SECTION.ispek_dialog.v1,'Vitals']/items[openEHR-EHR-OBSERVATION.body_temperature-zn.v1]/data[at0002]/events[at0003]/data[at0001]/items[at0.63]/value");
-//        List<Object> value = pathValueExtractor.getValue(composition);
-//        assertThat(value).hasSize(1);
-//        assertThat(value.get(0)).isInstanceOf(DvCodedText.class);
-//        DvCodedText codedText = (DvCodedText)value.get(0);
-//        assertThat(codedText.getMappings()).extracting("match").contains("=");
-//        assertThat(codedText.getMappings()).extracting("target").extracting("terminologyId").extracting("value").contains("LNC205");
-//        assertThat(codedText.getMappings()).extracting("target").extracting("codeString").contains("1111");
-//    }
+    @Test
+    public void termMappings() throws Exception {
+        String template = getFileContent("/res/Demo Vitals term mapping.opt");
+
+        Map<String, Object> flatComposition =
+                ImmutableMap.<String, Object>builder()
+                        .put("vitals/vitals/body_temperature/any_event/temperature|magnitude", 39.1)
+                        .put("vitals/vitals/body_temperature/any_event/temperature|unit", "°C")
+                        .put("vitals/vitals/body_temperature/any_event/symptoms", "at0.64")
+                        .put("vitals/vitals/body_temperature/any_event/body_exposure", "at0031")
+                        .build();
+
+        JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
+                template,
+                "en",
+                objectMapper.writeValueAsString(flatComposition),
+                ImmutableMap.of(
+                        CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
+                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
+                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer",
+                        CompositionBuilderContextKey.TERM_BINDING_TERMINOLOGIES.getKey(), "*"),
+                objectMapper);
+
+        assertThat(getCompositionValidator().validate(template, rawComposition.toString())).isEmpty();
+        JsonNode valueNode = rawComposition.get("content").get(0).get("items").get(0).get("data").get("events").get(0).get("data").get("items").get(1).get("value");
+
+        assertThat(valueNode.get("@class").asText()).isEqualTo("DV_CODED_TEXT");
+        assertThat(valueNode.get("mappings").get(0).get("match").asText()).isEqualTo("=");
+        assertThat(valueNode.get("mappings").get(0).get("target").get("terminology_id").get("value").asText()).isEqualTo("LNC205");
+        assertThat(valueNode.get("mappings").get(0).get("target").get("code_string").asText()).isEqualTo("1111");
+    }
 
     @Test
     public void serverError() throws Exception {
@@ -1769,26 +1239,23 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                 .put("adverse_reaction_list/allergies_and_adverse_reactions/adverse_reaction_risk:0/causative_agent", "Nuts")
                 .put("adverse_reaction_list/allergies_and_adverse_reactions/adverse_reaction_risk:0/status|value", "E.40")
                 .put("adverse_reaction_list/allergies_and_adverse_reactions/adverse_reaction_risk:0/status/defining_code", "Likely")
-                .put("adverse_reaction_list/allergies_and_adverse_reactions/adverse_reaction_risk:0/reaction_details/manifestation:0",
-                     "Somthing might happen")
-                .put(
-                        "adverse_reaction_list/allergies_and_adverse_reactions/adverse_reaction_risk:0/reaction_details/record_provenance/information_source",
-                        "Patient")
-                .put("adverse_reaction_list/allergies_and_adverse_reactions/adverse_reaction_risk:0/last_updated", "2018-02-13T11:52:41.8090137+00:00").build();
+                .put("adverse_reaction_list/allergies_and_adverse_reactions/adverse_reaction_risk:0/reaction_details/manifestation:0", "Somthing might happen")
+                .put("adverse_reaction_list/allergies_and_adverse_reactions/adverse_reaction_risk:0/reaction_details/record_provenance/information_source", "Patient")
+                .put("adverse_reaction_list/allergies_and_adverse_reactions/adverse_reaction_risk:0/last_updated", "2018-02-13T11:52:41.8090137+00:00")
+                .build();
 
         assertThatThrownBy(() -> getCompositionConverter().convertFlatToRaw(
                 template,
                 "en",
                 objectMapper.writeValueAsString(flatComposition),
                 Collections.emptyMap(),
-                objectMapper
-        )).isInstanceOf(Exception.class);
+                objectMapper))
+                .isInstanceOf(Exception.class);
     }
 
     @Test
     public void cytologyIssue() throws Exception {
         String template = getFileContent("/res/Cytology Report.xml");
-
 
         JsonNode structuredComposition = objectMapper.readTree(getFileContent("/res/cytology.json"));
 
@@ -1797,8 +1264,8 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                 "en",
                 structuredComposition.toString(),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(rawComposition).isNotNull();
     }
 
@@ -1813,8 +1280,8 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                 "en",
                 structuredComposition.toString(),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(rawComposition).isNotNull();
         assertThat(getCompositionValidator().validate(template, rawComposition.toString())).isEmpty();
     }
@@ -1830,8 +1297,8 @@ public class LocalBuilderTest extends AbstractWebTemplateTest {
                 "en",
                 structuredComposition.toString(),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(rawComposition).isNotNull();
         assertThat(getCompositionValidator().validate(template, rawComposition.toString())).hasSize(1);
     }

@@ -17,6 +17,7 @@ package care.better.platform.web.template;
 
 import care.better.platform.web.template.context.CompositionBuilderContextKey;
 import care.better.platform.web.template.extension.WebTemplateTestExtension;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -95,8 +96,7 @@ public class XdsBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(rawComposition).isNotNull();
         assertThat(getCompositionValidator().validate(template, rawComposition.toString())).isEmpty();
@@ -105,8 +105,8 @@ public class XdsBuilderTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(retrieve.get("cda_document/xds_metadata/event:0|code")).isEqualTo("event1_code");
         assertThat(retrieve.get("cda_document/xds_metadata/event:1|code")).isEqualTo("event2_code");
         assertThat(retrieve.get("cda_document/cda_component:0/templateid")).isEqualTo("1.3.6.1.4.1.19376.1.5.3.1.3.3");
@@ -140,8 +140,6 @@ public class XdsBuilderTest extends AbstractWebTemplateTest {
                 .put("xds_document/xds_metadata/event:1|code", "event2_code")
                 .put("xds_document/xds_metadata/event:1|value", "event2_value")
                 .put("xds_document/xds_metadata/author/author_person", "Jim Smith")
-//                .put("xds_document/xds_generic_content/document_content|uri", "http://localhost/xds/files/abc")
-//                .put("xds_document/xds_generic_content/document_content|mediatype", "image/png")
                 .build();
 
         JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
@@ -154,17 +152,7 @@ public class XdsBuilderTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer",
                         CompositionBuilderContextKey.ID_NAMESPACE.getKey(), "y",
                         CompositionBuilderContextKey.ID_SCHEME.getKey(), "x"),
-                objectMapper
-        );
-
-        // todo have a look?
-//        context.setLanguage("sl");
-//        context.setTerritory("SI");
-//        context.setIdScheme("scheme");
-//        context.setIdNamespace("namespace");
-//        context.setComposerName("composer");
-//        context.setIdScheme("x");
-//        context.setIdNamespace("y");
+                objectMapper);
 
         assertThat(rawComposition).isNotNull();
         assertThat(rawComposition.get("context").get("health_care_facility").get("name").asText()).isEqualTo("hospital");

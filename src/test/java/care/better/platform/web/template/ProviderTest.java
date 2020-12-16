@@ -69,20 +69,17 @@ public class ProviderTest extends AbstractWebTemplateTest {
                 "sl",
                 objectMapper.writeValueAsString(flatComposition),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
 
         Map<String, Object> retrieved = getCompositionConverter().convertRawToFlat(
                 template,
                 "sl",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(retrieved).contains(
                 entry("vitals/vitals/haemoglobin_a1c:0/_provider|name", "Marija Medved"),
-                entry("vitals/vitals/haemoglobin_a1c:0/_provider|id", "998")
-        );
+                entry("vitals/vitals/haemoglobin_a1c:0/_provider|id", "998"));
 
         retrieved.put("ctx/language", "sl");
         retrieved.put("ctx/territory", "SI");
@@ -95,8 +92,7 @@ public class ProviderTest extends AbstractWebTemplateTest {
                 "sl",
                 objectMapper.writeValueAsString(flatComposition),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(rawComposition1
                            .get("content").get(0)
@@ -136,15 +132,13 @@ public class ProviderTest extends AbstractWebTemplateTest {
                 "sl",
                 objectMapper.writeValueAsString(flatComposition),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
 
         Map<String, Object> retrieved = getCompositionConverter().convertRawToFlat(
                 template,
                 "sl",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(retrieved).contains(
                 entry("vitals/vitals/haemoglobin_a1c:0/_provider|name", "Marija Medved"),
@@ -170,8 +164,7 @@ public class ProviderTest extends AbstractWebTemplateTest {
                 "sl",
                 objectMapper.writeValueAsString(flatComposition),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(rawComposition1
                            .get("content").get(0)
@@ -205,22 +198,19 @@ public class ProviderTest extends AbstractWebTemplateTest {
                 "sl",
                 objectMapper.writeValueAsString(flatComposition),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
 
         Map<String, Object> retrieved = getCompositionConverter().convertRawToFlat(
                 template,
                 "sl",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(retrieved).contains(
                 entry("vitals/context/_health_care_facility|name", "Hospital"),
                 entry("vitals/context/_health_care_facility/_identifier:0", "17"),
                 entry("vitals/context/_health_care_facility/_identifier:0|type", "ESTABLISHMENT"),
                 entry("vitals/context/_health_care_facility/_identifier:0|assigner", "uk"),
-                entry("vitals/context/_health_care_facility/_identifier:0|issuer", "uk")
-        );
+                entry("vitals/context/_health_care_facility/_identifier:0|issuer", "uk"));
     }
 }

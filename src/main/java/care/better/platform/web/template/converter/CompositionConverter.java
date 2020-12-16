@@ -92,6 +92,19 @@ public interface CompositionConverter {
      */
     String convertStructuredToFlat(String template, String defaultLanguage, String structuredComposition, Map<String, Object> compositionBuilderContext) throws Exception;
 
+
+    /**
+     * Update a RAW composition json string with values of FLAT composition json string.
+     *
+     * @param template              Template xml string
+     * @param defaultLanguage       Template default language
+     * @param rawComposition        RAW composition json string
+     * @param compositionBuilderContext Map containing default values that will be used when composition is built
+     * @param deltaValues                 Flat composition Map containing the values to be added
+     * @return RAW composition json string
+     */
+    String updateRawComposition(String template, String defaultLanguage, String rawComposition, Map<String, Object> compositionBuilderContext, Map<String, Object> deltaValues) throws Exception;
+
     /**
      * Converts RAW composition json string to the FLAT composition.
      *
@@ -198,5 +211,25 @@ public interface CompositionConverter {
             Map<String, Object> compositionBuilderContext,
             ObjectMapper objectMapper) throws Exception {
         return objectMapper.readValue(convertStructuredToRaw(template, defaultLanguage, structuredComposition, compositionBuilderContext), JsonNode.class);
+    }
+
+    /**
+     * Update a RAW composition json string with values of FLAT composition json string.
+     *
+     * @param template              Template xml string
+     * @param defaultLanguage       Template default language
+     * @param rawComposition        RAW composition json string
+     * @param compositionBuilderContext Map containing default values that will be used when composition is built
+     * @param deltaValues                 Flat composition Map containing the values to be added
+     * @return RAW composition
+     */
+    default JsonNode updateRawComposition(
+            String template,
+            String defaultLanguage,
+            String rawComposition,
+            Map<String, Object> compositionBuilderContext,
+            Map<String, Object> deltaValues,
+            ObjectMapper objectMapper) throws Exception {
+        return objectMapper.readValue(updateRawComposition(template, defaultLanguage, rawComposition, compositionBuilderContext, deltaValues), JsonNode.class);
     }
 }

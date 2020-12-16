@@ -1,0 +1,44 @@
+// Copyright 2020-2021 Better Ltd (www.better.care)
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+{
+  "test/административная_информация/автор_документа":"User",
+  "test/административная_информация/вид_медпомощи|code":"at0024",
+  "test/административная_информация/вид_медпомощи|terminology":"local",
+  "test/административная_информация/вид_медпомощи|value":"амбулаторная медицинская помощь",
+  "test/административная_информация/дата_приема":"2013-06-03T00:00:00.000+06:00",
+  "test/административная_информация/документ_создан":"2013-06-03T13:29:45.000+06:00",
+  "test/административная_информация/должность|code":"135",
+  "test/административная_информация/должность|terminology":"NSI",
+  "test/административная_информация/должность|value":"Средний медицинский персонал: Медицинская сестра по физиотерапии",
+  "test/административная_информация/клиническая_область|code":"at0005",
+  "test/административная_информация/клиническая_область|terminology":"local",
+  "test/административная_информация/клиническая_область|value":"терапия",
+  "test/административная_информация/медицинское_учреждение|code":"174",
+  "test/административная_информация/медицинское_учреждение|terminology":"external",
+  "test/административная_информация/медицинское_учреждение|value":"Городская поликлиника № 67",
+  "test/административная_информация/название_документа":"test 03.06.2013",
+  "test/административная_информация/основной_диагноз|code":"A01.3",
+  "test/административная_информация/основной_диагноз|terminology":"NSI",
+  "test/административная_информация/основной_диагноз|value":"Паратиф C",
+  "test/административная_информация/отделение":"Неизвестное отделение",
+  "test/административная_информация/специальность|code":"0.1",
+  "test/административная_информация/специальность|terminology":"NSI",
+  "test/административная_информация/специальность|value":"Врачебные специальности. Лечебное дело. Педиатрия",
+  "test/административная_информация/статус_документа|code":"at0014",
+  "test/административная_информация/статус_документа|terminology":"local",
+  "test/административная_информация/статус_документа|value":"черновик",
+  "test/interval_quantity/fiels_for_test/upper":"90",
+  "test/interval_quantity/fiels_for_test/lower":"120"
+}

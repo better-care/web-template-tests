@@ -69,22 +69,20 @@ public class SettersTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(ImmutableMap.of("testing_template/context/testing/fixed_values/fixed_text|code", "at0009")),
                 context,
-                objectMapper
-        );
+                objectMapper);
+
         Map<String, Object> formatted = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(formatted).contains(
                 entry("testing_template/context/testing/fixed_values/fixed_text|code", "at0008"),
                 entry("testing_template/context/testing/fixed_values/fixed_ordinal|code", "at0009"),
                 entry("testing_template/context/testing/fixed_values/fixed_ordinal|ordinal", 1),
                 entry("testing_template/context/testing/fixed_values/fixed_count", 1),
-                entry("testing_template/context/testing/fixed_values/fixed_boolean", true)
-        );
+                entry("testing_template/context/testing/fixed_values/fixed_boolean", true));
     }
 
     @Test
@@ -99,24 +97,21 @@ public class SettersTest extends AbstractWebTemplateTest {
                                 "testing_template/context/testing/multimedia", "http://here.com/123",
                                 "testing_template/context/testing/multimedia|alternatetext", "Hello world!",
                                 "testing_template/context/testing/multimedia|mediatype", "png",
-                                "testing_template/context/testing/multimedia|size", "999"
-                        )),
+                                "testing_template/context/testing/multimedia|size", "999")),
                 context,
-                objectMapper
-        );
+                objectMapper);
+
         Map<String, Object> formatted = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(formatted).contains(
                 entry("testing_template/context/testing/multimedia", "http://here.com/123"),
                 entry("testing_template/context/testing/multimedia|alternatetext", "Hello world!"),
                 entry("testing_template/context/testing/multimedia|mediatype", "png"),
-                entry("testing_template/context/testing/multimedia|size", 999)
-        );
+                entry("testing_template/context/testing/multimedia|size", 999));
     }
 
     @Test
@@ -129,12 +124,14 @@ public class SettersTest extends AbstractWebTemplateTest {
                 objectMapper.writeValueAsString(
                         ImmutableMap.of(
                                 "testing_template/context/testing/multimedia", "http://here.com/123",
-                                "testing_template/context/testing/multimedia|xyz", "Hello world!"
-                        )),
-                context,
-                objectMapper
-        )).isInstanceOf(Exception.class);
-//                .hasMessageContaining("Unknown attribute 'xyz' for DV_MULTIMEDIA.*");
+                                "testing_template/context/testing/multimedia|xyz", "Hello world!")),
+                ImmutableMap.of(
+                        CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
+                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
+                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
+                objectMapper))
+                .isInstanceOf(Exception.class)
+                .hasMessageContaining("Unknown attribute 'xyz' for DV_MULTIMEDIA");
     }
 
     @Test
@@ -147,12 +144,14 @@ public class SettersTest extends AbstractWebTemplateTest {
                 objectMapper.writeValueAsString(
                         ImmutableMap.of(
                                 "testing_template/context/testing/multimedia", "http://here.com/123",
-                                "testing_template/context/testing/multimedia|size", "XYZ"
-                        )),
-                context,
-                objectMapper
-        )).isInstanceOf(Exception.class);
-//                .hasMessageContaining("Invalid value for attribute 'size' of DV_MULTIMEDIA \\(numeric expected\\): XYZ.*");
+                                "testing_template/context/testing/multimedia|size", "XYZ")),
+                ImmutableMap.of(
+                        CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
+                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
+                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
+                objectMapper))
+                .isInstanceOf(Exception.class)
+                .hasMessageContaining("Invalid value for attribute 'size' of DV_MULTIMEDIA (numeric expected): XYZ");
     }
 
     @Test
@@ -165,22 +164,19 @@ public class SettersTest extends AbstractWebTemplateTest {
                 objectMapper.writeValueAsString(
                         ImmutableMap.of(
                                 "testing_template/context/testing/proportion|numerator", "10",
-                                "testing_template/context/testing/proportion|denominator", "100"
-                        )),
+                                "testing_template/context/testing/proportion|denominator", "100")),
                 context,
-                objectMapper
-        );
+                objectMapper);
+
         Map<String, Object> formatted = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(formatted).contains(
                 entry("testing_template/context/testing/proportion|numerator", 10.0),
-                entry("testing_template/context/testing/proportion|denominator", 100.0)
-        );
+                entry("testing_template/context/testing/proportion|denominator", 100.0));
     }
 
     @Test
@@ -193,12 +189,14 @@ public class SettersTest extends AbstractWebTemplateTest {
                 objectMapper.writeValueAsString(
                         ImmutableMap.of(
                                 "testing_template/context/testing/proportion|numerator", "xyz",
-                                "testing_template/context/testing/proportion|denominator", "100"
-                        )),
-                context,
-                objectMapper
-        )).isInstanceOf(Exception.class);
-//                .hasMessageContaining("Invalid decimal value: xyz \\(path: testing_template/context/testing/proportion\\|numerator\\)");
+                                "testing_template/context/testing/proportion|denominator", "100")),
+                ImmutableMap.of(
+                        CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
+                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
+                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
+                objectMapper))
+                .isInstanceOf(Exception.class)
+                .hasMessageContaining("Invalid decimal value: xyz (path: testing_template/context/testing/proportion|numerator)");
     }
 
     @Test
@@ -211,12 +209,14 @@ public class SettersTest extends AbstractWebTemplateTest {
                 objectMapper.writeValueAsString(
                         ImmutableMap.of(
                                 "testing_template/context/testing/proportion|numerator", "10",
-                                "testing_template/context/testing/proportion|denominator", "abc"
-                        )),
-                context,
-                objectMapper
-        )).isInstanceOf(Exception.class);
-//                .hasMessageContaining("Invalid decimal value: abc \\(path: testing_template/context/testing/proportion\\|denominator\\)");
+                                "testing_template/context/testing/proportion|denominator", "abc")),
+                ImmutableMap.of(
+                        CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
+                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
+                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
+                objectMapper))
+                .isInstanceOf(Exception.class)
+                .hasMessageContaining("Invalid decimal value: abc (path: testing_template/context/testing/proportion|denominator)");
     }
 
     @Test
@@ -229,14 +229,13 @@ public class SettersTest extends AbstractWebTemplateTest {
                 objectMapper.writeValueAsString(
                         ImmutableMap.of("testing_template/context/testing/uri", "http://www.google.com")),
                 context,
-                objectMapper
-        );
+                objectMapper);
+
         Map<String, Object> formatted = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(formatted).contains(entry("testing_template/context/testing/uri", "http://www.google.com"));
     }
@@ -251,14 +250,13 @@ public class SettersTest extends AbstractWebTemplateTest {
                 objectMapper.writeValueAsString(
                         ImmutableMap.of("testing_template/context/testing/date", "2014-1-13")),
                 context,
-                objectMapper
-        );
+                objectMapper);
+
         Map<String, Object> formatted = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(formatted).contains(entry("testing_template/context/testing/date", "2014-01-13"));
 
@@ -268,14 +266,13 @@ public class SettersTest extends AbstractWebTemplateTest {
                 objectMapper.writeValueAsString(
                         ImmutableMap.of("testing_template/context/testing/date", new LocalDate(2014, 1, 13))),
                 context,
-                objectMapper
-        );
+                objectMapper);
+
         Map<String, Object> formatted2 = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition2.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(formatted2).contains(entry("testing_template/context/testing/date", "2014-01-13"));
 
@@ -285,14 +282,13 @@ public class SettersTest extends AbstractWebTemplateTest {
                 objectMapper.writeValueAsString(
                         ImmutableMap.of("testing_template/context/testing/date", new DateTime(2014, 1, 13, 10, 13))),
                 context,
-                objectMapper
-        );
+                objectMapper);
+
         Map<String, Object> formatted3 = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
-                rawComposition2.toString(),
-                objectMapper
-        );
+                rawComposition3.toString(),
+                objectMapper);
 
         assertThat(formatted3).contains(entry("testing_template/context/testing/date", "2014-01-13"));
 
@@ -301,10 +297,13 @@ public class SettersTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(
                         ImmutableMap.of("testing_template/context/testing/date", true)),
-                context,
-                objectMapper
-        )).isInstanceOf(Exception.class);
-//                .hasMessageContaining("Error processing form value: true (path: testing_template/context/testing/date)");
+                ImmutableMap.of(
+                        CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
+                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
+                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
+                objectMapper))
+                .isInstanceOf(Exception.class)
+                .hasMessageContaining("Error processing form value: true (path: testing_template/context/testing/date)");
     }
 
     @Test
@@ -317,14 +316,13 @@ public class SettersTest extends AbstractWebTemplateTest {
                 objectMapper.writeValueAsString(
                         ImmutableMap.of("testing_template/context/testing/date", "2014-1-13")),
                 context,
-                objectMapper
-        );
+                objectMapper);
+
         Map<String, Object> formatted = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(formatted).contains(entry("testing_template/context/testing/date", "2014-01-13"));
 
@@ -334,14 +332,13 @@ public class SettersTest extends AbstractWebTemplateTest {
                 objectMapper.writeValueAsString(
                         ImmutableMap.of("testing_template/context/testing/date", new LocalDate(2014, 1, 13))),
                 context,
-                objectMapper
-        );
+                objectMapper);
+
         Map<String, Object> formatted2 = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition2.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(formatted2).contains(entry("testing_template/context/testing/date", "2014-01-13"));
 
@@ -351,14 +348,13 @@ public class SettersTest extends AbstractWebTemplateTest {
                 objectMapper.writeValueAsString(
                         ImmutableMap.of("testing_template/context/testing/date", new DateTime(2014, 1, 13, 10, 13))),
                 context,
-                objectMapper
-        );
+                objectMapper);
+
         Map<String, Object> formatted3 = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition3.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(formatted3).contains(entry("testing_template/context/testing/date", "2014-01-13"));
 
@@ -367,10 +363,13 @@ public class SettersTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(
                         ImmutableMap.of("testing_template/context/testing/date", "2014-a-b")),
-                context,
-                objectMapper
-        )).isInstanceOf(Exception.class);
-//                .hasMessageContaining("Error processing form value: 2014-a-b (path: testing_template/context/testing/date)");
+                ImmutableMap.of(
+                        CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
+                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
+                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
+                objectMapper))
+                .isInstanceOf(Exception.class)
+                .hasMessageContaining("Error processing form value: 2014-a-b (path: testing_template/context/testing/date)");
     }
 
     @Test
@@ -382,32 +381,36 @@ public class SettersTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(
                         ImmutableMap.of("testing_template/context/testing/time", "14:35")),
-                context,
-                objectMapper
-        );
+                ImmutableMap.of(
+                        CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
+                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
+                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
+                objectMapper);
+
         Map<String, Object> formatted = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(formatted).contains(entry("testing_template/context/testing/time", "14:35:00"));
-
+       // todo Primoz, not converting at all
         JsonNode rawComposition2 = getCompositionConverter().convertFlatToRaw(
                 template,
                 "en",
                 objectMapper.writeValueAsString(
                         ImmutableMap.of("testing_template/context/testing/time", java.time.LocalTime.of(14, 35, 10, 117000000))),
-                context,
-                objectMapper
-        );
+                ImmutableMap.of(
+                        CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
+                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
+                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
+                objectMapper);
+
         Map<String, Object> formatted2 = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition2.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(formatted2).contains(entry("testing_template/context/testing/time", "14:35:10.117"));
 
@@ -415,17 +418,17 @@ public class SettersTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 objectMapper.writeValueAsString(
-                        ImmutableMap.of("testing_template/context/testing/time",
-                                        ZonedDateTime.of(2014, 1, 13, 14, 35, 10, 117000000, ZoneId.systemDefault()))),
-                context,
-                objectMapper
-        );
+                        ImmutableMap.of("testing_template/context/testing/time", ZonedDateTime.of(2014, 1, 13, 14, 35, 10, 117000000, ZoneId.systemDefault()))),
+                ImmutableMap.of(
+                        CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
+                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
+                objectMapper);
+
         Map<String, Object> formatted3 = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition3.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(formatted3).contains(entry("testing_template/context/testing/time", "14:35:10.117+01:00"));
 
@@ -434,10 +437,13 @@ public class SettersTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(
                         ImmutableMap.of("testing_template/context/testing/time", true)),
-                context,
-                objectMapper
-        )).isInstanceOf(Exception.class);
-//        .hasMessageContaining("Unable to convert value to LocalTime: true \\(path: testing_template/context/testing/time\\)");
+                ImmutableMap.of(
+                        CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
+                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
+                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
+                objectMapper))
+                .isInstanceOf(Exception.class)
+                .hasMessageContaining("Unable to convert value to LocalTime: true (path: testing_template/context/testing/time)");
     }
 
     @Test
@@ -449,32 +455,36 @@ public class SettersTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(
                         ImmutableMap.of("testing_template/context/testing/time", "14:35")),
-                context,
-                objectMapper
-        );
+                ImmutableMap.of(
+                        CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
+                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
+                objectMapper);
+
         Map<String, Object> formatted = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(formatted).contains(entry("testing_template/context/testing/time", "14:35:00"));
 
+        // datetime conversion not working todo Primoz
         JsonNode rawComposition2 = getCompositionConverter().convertFlatToRaw(
                 template,
                 "en",
                 objectMapper.writeValueAsString(
                         ImmutableMap.of("testing_template/context/testing/time", "14:35+02:00")),
-                context,
-                objectMapper
-        );
+                ImmutableMap.of(
+                        CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
+//                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
+                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
+                objectMapper);
+
         Map<String, Object> formatted2 = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition2.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(formatted2).contains(entry("testing_template/context/testing/time", "14:35:00+02:00"));
     }
@@ -482,21 +492,22 @@ public class SettersTest extends AbstractWebTemplateTest {
     @Test
     public void testTime2() throws Exception {
         String template = getFileContent("/res/Testing Template.opt");
-        
+
         JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
                 template,
                 "en",
                 objectMapper.writeValueAsString(
                         ImmutableMap.of("testing_template/context/testing/time", "14:35")),
-                context,
-                objectMapper
-        );
+                ImmutableMap.of(
+                        CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
+                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
+                objectMapper);
+
         Map<String, Object> formatted = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(formatted).contains(entry("testing_template/context/testing/time", "14:35:00"));
 
@@ -505,32 +516,35 @@ public class SettersTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(
                         ImmutableMap.of("testing_template/context/testing/time", new LocalTime(14, 35, 10, 117))),
-                context,
-                objectMapper
-        );
+                ImmutableMap.of(
+                        CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
+                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
+                objectMapper);
+
         Map<String, Object> formatted2 = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition2.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(formatted2).contains(entry("testing_template/context/testing/time", "14:35:10.117"));
-
+        // todo Primoz, converts but assertion fails
         JsonNode rawComposition3 = getCompositionConverter().convertFlatToRaw(
                 template,
                 "en",
                 objectMapper.writeValueAsString(
                         ImmutableMap.of("testing_template/context/testing/time", new DateTime(2014, 1, 13, 14, 35, 10, 117))),
-                context,
-                objectMapper
-        );
+                ImmutableMap.of(
+                        CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
+                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
+                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
+                objectMapper);
+
         Map<String, Object> formatted3 = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition3.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(formatted3).contains(entry("testing_template/context/testing/time", "14:35:10.117+01:00"));
 
@@ -539,10 +553,13 @@ public class SettersTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(
                         ImmutableMap.of("testing_template/context/testing/time", "17:aa")),
-                context,
-                objectMapper
-        )).isInstanceOf(Exception.class);
-//        .hasMessageContaining("Unable to convert value to LocalTime: 17:aa \\(path: testing_template/context/testing/time\\)");
+                ImmutableMap.of(
+                        CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
+                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
+                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
+                objectMapper))
+                .isInstanceOf(Exception.class)
+                .hasMessageContaining("Unable to convert value to LocalTime: 17:aa (path: testing_template/context/testing/time)");
     }
 
     @Test
@@ -554,35 +571,39 @@ public class SettersTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(
                         ImmutableMap.of("testing_template/context/testing/date_time", "2014-1-13T14:35:00.000")),
-                context,
-                objectMapper
-        );
+                ImmutableMap.of(
+                        CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
+                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
+                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
+                objectMapper);
+
         Map<String, Object> formatted1 = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         String formatted = DateTimeFormatter.ISO_OFFSET_DATE_TIME.format(ZonedDateTime.of(2014, 1, 13, 14, 35, 0, 0, ZoneId.systemDefault()));
         assertThat(formatted1).contains(entry("testing_template/context/testing/date_time", formatted));
 
         DateTime dt = new DateTime(2014, 1, 13, 14, 35, 10, 117);
-
+// datetime conversion not working todo Primoz
         JsonNode rawComposition2 = getCompositionConverter().convertFlatToRaw(
                 template,
                 "en",
                 objectMapper.writeValueAsString(
                         ImmutableMap.of("testing_template/context/testing/date_time", dt)),
-                context,
-                objectMapper
-        );
+                ImmutableMap.of(
+                        CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
+//                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
+                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
+                objectMapper);
+
         Map<String, Object> formatted2 = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition2.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(formatted2).contains(entry("testing_template/context/testing/date_time", ISODateTimeFormat.dateTime().print(dt)));
 
@@ -591,10 +612,13 @@ public class SettersTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(
                         ImmutableMap.of("testing_template/context/testing/date_time", true)),
-                context,
-                objectMapper
-        )).isInstanceOf(Exception.class);
-//        .hasMessageContaining("Unable to convert value to DateTime: true \\(path: testing_template/context/testing/date_time\\)");
+                ImmutableMap.of(
+                        CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
+                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
+                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
+                objectMapper))
+                .isInstanceOf(Exception.class)
+                .hasMessageContaining("Unable to convert value to DateTime: true (path: testing_template/context/testing/date_time)");
     }
 
     @Test
@@ -606,35 +630,39 @@ public class SettersTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(
                         ImmutableMap.of("testing_template/context/testing/date_time", "2014-1-13T14:35:00.000")),
-                context,
-                objectMapper
-        );
+                ImmutableMap.of(
+                        CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
+                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
+                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
+                objectMapper);
+
         Map<String, Object> formatted1 = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         String formatted = DateTimeFormatter.ISO_OFFSET_DATE_TIME.format(ZonedDateTime.of(2014, 1, 13, 14, 35, 0, 0, ZoneId.systemDefault()));
         assertThat(formatted1).contains(entry("testing_template/context/testing/date_time", formatted));
 
         DateTime dt = new DateTime(2014, 1, 13, 14, 35, 10, 117);
-
+// datetime conversion not working todo Primoz
         JsonNode rawComposition2 = getCompositionConverter().convertFlatToRaw(
                 template,
                 "en",
                 objectMapper.writeValueAsString(
                         ImmutableMap.of("testing_template/context/testing/date_time", dt)),
-                context,
-                objectMapper
-        );
+                ImmutableMap.of(
+                        CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
+//                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
+                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
+                objectMapper);
+
         Map<String, Object> formatted2 = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition2.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(formatted2).contains(entry("testing_template/context/testing/date_time", ISODateTimeFormat.dateTime().print(dt)));
 
@@ -643,9 +671,12 @@ public class SettersTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(
                         ImmutableMap.of("testing_template/context/testing/date_time", "17:aa")),
-                context,
-                objectMapper
-        )).isInstanceOf(Exception.class);
-//                .hasMessageContaining("Unable to convert value to DateTime: 17:aa \\(path: testing_template/context/testing/date_time\\)");
+                ImmutableMap.of(
+                        CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
+                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
+                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
+                objectMapper))
+                .isInstanceOf(Exception.class)
+                .hasMessageContaining("Unable to convert value to DateTime: 17:aa (path: testing_template/context/testing/date_time)");
     }
 }

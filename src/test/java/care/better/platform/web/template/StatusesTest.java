@@ -67,8 +67,7 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(flatComposition),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(rawComposition).isNotNull();
 
@@ -80,8 +79,7 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(returned1).contains(entry("test_statuses/test_statuses:0/ordinal|normal_status", "L"));
 
@@ -99,8 +97,7 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(flatComposition2),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(rawComposition2).isNotNull();
 
@@ -112,10 +109,9 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition2.toString(),
-                objectMapper
-        );
+                objectMapper);
 
-        assertThat(returned2.keySet().stream().filter(k -> k.contains("|normal_status"))).isEmpty();
+        assertThat(returned2.keySet().stream().filter(key -> key.contains("|normal_status"))).isEmpty();
     }
 
     @Test
@@ -137,8 +133,7 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(flatComposition),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(rawComposition).isNotNull();
         assertThat(getCompositionValidator().validate(template, rawComposition.toString())).isEmpty();
@@ -151,8 +146,7 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(returned1).contains(entry("test_statuses/test_statuses:0/ordinal|normal_status", "N"));
 
@@ -170,8 +164,8 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(flatComposition2),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(rawComposition2).isNotNull();
 
         JsonNode ordinal2 = getDataValue(rawComposition2);
@@ -182,10 +176,9 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition2.toString(),
-                objectMapper
-        );
+                objectMapper);
 
-        assertThat(returned2.keySet().stream().filter(k -> k.contains("|normal_status"))).isEmpty();
+        assertThat(returned2.keySet().stream().filter(key -> key.contains("|normal_status"))).isEmpty();
     }
 
     @Test
@@ -207,8 +200,7 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(flatComposition),
                 Collections.emptyMap(),
-                objectMapper
-        ))
+                objectMapper))
                 .isInstanceOf(Exception.class)
                 .hasMessageContaining("Invalid NORMAL_STATUS code: X");
     }
@@ -233,8 +225,8 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(flatComposition),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(rawComposition).isNotNull();
 
         JsonNode duration1 = getDataValue(rawComposition);
@@ -246,8 +238,7 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(returned1).contains(entry("test_statuses/test_statuses:0/duration|normal_status", "L"));
         assertThat(returned1).contains(entry("test_statuses/test_statuses:0/duration|magnitude_status", ">="));
@@ -266,8 +257,8 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(flatComposition2),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(rawComposition2).isNotNull();
 
         JsonNode duration2 = getDataValue(rawComposition2);
@@ -279,10 +270,10 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition2.toString(),
-                objectMapper
-        );
-        assertThat(returned2.keySet().stream().filter(k -> k.contains("|normal_status"))).isEmpty();
-        assertThat(returned2.keySet().stream().filter(k -> k.contains("|magnitude_status"))).isEmpty();
+                objectMapper);
+
+        assertThat(returned2.keySet().stream().filter(key -> key.contains("|normal_status"))).isEmpty();
+        assertThat(returned2.keySet().stream().filter(key -> key.contains("|magnitude_status"))).isEmpty();
     }
 
     @Test
@@ -349,8 +340,8 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(flatComposition),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(rawComposition).isNotNull();
 
         JsonNode quantity1 = getDataValue(rawComposition);
@@ -362,8 +353,8 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(returned1).contains(entry("test_statuses/test_statuses:0/quantity|normal_status", "L"));
         assertThat(returned1).contains(entry("test_statuses/test_statuses:0/quantity|magnitude_status", ">="));
 
@@ -382,8 +373,8 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(flatComposition2),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(rawComposition2).isNotNull();
 
         JsonNode quantity2 = getDataValue(rawComposition2);
@@ -395,10 +386,10 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition2.toString(),
-                objectMapper
-        );
-        assertThat(returned2.keySet().stream().filter(k -> k.contains("|normal_status"))).isEmpty();
-        assertThat(returned2.keySet().stream().filter(k -> k.contains("|magnitude_status"))).isEmpty();
+                objectMapper);
+
+        assertThat(returned2.keySet().stream().filter(key -> key.contains("|normal_status"))).isEmpty();
+        assertThat(returned2.keySet().stream().filter(key -> key.contains("|magnitude_status"))).isEmpty();
     }
 
     @Test
@@ -466,8 +457,8 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(flatComposition),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(rawComposition).isNotNull();
 
         JsonNode date1 = getDataValue(rawComposition);
@@ -479,8 +470,8 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(returned1).contains(entry("test_statuses/test_statuses:0/date|normal_status", "L"));
         assertThat(returned1).contains(entry("test_statuses/test_statuses:0/date|magnitude_status", ">="));
 
@@ -498,8 +489,8 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(flatComposition2),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(rawComposition2).isNotNull();
 
         JsonNode date2 = getDataValue(rawComposition2);
@@ -511,10 +502,10 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition2.toString(),
-                objectMapper
-        );
-        assertThat(returned2.keySet().stream().filter(k -> k.contains("|normal_status"))).isEmpty();
-        assertThat(returned2.keySet().stream().filter(k -> k.contains("|magnitude_status"))).isEmpty();
+                objectMapper);
+
+        assertThat(returned2.keySet().stream().filter(key -> key.contains("|normal_status"))).isEmpty();
+        assertThat(returned2.keySet().stream().filter(key -> key.contains("|magnitude_status"))).isEmpty();
     }
 
     @Test
@@ -580,8 +571,8 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(flatComposition),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(rawComposition).isNotNull();
         
 
@@ -594,8 +585,8 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(returned1).contains(entry("test_statuses/test_statuses:0/time|normal_status", "L"));
         assertThat(returned1).contains(entry("test_statuses/test_statuses:0/time|magnitude_status", ">="));
 
@@ -613,8 +604,8 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(flatComposition2),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(rawComposition2).isNotNull();
 
         JsonNode time2 = getDataValue(rawComposition2);
@@ -626,10 +617,10 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition2.toString(),
-                objectMapper
-        );
-        assertThat(returned2.keySet().stream().filter(k -> k.contains("|normal_status"))).isEmpty();
-        assertThat(returned2.keySet().stream().filter(k -> k.contains("|magnitude_status"))).isEmpty();
+                objectMapper);
+
+        assertThat(returned2.keySet().stream().filter(key -> key.contains("|normal_status"))).isEmpty();
+        assertThat(returned2.keySet().stream().filter(key -> key.contains("|magnitude_status"))).isEmpty();
     }
 
     @Test
@@ -695,8 +686,8 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(flatComposition),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(rawComposition).isNotNull();
         
 
@@ -709,8 +700,8 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(returned1).contains(entry("test_statuses/test_statuses:0/datetime|normal_status", "L"));
         assertThat(returned1).contains(entry("test_statuses/test_statuses:0/datetime|magnitude_status", ">="));
 
@@ -728,8 +719,8 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(flatComposition2),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(rawComposition2).isNotNull();
         assertThat(rawComposition2).isNotNull();
 
@@ -742,10 +733,10 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition2.toString(),
-                objectMapper
-        );
-        assertThat(returned2.keySet().stream().filter(k -> k.contains("|normal_status"))).isEmpty();
-        assertThat(returned2.keySet().stream().filter(k -> k.contains("|magnitude_status"))).isEmpty();
+                objectMapper);
+
+        assertThat(returned2.keySet().stream().filter(key -> key.contains("|normal_status"))).isEmpty();
+        assertThat(returned2.keySet().stream().filter(key -> key.contains("|magnitude_status"))).isEmpty();
     }
 
     @Test
@@ -811,8 +802,8 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(flatComposition),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(rawComposition).isNotNull();
         
 
@@ -825,8 +816,8 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(returned1).contains(entry("test_statuses/test_statuses:0/count|normal_status", "L"));
         assertThat(returned1).contains(entry("test_statuses/test_statuses:0/count|magnitude_status", ">="));
 
@@ -844,8 +835,8 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(flatComposition2),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(rawComposition2).isNotNull();
 
         JsonNode count2 = getDataValue(rawComposition2);
@@ -857,10 +848,10 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition2.toString(),
-                objectMapper
-        );
-        assertThat(returned2.keySet().stream().filter(k -> k.contains("|normal_status"))).isEmpty();
-        assertThat(returned2.keySet().stream().filter(k -> k.contains("|magnitude_status"))).isEmpty();
+                objectMapper);
+
+        assertThat(returned2.keySet().stream().filter(key -> key.contains("|normal_status"))).isEmpty();
+        assertThat(returned2.keySet().stream().filter(key -> key.contains("|magnitude_status"))).isEmpty();
     }
 
     @Test
@@ -927,8 +918,8 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(flatComposition),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(rawComposition).isNotNull();
         
 
@@ -941,8 +932,8 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(returned1).contains(entry("test_statuses/test_statuses:0/proportion|normal_status", "L"));
         assertThat(returned1).contains(entry("test_statuses/test_statuses:0/proportion|magnitude_status", ">="));
 
@@ -961,8 +952,8 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 "en",
                 objectMapper.writeValueAsString(flatComposition2),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(rawComposition2).isNotNull();
         assertThat(rawComposition2).isNotNull();
 
@@ -975,10 +966,10 @@ public class StatusesTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition2.toString(),
-                objectMapper
-        );
-        assertThat(returned2.keySet().stream().filter(k -> k.contains("|normal_status"))).isEmpty();
-        assertThat(returned2.keySet().stream().filter(k -> k.contains("|magnitude_status"))).isEmpty();
+                objectMapper);
+
+        assertThat(returned2.keySet().stream().filter(key -> key.contains("|normal_status"))).isEmpty();
+        assertThat(returned2.keySet().stream().filter(key -> key.contains("|magnitude_status"))).isEmpty();
     }
 
     @Test

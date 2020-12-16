@@ -78,8 +78,7 @@ public class UidTest extends AbstractWebTemplateTest {
                 "sl",
                 objectMapper.writeValueAsString(flatComposition),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(rawComposition).isNotNull();
 
@@ -87,8 +86,8 @@ public class UidTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(retrieved).contains(entry("clinical_summary_events/documents/citation:0/_uid", "averyspecialuid"));
     }
 
@@ -121,8 +120,7 @@ public class UidTest extends AbstractWebTemplateTest {
                 "sl",
                 objectMapper.writeValueAsString(flatComposition),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(rawComposition).isNotNull();
         assertThat(rawComposition.get("uid").get("value").asText()).isEqualTo("compuid");
@@ -131,8 +129,8 @@ public class UidTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(retrieved).contains(entry("clinical_summary_events/_uid", "compuid"));
         assertThat(retrieved).contains(entry("clinical_summary_events/documents/citation:0/_uid", "averyspecialuid"));
     }

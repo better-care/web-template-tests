@@ -56,8 +56,7 @@ public class PskyBuilderTest extends AbstractWebTemplateTest {
                 "en",
                 structuredComposition.toString(),
                 Collections.emptyMap(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(getCompositionValidator().validate(template, rawComposition.toString())).isEmpty();
     }

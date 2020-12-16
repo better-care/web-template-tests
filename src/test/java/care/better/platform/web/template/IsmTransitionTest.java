@@ -55,15 +55,12 @@ public class IsmTransitionTest extends AbstractWebTemplateTest {
                 objectMapper.writeValueAsString(
                         ImmutableMap.<String, Object>of(
                                 "medication_order/medication_detail/medication_action/ism_transition/careflow_step", "at0001",
-                                "medication_order/medication_detail/medication_action/medicine", "Aspirin"
-                        )
-                ),
+                                "medication_order/medication_detail/medication_action/medicine", "Aspirin")),
                 ImmutableMap.of(
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
         
         JsonNode action = rawComposition.get("content").get(0).get("items").get(0);
         JsonNode currentState = action.get("ism_transition").get("current_state");
@@ -87,15 +84,12 @@ public class IsmTransitionTest extends AbstractWebTemplateTest {
                 objectMapper.writeValueAsString(
                         ImmutableMap.<String, Object>of(
                                 "medication_order/medication_detail/medication_action/ism_transition/careflow_step", "at0002",
-                                "medication_order/medication_detail/medication_action/medicine", "Aspirin"
-                        )
-                ),
+                                "medication_order/medication_detail/medication_action/medicine", "Aspirin")),
                 ImmutableMap.of(
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
         
         JsonNode action = rawComposition.get("content").get(0).get("items").get(0);
         JsonNode currentState = action.get("ism_transition").get("current_state");
@@ -120,15 +114,12 @@ public class IsmTransitionTest extends AbstractWebTemplateTest {
                         ImmutableMap.<String, Object>of(
                                 "medication_order/medication_detail/medication_action/ism_transition/careflow_step", "at0002",
                                 "medication_order/medication_detail/medication_action/ism_transition/current_state|value", "initial",
-                                "medication_order/medication_detail/medication_action/medicine", "Aspirin"
-                        )
-                ),
+                                "medication_order/medication_detail/medication_action/medicine", "Aspirin")),
                 ImmutableMap.of(
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
        
         JsonNode action1 = rawComposition.get("content").get(0).get("items").get(0);
         JsonNode currentState1 = action1.get("ism_transition").get("current_state");
@@ -148,15 +139,12 @@ public class IsmTransitionTest extends AbstractWebTemplateTest {
                         ImmutableMap.<String, Object>of(
                                 "medication_order/medication_detail/medication_action/ism_transition/careflow_step", "at0002",
                                 "medication_order/medication_detail/medication_action/ism_transition/current_state", "524",
-                                "medication_order/medication_detail/medication_action/medicine", "Aspirin"
-                        )
-                ),
+                                "medication_order/medication_detail/medication_action/medicine", "Aspirin")),
                 ImmutableMap.of(
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
 
         JsonNode action2 = rawComposition.get("content").get(0).get("items").get(0);
         JsonNode currentState2 = action2.get("ism_transition").get("current_state");

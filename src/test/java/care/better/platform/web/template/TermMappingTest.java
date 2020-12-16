@@ -58,15 +58,14 @@ public class TermMappingTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(flatComposition).contains(entry("vitals/vitals/body_temperature:0/any_event:0/symptoms:0/_mapping:0|match", "="));
         assertThat(flatComposition).contains(entry("vitals/vitals/body_temperature:0/any_event:0/symptoms:0/_mapping:0/target|terminology", "SNOMED-CT"));
         assertThat(flatComposition).contains(entry("vitals/vitals/body_temperature:0/any_event:0/symptoms:0/_mapping:0/target|code", "21794005"));
         assertThat(flatComposition).contains(entry("vitals/vitals/body_temperature:0/any_event:0/symptoms:0/_mapping:1|match", "="));
         assertThat(flatComposition).contains(entry("vitals/vitals/body_temperature:0/any_event:0/symptoms:0/_mapping:1/target|terminology", "RTX"));
         assertThat(flatComposition).contains(entry("vitals/vitals/body_temperature:0/any_event:0/symptoms:0/_mapping:1/target|code", "W.11.7"));
-
     }
 
     @Test
@@ -89,15 +88,13 @@ public class TermMappingTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "en",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "CA",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "User"),
-                objectMapper
-        );
+                objectMapper);
 
         Map<String, Object> retrieved = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(retrieved).contains(entry("vitals/vitals/body_temperature:0/any_event:0/symptoms:0|code", "at0.64"));
         assertThat(retrieved).contains(entry("vitals/vitals/body_temperature:0/any_event:0/symptoms:0|terminology", "local"));
@@ -132,15 +129,13 @@ public class TermMappingTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "en",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "CA",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "User"),
-                objectMapper
-        );
+                objectMapper);
 
         Map<String, Object> retrieved = getCompositionConverter().convertRawToFlat(
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(retrieved).contains(entry("vitals/vitals/haemoglobin_a1c:0/any_event:0/test_name|code", "117"));
         assertThat(retrieved).contains(entry("vitals/vitals/haemoglobin_a1c:0/any_event:0/test_name|terminology", "mine"));
@@ -162,8 +157,7 @@ public class TermMappingTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(stringMap).contains(entry("vitals/vitals/body_temperature:0/any_event:0/symptoms:0/_mapping:0|match", "="));
         assertThat(stringMap).contains(entry("vitals/vitals/body_temperature:0/any_event:0/symptoms:0/_mapping:0/target|terminology", "SNOMED-CT"));
@@ -182,12 +176,10 @@ public class TermMappingTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
         
         assertThat(structuredComposition).isNotNull();
-        JsonNode mappingNode = structuredComposition.path("vitals").path("vitals").path(0).path("body_temperature").path(0).path("any_event").path(0).path("symptoms").path(0)
-                .path("_mapping");
+        JsonNode mappingNode = structuredComposition.path("vitals").path("vitals").path(0).path("body_temperature").path(0).path("any_event").path(0).path("symptoms").path(0).path("_mapping");
         assertThat(mappingNode.isNull()).isFalse();
         assertThat(mappingNode.isArray()).isTrue();
         assertThat(mappingNode.size()).isEqualTo(2);
@@ -198,8 +190,7 @@ public class TermMappingTest extends AbstractWebTemplateTest {
         assertThat(mappingNode.path(1).path("target").path(0).path("|terminology").asText()).isEqualTo("RTX");
         assertThat(mappingNode.path(1).path("target").path(0).path("|code").asText()).isEqualTo("W.11.7");
 
-        JsonNode dvTextNode = structuredComposition.path("vitals").path("vitals").path(0).path("body_temperature").path(0).path("any_event").path(0).path(
-                "description_of_thermal_stress");
+        JsonNode dvTextNode = structuredComposition.path("vitals").path("vitals").path(0).path("body_temperature").path(0).path("any_event").path(0).path("description_of_thermal_stress");
         assertThat(dvTextNode.isArray()).isTrue();
         assertThat(dvTextNode.size()).isEqualTo(1);
         assertThat(dvTextNode.path(0).isObject()).isTrue();
@@ -226,12 +217,10 @@ public class TermMappingTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
         
         assertThat(structuredComposition).isNotNull();
-        JsonNode mappingNode = structuredComposition.path("vitals").path("vitals").path(0).path("body_temperature").path(0).path("any_event").path(0).path("symptoms").path(0)
-                .path("_mapping");
+        JsonNode mappingNode = structuredComposition.path("vitals").path("vitals").path(0).path("body_temperature").path(0).path("any_event").path(0).path("symptoms").path(0).path("_mapping");
         assertThat(mappingNode.isNull()).isFalse();
 
         JsonNode retrievedRawComposition = getCompositionConverter().convertStructuredToRaw(
@@ -242,14 +231,11 @@ public class TermMappingTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "test_composer"),
-                objectMapper
-        );
+                objectMapper);
 
-        JsonNode termMappings = retrievedRawComposition.get("content").get(0).get("items").get(1).get("data").get("events").get(0).get("data").get("items").get(
-                1).get("value").get("mappings");
+        JsonNode termMappings = retrievedRawComposition.get("content").get(0).get("items").get(1).get("data").get("events").get(0).get("data").get("items").get(1).get("value").get("mappings");
 
         assertThat(termMappings).hasSize(2);
-
         assertThat(termMappings.get(0).get("match").asText()).isEqualTo("=");
         assertThat(termMappings.get(0).get("target").get("code_string").asText()).isEqualTo("21794005");
         assertThat(termMappings.get(0).get("target").get("terminology_id").get("value").asText()).isEqualTo("SNOMED-CT");
@@ -259,9 +245,8 @@ public class TermMappingTest extends AbstractWebTemplateTest {
         assertThat(termMappings.get(1).get("target").get("terminology_id").get("value").asText()).isEqualTo("RTX");
         assertThat(termMappings.get(1).get("purpose")).isInstanceOf(NullNode.class);
 
-
-        termMappings = retrievedRawComposition.get("content").get(0).get("items").get(1).get("data").get("events").get(0).get("state").get("items").get(0).get("value").get(
-                "mappings");
+        termMappings = retrievedRawComposition.get("content").get(0).get("items").get(1).get("data").get("events").get(0).get("state").get("items")
+                .get(0).get("value").get("mappings");
 
         assertThat(termMappings).hasSize(1);
         assertThat(termMappings.get(0).get("match").asText()).isEqualTo("=");
@@ -283,11 +268,10 @@ public class TermMappingTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
+
         assertThat(structuredComposition).isNotNull();
-        JsonNode mappingNode = structuredComposition.path("vitals").path("vitals").path(0).path("body_temperature").path(0).path("any_event").path(0).path("symptoms").path(0)
-                .path("_mapping");
+        JsonNode mappingNode = structuredComposition.path("vitals").path("vitals").path(0).path("body_temperature").path(0).path("any_event").path(0).path("symptoms").path(0).path("_mapping");
         assertThat(mappingNode.isNull()).isFalse();
 
         assertThatThrownBy(() -> getCompositionConverter().convertStructuredToRaw(
@@ -298,8 +282,8 @@ public class TermMappingTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "test_composer"),
-                objectMapper
-        )).isInstanceOf(Exception.class);
+                objectMapper))
+                .isInstanceOf(Exception.class);
     }
 
     @SuppressWarnings("ReuseOfLocalVariable")
@@ -312,8 +296,7 @@ public class TermMappingTest extends AbstractWebTemplateTest {
                 template,
                 "en",
                 rawComposition.toString(),
-                objectMapper
-        );
+                objectMapper);
 
         JsonNode retrievedRawComposition = getCompositionConverter().convertFlatToRaw(
                 template,
@@ -323,11 +306,9 @@ public class TermMappingTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "test_composer"),
-                objectMapper
-        );
+                objectMapper);
 
-        JsonNode termMappings = retrievedRawComposition.get("content").get(0).get("items").get(1).get("data").get("events").get(0).get("data").get("items").get(
-                1).get("value").get("mappings");
+        JsonNode termMappings = retrievedRawComposition.get("content").get(0).get("items").get(1).get("data").get("events").get(0).get("data").get("items").get(1).get("value").get("mappings");
         assertThat(termMappings).hasSize(2);
         
         JsonNode tm = termMappings.get(0);

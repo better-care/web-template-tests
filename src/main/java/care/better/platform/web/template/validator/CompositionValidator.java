@@ -20,7 +20,6 @@ import java.util.List;
 /**
  * @author Primoz Delopst
  */
-@FunctionalInterface
 public interface CompositionValidator {
 
     /**
@@ -31,4 +30,15 @@ public interface CompositionValidator {
      * @return {@code List} of {@code ValidationErrorDto}
      */
     List<ValidationErrorDto> validate(String template, String rawComposition) throws Exception;
+
+    /**
+     * Validates RAW composition with added parameters
+     *
+     * @param template       Template xml string
+     * @param rawComposition RAW composition json string
+     * @param strictTextValidation text matching setting
+     * @param relaxedNameMatching property name matching setting
+     * @return {@code List} of {@code ValidationErrorDto}
+     */
+    List<ValidationErrorDto> validateWithParams(String template, String rawComposition, boolean strictTextValidation, boolean relaxedNameMatching) throws Exception;
 }

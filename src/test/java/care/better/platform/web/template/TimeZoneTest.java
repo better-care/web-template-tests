@@ -66,8 +66,7 @@ public class TimeZoneTest extends AbstractWebTemplateTest {
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper
-        );
+                objectMapper);
 
         assertThat(composition.get("context").get("start_time").get("value").asText()).isEqualTo("2015-01-01T10:00:00+05:00");
     }

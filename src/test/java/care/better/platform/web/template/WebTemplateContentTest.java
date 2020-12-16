@@ -60,10 +60,15 @@ public class WebTemplateContentTest extends AbstractWebTemplateTest {
                 .put("vitals/vitals/body_temperature/any_event/body_exposure", "at0031")
                 .build();
 
-        JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(template, "sl", objectMapper.writeValueAsString(flatComposition), ImmutableMap.of(
-                CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
-                CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
-                CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"), objectMapper);
+        JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
+                template,
+                "sl",
+                objectMapper.writeValueAsString(flatComposition),
+                ImmutableMap.of(
+                        CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
+                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
+                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
+                objectMapper);
         Map<String, Object> retrivedFlat = getCompositionConverter().convertRawToFlat(template, "sl", rawComposition.toString(), objectMapper);
         assertThat(retrivedFlat).contains(entry("vitals/category|code", "433"));
         assertThat(retrivedFlat).contains(entry("vitals/category|terminology", "openehr"));
@@ -80,10 +85,15 @@ public class WebTemplateContentTest extends AbstractWebTemplateTest {
                 .put("vitals/vitals/body_temperature/any_event/body_exposure", "at0031")
                 .build();
 
-        JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(template, "sl", objectMapper.writeValueAsString(flatComposition), ImmutableMap.of(
-                CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
-                CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
-                CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"), objectMapper);
+        JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
+                template,
+                "sl",
+                objectMapper.writeValueAsString(flatComposition),
+                ImmutableMap.of(
+                        CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
+                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
+                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
+                objectMapper);
         Map<String, Object> retrivedFlat = getCompositionConverter().convertRawToFlat(template, "sl", rawComposition.toString(), objectMapper);
 
         assertThat(retrivedFlat).contains(entry("vitals/language|code", "sl"));

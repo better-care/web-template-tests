@@ -1,0 +1,61 @@
+// Copyright 2020-2021 Better Ltd (www.better.care)
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+{
+  "simple_body_observation/context/context_detail:0/period_of_care_identifier":"76024131",
+  "simple_body_observation/context/setting|238":true,
+  "simple_body_observation/context/setting|code":"238",
+  "simple_body_observation/context/setting|terminology":"openehr",
+  "simple_body_observation/context/setting|value":"other care",
+  "simple_body_observation/context/start_time":"2013-10-07T17:09:35.472+02:00",
+  "simple_body_observation/eye_examination/additional_description:0":"BP",
+  "simple_body_observation/eye_examination/normal":"Normalen vid.",
+  "simple_body_observation/eye_examination/time":"2013-10-07T17:09:35.472+02:00",
+  "simple_body_observation/psychological_status/general_appearance/dizzy|at0233":true,
+  "simple_body_observation/psychological_status/general_appearance/dizzy|code":"at0233",
+  "simple_body_observation/psychological_status/general_appearance/dizzy|terminology":"local",
+  "simple_body_observation/psychological_status/general_appearance/dizzy|value":"Da",
+  "simple_body_observation/psychological_status/orientation/orientation_in_place|code":"at0013",
+  "simple_body_observation/psychological_status/orientation/orientation_in_place|ordinal":2,
+  "simple_body_observation/psychological_status/orientation/orientation_in_place|value":"Slaba",
+  "simple_body_observation/psychological_status/orientation/orientation_in_time|code":"at0009",
+  "simple_body_observation/psychological_status/orientation/orientation_in_time|ordinal":2,
+  "simple_body_observation/psychological_status/orientation/orientation_in_time|value":"Slaba",
+  "simple_body_observation/psychological_status/orientation/orientation_to_person|code":"at0017",
+  "simple_body_observation/psychological_status/orientation/orientation_to_person|ordinal":2,
+  "simple_body_observation/psychological_status/orientation/orientation_to_person|value":"Slaba",
+  "simple_body_observation/psychological_status/psychologgical_assessment_other":"Demenca",
+  "simple_body_observation/psychological_status/speech/distinct":"Ni razločen.",
+  "simple_body_observation/psychological_status/speech/indistinct":"Momljanje idr.",
+  "simple_body_observation/psychological_status/speech/language|at0227":true,
+  "simple_body_observation/psychological_status/speech/language|code":"at0227",
+  "simple_body_observation/psychological_status/speech/language|terminology":"local",
+  "simple_body_observation/psychological_status/speech/language|value":"slovenski",
+  "simple_body_observation/psychological_status/thinking/confusion|at0218":true,
+  "simple_body_observation/psychological_status/thinking/confusion|code":"at0218",
+  "simple_body_observation/psychological_status/thinking/confusion|terminology":"local",
+  "simple_body_observation/psychological_status/thinking/confusion|value":"Ne",
+  "simple_body_observation/psychological_status/thinking/dementia|at0220":true,
+  "simple_body_observation/psychological_status/thinking/dementia|code":"at0220",
+  "simple_body_observation/psychological_status/thinking/dementia|terminology":"local",
+  "simple_body_observation/psychological_status/thinking/dementia|value":"Da",
+  "simple_body_observation/psychological_status/time":"2013-10-07T17:09:35.472+02:00",
+  "simple_body_observation/simptomi_bolečine/pain/comments":"ggg",
+  "simple_body_observation/simptomi_bolečine/pain/intensity/pain_scale_method|at0.0.201":true,
+  "simple_body_observation/simptomi_bolečine/pain/intensity/pain_scale_method|code":"at0.0.201",
+  "simple_body_observation/simptomi_bolečine/pain/intensity/pain_scale_method|terminology":"local",
+  "simple_body_observation/simptomi_bolečine/pain/intensity/pain_scale_method|value":"6 obrazov",
+  "simple_body_observation/simptomi_bolečine/pain/intensity/scale_score":6,
+  "simple_body_observation/simptomi_bolečine/time":"2013-10-07T17:09:35.472+02:00"
+}
