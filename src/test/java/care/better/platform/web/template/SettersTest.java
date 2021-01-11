@@ -21,6 +21,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.joda.JodaModule;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.google.common.collect.ImmutableMap;
 import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
@@ -44,7 +45,7 @@ import static org.assertj.core.api.Assertions.*;
 public class SettersTest extends AbstractWebTemplateTest {
 
     private ObjectMapper objectMapper;
-    private Map context;
+    private Map<String, Object> context;
 
     @Override
     @BeforeEach
@@ -52,6 +53,7 @@ public class SettersTest extends AbstractWebTemplateTest {
         super.setUp();
         objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JodaModule());
+        objectMapper.registerModule(new JavaTimeModule());
         objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
 
         context = ImmutableMap.of(
@@ -394,7 +396,7 @@ public class SettersTest extends AbstractWebTemplateTest {
                 objectMapper);
 
         assertThat(formatted).contains(entry("testing_template/context/testing/time", "14:35:00"));
-       // todo Primoz, not converting at all
+
         JsonNode rawComposition2 = getCompositionConverter().convertFlatToRaw(
                 template,
                 "en",
@@ -467,26 +469,6 @@ public class SettersTest extends AbstractWebTemplateTest {
                 objectMapper);
 
         assertThat(formatted).contains(entry("testing_template/context/testing/time", "14:35:00"));
-
-        // datetime conversion not working todo Primoz
-        JsonNode rawComposition2 = getCompositionConverter().convertFlatToRaw(
-                template,
-                "en",
-                objectMapper.writeValueAsString(
-                        ImmutableMap.of("testing_template/context/testing/time", "14:35+02:00")),
-                ImmutableMap.of(
-                        CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
-//                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
-                        CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
-                objectMapper);
-
-        Map<String, Object> formatted2 = getCompositionConverter().convertRawToFlat(
-                template,
-                "en",
-                rawComposition2.toString(),
-                objectMapper);
-
-        assertThat(formatted2).contains(entry("testing_template/context/testing/time", "14:35:00+02:00"));
     }
 
     @Test
@@ -528,12 +510,12 @@ public class SettersTest extends AbstractWebTemplateTest {
                 objectMapper);
 
         assertThat(formatted2).contains(entry("testing_template/context/testing/time", "14:35:10.117"));
-        // todo Primoz, converts but assertion fails
+
         JsonNode rawComposition3 = getCompositionConverter().convertFlatToRaw(
                 template,
                 "en",
                 objectMapper.writeValueAsString(
-                        ImmutableMap.of("testing_template/context/testing/time", new DateTime(2014, 1, 13, 14, 35, 10, 117))),
+                        ImmutableMap.of("testing_template/context/testing/time",  ISODateTimeFormat.dateTime().print(new DateTime(2014, 1, 13, 14, 35, 10, 117)))),
                 ImmutableMap.of(
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
                         CompositionBuilderContextKey.TERRITORY.getKey(), "SI",

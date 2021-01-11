@@ -41,7 +41,7 @@ import static org.assertj.core.api.Assertions.entry;
 public class RussianBuilderTest extends AbstractWebTemplateTest {
 
     private ObjectMapper objectMapper;
-    private Map context;
+    private Map<String, Object> context;
 
     @Override
     @BeforeEach

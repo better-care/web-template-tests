@@ -46,7 +46,7 @@ import static org.assertj.core.api.Assertions.entry;
 public class IspekBuilderTest extends AbstractWebTemplateTest {
 
     private ObjectMapper objectMapper;
-    private ImmutableMap context;
+    private ImmutableMap<String, Object> context;
 
     @Override
     @BeforeEach
