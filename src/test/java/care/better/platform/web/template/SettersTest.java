@@ -587,15 +587,15 @@ public class SettersTest extends AbstractWebTemplateTest {
         assertThat(formatted1).contains(entry("testing_template/context/testing/date_time", formatted));
 
         DateTime dt = new DateTime(2014, 1, 13, 14, 35, 10, 117);
-// datetime conversion not working todo Primoz
+
         JsonNode rawComposition2 = getCompositionConverter().convertFlatToRaw(
                 template,
                 "en",
                 objectMapper.writeValueAsString(
-                        ImmutableMap.of("testing_template/context/testing/date_time", dt)),
+                        ImmutableMap.of("testing_template/context/testing/date_time", ISODateTimeFormat.dateTime().print(dt))),
                 ImmutableMap.of(
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
-//                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
+                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
                 objectMapper);
 
@@ -614,11 +614,10 @@ public class SettersTest extends AbstractWebTemplateTest {
                         ImmutableMap.of("testing_template/context/testing/date_time", true)),
                 ImmutableMap.of(
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
-                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
                 objectMapper))
                 .isInstanceOf(Exception.class)
-                .hasMessageContaining("Unable to convert value to DateTime: true (path: testing_template/context/testing/date_time)");
+                .hasMessageContaining("Unable to convert value to datetime: true (path: testing_template/context/testing/date_time)");
     }
 
     @Test
@@ -646,15 +645,15 @@ public class SettersTest extends AbstractWebTemplateTest {
         assertThat(formatted1).contains(entry("testing_template/context/testing/date_time", formatted));
 
         DateTime dt = new DateTime(2014, 1, 13, 14, 35, 10, 117);
-// datetime conversion not working todo Primoz
+
         JsonNode rawComposition2 = getCompositionConverter().convertFlatToRaw(
                 template,
                 "en",
                 objectMapper.writeValueAsString(
-                        ImmutableMap.of("testing_template/context/testing/date_time", dt)),
+                        ImmutableMap.of("testing_template/context/testing/date_time", ISODateTimeFormat.dateTime().print(dt))),
                 ImmutableMap.of(
                         CompositionBuilderContextKey.LANGUAGE.getKey(), "sl",
-//                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
+                        CompositionBuilderContextKey.TERRITORY.getKey(), "SI",
                         CompositionBuilderContextKey.COMPOSER_NAME.getKey(), "composer"),
                 objectMapper);
 
