@@ -229,14 +229,14 @@
           {
             "|id": "1027739600789",
             "|id_namespace": "Сервис РМР/РМУ",
-            "|name": "ГБУЗ г. Москвы \"Детская городская поликлиника № 122 ДЗМ\"",
+            "|name": "Testing Hospital",
             "|id_scheme": "undefined"
           }
         ],
         "_participation": [
           {
             "|id": "10485934953",
-            "|name": "Черемных Лариса Юрьевна",
+            "|name": "Testing Doctor",
             "|function": "Врач отделения профилактики"
           }
         ]
@@ -251,7 +251,7 @@
     ],
     "composer": [
       {
-        "|name": "Черемных Лариса Юрьевна",
+        "|name": "Testing Doctor",
         "|id": "05496317686",
         "|id_namespace": "Парус",
         "|id_scheme": "undefined"

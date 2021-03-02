@@ -52,7 +52,7 @@ public class DrpBuilderTest extends AbstractWebTemplateTest {
 
     @Test
     public void initialMedicationSafety() throws Exception {
-        String template = getFileContent("/res/ISPEK - MSE - Initial Medication Safety Report.opt");
+        String template = getFileContent("/res/MSE - Initial Medication Safety Report.opt");
 
         Map<String, String> flatComposition = ImmutableMap.<String, String>builder()
                 .put("initial_medication_safety_report/context/start_time", "2013-01-01T10:00:00.000+01:00")
@@ -92,7 +92,7 @@ public class DrpBuilderTest extends AbstractWebTemplateTest {
 
     @Test
     public void initialMedicationSafety2() throws Exception {
-        String template = getFileContent("/res/ISPEK - MSE - Initial Medication Safety Report.opt");
+        String template = getFileContent("/res/MSE - Initial Medication Safety Report.opt");
 
         Map<String, String> flatComposition = ImmutableMap.<String, String>builder()
                 .put("initial_medication_safety_report/medication_safety_event/event_description", "Just some description !!")
@@ -185,7 +185,7 @@ public class DrpBuilderTest extends AbstractWebTemplateTest {
 
     @Test
     public void adverseReaction() throws Exception {
-        String template = getFileContent("/res/ISPEK - MSE - Adverse Drug Reaction Report.opt");
+        String template = getFileContent("/res/MSE - Adverse Drug Reaction Report.opt");
 
         Map<String, Object> flatComposition = ImmutableMap.<String, Object>builder()
                 .put("adverse_drug_reaction_report/adverse_drug_reaction/event_type", "at0250")
@@ -215,7 +215,7 @@ public class DrpBuilderTest extends AbstractWebTemplateTest {
 
     @Test
     public void adverseReactionException() throws Exception {
-        String template = getFileContent("/res/ISPEK - MSE - Adverse Drug Reaction Report.opt");
+        String template = getFileContent("/res/MSE - Adverse Drug Reaction Report.opt");
 
         Map<String, Object> flatComposition = ImmutableMap.<String, Object>builder()
                 .put("adverse_drug_reaction_report/adverse_drug_reaction/event_type", "at0250")
@@ -271,7 +271,7 @@ public class DrpBuilderTest extends AbstractWebTemplateTest {
 
     @Test
     public void errorReport() throws Exception {
-        String template = getFileContent("/res/ISPEK - MSE - Medication Error Report.opt");
+        String template = getFileContent("/res/MSE - Medication Error Report.opt");
 
         String flatCompositionString = getFileContent("/res/Error Report.json");
         Map<String, Object> flatComposition = objectMapper.readValue(flatCompositionString, new TypeReference<Map<String, Object>>() {});
@@ -299,7 +299,7 @@ public class DrpBuilderTest extends AbstractWebTemplateTest {
 
     @Test
     public void validationTest() {
-        String template = "res/ISPEK - MSE - Initial Medication Safety Report.opt";
+        String template = "res/MSE - Initial Medication Safety Report.opt";
 
         Map<String, Object> flatComposition = new ImmutableMap.Builder<String, Object>()
                 .put("initial_medication_safety_report/context/case_identifier", "10135201")
@@ -329,7 +329,7 @@ public class DrpBuilderTest extends AbstractWebTemplateTest {
 
     @Test
     public void fixedValueTest() throws Exception {
-        String template = getFileContent("/res/ISPEK - MSE - Medication Event Case Summary.opt");
+        String template = getFileContent("/res/MSE - Medication Event Case Summary.opt");
 
         Map<String, Object> flatComposition = new ImmutableMap.Builder<String, Object>()
                 .put("medication_event_case_summary/case_summary/patient_outcome_category", "at0064")
@@ -367,7 +367,7 @@ public class DrpBuilderTest extends AbstractWebTemplateTest {
 
     @Test
     public void fixedValueTestDouble() throws Exception {
-        String template = getFileContent("/res/ISPEK - MSE - Medication Event Case Summary.opt");
+        String template = getFileContent("/res/MSE - Medication Event Case Summary.opt");
 
         Map<String, Object> flatComposition = new ImmutableMap.Builder<String, Object>()
                 .put("medication_event_case_summary/context/report_type", "at0.0.74")
@@ -407,7 +407,7 @@ public class DrpBuilderTest extends AbstractWebTemplateTest {
 
     @Test
     public void elementWith2Values() throws Exception {
-        String template = getFileContent("/res/ISPEK - MSE - Medication Event Case Summary.opt");
+        String template = getFileContent("/res/MSE - Medication Event Case Summary.opt");
 
         Map<String, Object> flatComposition = new ImmutableMap.Builder<String, Object>()
                 .put("medication_event_case_summary/case_summary/summary_details/admission_diagnosis_classification|code", "J00")
@@ -449,7 +449,7 @@ public class DrpBuilderTest extends AbstractWebTemplateTest {
 
     @Test
     public void errorReportMultiple() throws Exception {
-        String template = getFileContent("/res/ISPEK - MSE - Medication Error Report.opt");
+        String template = getFileContent("/res/MSE - Medication Error Report.opt");
 
         String flatCompositionString = getFileContent("/res/Error Report 2.json");
         Map<String, Object> flatComposition = objectMapper.readValue(flatCompositionString, new TypeReference<Map<String, Object>>() {
@@ -483,7 +483,7 @@ public class DrpBuilderTest extends AbstractWebTemplateTest {
 
     @Test
     public void codedWithOther() throws Exception {
-        String template = getFileContent("/res/ISPEK - MSE - Drug Related Problem Report.opt");
+        String template = getFileContent("/res/MSE - Drug Related Problem Report.opt");
 
         Map<String, Object> flatComposition = new ImmutableMap.Builder<String, Object>()
                 .put("drug_related_problem_report/medication_error/related_trigger:0", "at0271")
@@ -526,7 +526,7 @@ public class DrpBuilderTest extends AbstractWebTemplateTest {
 
     @Test
     public void codedWithOther1() throws Exception {
-        String template = getFileContent("/res/ISPEK - MSE - Drug Related Problem Report.opt");
+        String template = getFileContent("/res/MSE - Drug Related Problem Report.opt");
 
         Map<String, Object> flatComposition = new ImmutableMap.Builder<String, Object>()
                 .put("drug_related_problem_report/medication_error/related_trigger", "at0271")

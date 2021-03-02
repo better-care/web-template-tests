@@ -255,14 +255,14 @@
           {
             "|id": "1037719010757",
             "|id_namespace": "Сервис РМР/РМУ",
-            "|name": "ГБУЗ ГП № 175 ДЗМ филиал 5",
+            "|name": "Testing Hospital",
             "|id_scheme": "undefined"
           }
         ],
         "_participation": [
           {
             "|id": "10970070610",
-            "|name": "Медведева Евгения Валентиновна",
+            "|name": "Testing Nurse",
             "|function": "Врач"
           }
         ]
@@ -277,7 +277,7 @@
     ],
     "composer": [
       {
-        "|name": "Медведева Евгения Валентиновна",
+        "|name": "Testing Nurse",
         "|id": "10209583825",
         "|id_namespace": "Парус",
         "|id_scheme": "undefined"

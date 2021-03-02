@@ -27,7 +27,7 @@
   },
   "uid":{
     "@class":"OBJECT_VERSION_ID",
-    "value":"18c3c6c0-902c-4a06-ba93-ed588c76995d::example.ethercis.com::1"
+    "value":"18c3c6c0-902c-4a06-ba93-ed588c76995d::default::1"
   },
   "links":[
 
@@ -96,7 +96,7 @@
     "identifiers":[
       {
         "@class":"DV_IDENTIFIER",
-        "issuer":"ETHERCIS",
+        "issuer":"Test",
         "assigner":"dummy",
         "id":"1234-5678",
         "type":"dummy"
@@ -3636,7 +3636,7 @@
                           "archetype_node_id":"at0027",
                           "value":{
                             "@class":"DV_URI",
-                            "value":"http://www.ethercis.com/"
+                            "value":"http://www.test.com/"
                           },
                           "null_flavour":null
                         },

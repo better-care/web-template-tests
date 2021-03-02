@@ -62,7 +62,7 @@ public class EthercisBuilderTest extends AbstractWebTemplateTest {
 
     @Test
     public void ctxValuesTest() throws Exception {
-        String template = getFileContent("/res/RIPPLE-ConformanceTesttemplate.opt");
+        String template = getFileContent("/res/ConformanceTesttemplate.opt");
         String rawCompositionString = getFileContent("/res/conformance test.json");
 
         JsonNode rawComposition = objectMapper.readTree(rawCompositionString);

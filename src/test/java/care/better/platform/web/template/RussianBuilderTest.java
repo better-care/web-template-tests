@@ -90,7 +90,7 @@ public class RussianBuilderTest extends AbstractWebTemplateTest {
     @Test
     public void testInvalidOccurences1() throws Exception {
         String template = getFileContent("/res/openEHR-EHR-COMPOSITION.t_gynecologist_anamnesis_pregnant .v1.xml");
-        Map<String, Object> flatComposition = objectMapper.readValue(getFileContent("/res/Russian5.json"), new TypeReference<Map<String, Object>>() {});
+        Map<String, Object> flatComposition = objectMapper.readValue(getFileContent("/res/openEHR-EHR-COMPOSITION.t_gynecologist_anamnesis_pregnant .v1.json"), new TypeReference<Map<String, Object>>() {});
 
         JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
                 template,
@@ -115,7 +115,8 @@ public class RussianBuilderTest extends AbstractWebTemplateTest {
     @Test
     public void testInvalidOccurences2() throws Exception {
         String template = getFileContent("/res/openEHR-EHR-COMPOSITION.t_gynecologist_prophylactic_examination.v1.xml");
-        Map<String, Object> flatComposition = objectMapper.readValue(getFileContent("/res/Russian6.json"), new TypeReference<Map<String, Object>>() {});
+        Map<String, Object> flatComposition = objectMapper.readValue(getFileContent(
+                "/res/openEHR-EHR-COMPOSITION.t_gynecologist_prophylactic_examination.v1.json"), new TypeReference<Map<String, Object>>() {});
 
         JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
                 template,
@@ -140,7 +141,7 @@ public class RussianBuilderTest extends AbstractWebTemplateTest {
     @Test
     public void testActivity() throws Exception {
         String template = getFileContent("/res/openEHR-EHR-COMPOSITION.t_new_physiatrist_examination.v1.xml");
-        Map<String, Object> flatComposition = objectMapper.readValue(getFileContent("/res/Russian1.json"), new TypeReference<Map<String, Object>>() {});
+        Map<String, Object> flatComposition = objectMapper.readValue(getFileContent("/res/openEHR-EHR-COMPOSITION.t_new_physiatrist_examination.v1(1).json"), new TypeReference<Map<String, Object>>() {});
 
         JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
                 template,
@@ -156,7 +157,7 @@ public class RussianBuilderTest extends AbstractWebTemplateTest {
     @Test
     public void testActivityWithProviders() throws Exception {
         String template = getFileContent("/res/openEHR-EHR-COMPOSITION.t_new_physiatrist_examination.v1.xml");
-        Map<String, Object> flatComposition = objectMapper.readValue(getFileContent("/res/Russian2.json"), new TypeReference<Map<String, Object>>() {});
+        Map<String, Object> flatComposition = objectMapper.readValue(getFileContent("/res/openEHR-EHR-COMPOSITION.t_new_physiatrist_examination.v1.json"), new TypeReference<Map<String, Object>>() {});
 
         JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
                 template,
@@ -177,7 +178,7 @@ public class RussianBuilderTest extends AbstractWebTemplateTest {
     @Test
     public void testDentalFormuleValidationSuccess() throws Exception {
         String template = getFileContent("/res/openEHR-EHR-COMPOSITION.t_dental_formule.v1.xml");
-        Map<String, Object> flatComposition = objectMapper.readValue(getFileContent("/res/Russian3.json"), new TypeReference<Map<String, Object>>() {});
+        Map<String, Object> flatComposition = objectMapper.readValue(getFileContent("/res/openEHR-EHR-COMPOSITION.t_dental_formule.v1.json"), new TypeReference<Map<String, Object>>() {});
 
         JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
                 template,
@@ -229,7 +230,7 @@ public class RussianBuilderTest extends AbstractWebTemplateTest {
     @Test
     public void testQuantityValidationAndConversion() throws Exception {
         String template = getFileContent("/res/openEHR-EHR-COMPOSITION.t_interval_quantity_test.v1.xml");
-        Map<String, Object> flatComposition = objectMapper.readValue(getFileContent("/res/Russian4.json"), new TypeReference<Map<String, Object>>() {});
+        Map<String, Object> flatComposition = objectMapper.readValue(getFileContent("/res/openEHR-EHR-COMPOSITION.t_interval_quantity_test.v1.json"), new TypeReference<Map<String, Object>>() {});
 
         JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
                 template,
@@ -416,7 +417,7 @@ public class RussianBuilderTest extends AbstractWebTemplateTest {
     public void testSociomedicalAssessmentContent() throws Exception {
         String template = getFileContent("/res/openEHR-EHR-COMPOSITION.t_sociomedical_assessment_referral.v1.xml");
 
-        JsonNode structuredComposition = objectMapper.readTree(getFileContent("/res/ru559_composition.json"));
+        JsonNode structuredComposition = objectMapper.readTree(getFileContent("/res/openEHR-EHR-COMPOSITION.t_sociomedical_assessment_referral.v1.json"));
 
         JsonNode rawComposition = getCompositionConverter().convertStructuredToRaw(
                 template,
@@ -433,7 +434,7 @@ public class RussianBuilderTest extends AbstractWebTemplateTest {
     public void testReferenceFormConversion() throws Exception {
         String template = getFileContent("/res/openEHR-EHR-COMPOSITION.t_outpatient_reference_form_025_1.v4.xml");
 
-        JsonNode structuredComposition = objectMapper.readTree(getFileContent("/res/EMIASSIMI-3836-composition.json"));
+        JsonNode structuredComposition = objectMapper.readTree(getFileContent("/res/openEHR-EHR-COMPOSITION.t_outpatient_reference_form_025_1.v4.json"));
 
         JsonNode rawComposition = getCompositionConverter().convertStructuredToRaw(
                 template,

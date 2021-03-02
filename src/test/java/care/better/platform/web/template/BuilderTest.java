@@ -47,7 +47,7 @@ public class BuilderTest extends AbstractWebTemplateTest {
 
     @Test
     public void childGrowthTest() throws Exception {
-        String template = getFileContent("/res/ISPEK - ZN - Child Growth Encounter.xml");
+        String template = getFileContent("/res/ZN - Child Growth Encounter.xml");
         JsonNode rawComposition = objectMapper.readTree(getFileContent("/res/Child Growth.json"));
         assertThat(rawComposition).isNotNull();
         assertThat(getCompositionValidator().validate(template, rawComposition.toString())).isEmpty();
@@ -55,7 +55,7 @@ public class BuilderTest extends AbstractWebTemplateTest {
 
     @Test
     public void vitalFunctionsTest() throws Exception {
-        String template = getFileContent("/res/ISPEK - ZN - Vital Functions Encounter.xml");
+        String template = getFileContent("/res/ZN - Vital Functions Encounter.xml");
         JsonNode rawComposition = objectMapper.readTree(getFileContent("/res/Vital Functions.json"));
         assertThat(rawComposition).isNotNull();
         assertThat(getCompositionValidator().validate(template, rawComposition.toString())).isEmpty();
@@ -63,7 +63,7 @@ public class BuilderTest extends AbstractWebTemplateTest {
 
     @Test
     public void assessmentScalesTest() throws Exception {
-        String template = getFileContent("/res/ISPEK - ZN - Assessment Scales Encounter.opt");
+        String template = getFileContent("/res/ZN - Assessment Scales Encounter.opt");
         JsonNode rawComposition = objectMapper.readTree(getFileContent("/res/Assessment Scales.json"));
         assertThat(rawComposition).isNotNull();
         assertThat(getCompositionValidator().validate(template, rawComposition.toString())).isEmpty();

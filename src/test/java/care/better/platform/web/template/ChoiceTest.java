@@ -47,7 +47,7 @@ public class ChoiceTest extends AbstractWebTemplateTest {
 
     @Test
     public void choiceDvQuantityAndDvInterval() throws Exception {
-        String template = getFileContent("/local/ISPEK - MED - Medication Order-choice.opt");
+        String template = getFileContent("/local/MED - Medication Order-choice.opt");
 
         ImmutableMap<String, String> flatCompositionMap = ImmutableMap.<String, String>builder()
                 .put("ctx/language", "en")

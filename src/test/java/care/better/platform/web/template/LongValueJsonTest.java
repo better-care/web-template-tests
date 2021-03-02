@@ -49,7 +49,7 @@ public class LongValueJsonTest extends AbstractWebTemplateTest {
 
     @Test
     public void longValueJson() throws Exception {
-        String template = getFileContent("/res/ISPEK - ZN - Assessment Scales Encounter2.opt");
+        String template = getFileContent("/res/ZN - Assessment Scales Encounter2.opt");
 
         Map<String, Object> flatComposition = ImmutableMap.<String, Object>builder()
                 .put("assessment_scales/pain_assessment/story/pain/patient_described_current_intensity/degree_level", 5000000000000000000L)

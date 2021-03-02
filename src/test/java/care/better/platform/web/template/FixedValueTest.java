@@ -50,7 +50,7 @@ public class FixedValueTest extends AbstractWebTemplateTest {
 
     @Test
     public void fixed() throws Exception {
-        String template = getFileContent("/res/ISPEK - ZN - Assessment Scales Encounter2.opt");
+        String template = getFileContent("/res/ZN - Assessment Scales Encounter2.opt");
 
         Map<String, String> flatComposition = ImmutableMap.<String, String>builder()
                 .put("assessment_scales/pain_assessment/story/pain/exascerbating_factor/factor", "test")

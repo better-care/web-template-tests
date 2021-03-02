@@ -44,7 +44,7 @@
         "_health_care_facility": [
           {
             "|id": "1117746711180",
-            "|name": "ГБУЗ г. Москвы \"Городская поликлиника № 175 ДЗМ ",
+            "|name": "Testing Hospital",
             "|id_namespace": "Справочник медицинских организаций",
             "|id_scheme": "undefined"
           }
@@ -247,7 +247,7 @@
     ],
     "composer": [
       {
-        "|name": "Беда Раиса Андреевна",
+        "|name": "Testing Doctor",
         "|id": "RBeda",
         "|id_namespace": "Парус",
         "|id_scheme": "undefined"

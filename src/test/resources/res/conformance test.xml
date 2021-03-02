@@ -19,7 +19,7 @@
         <value>Encounter</value>
     </name>
     <uid xmlns:v1="http://schemas.openehr.org/v1" xsi:type="v1:OBJECT_VERSION_ID">
-        <value>18c3c6c0-902c-4a06-ba93-ed588c76995d::example.ethercis.com::1</value>
+        <value>18c3c6c0-902c-4a06-ba93-ed588c76995d::default::1</value>
     </uid>
     <archetype_details>
         <archetype_id>
@@ -61,7 +61,7 @@
         </external_ref>
         <name>Composer</name>
         <identifiers>
-            <issuer>ETHERCIS</issuer>
+            <issuer>Test</issuer>
             <assigner>dummy</assigner>
             <id>1234-5678</id>
             <type>dummy</type>
@@ -1156,7 +1156,7 @@
                                     <value>URI - resource identifier</value>
                                 </name>
                                 <value xsi:type="v1:DV_URI">
-                                    <value>http://www.ethercis.com/</value>
+                                    <value>http://www.test.com/</value>
                                 </value>
                             </items>
                             <items archetype_node_id="at0044" xsi:type="v1:ELEMENT">

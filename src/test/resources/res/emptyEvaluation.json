@@ -45,13 +45,13 @@
           {
             "|function": "Врач",
             "|id": "4",
-            "|name": "Демичева Диана Юрьевна"
+            "|name": "Testing Doctor"
           }
         ],
         "_health_care_facility": [
           {
             "|id": "1117746711180",
-            "|name": "ГБУЗ г. Москвы \"Детская городская поликлиника № 110 ДЗМ\"",
+            "|name": "Testing Hospital",
             "|id_namespace": "Справочник медицинских организаций",
             "|id_scheme": "undefined"
           }
@@ -406,7 +406,7 @@
         "|id": "DDemicheva",
         "|id_scheme": "undefined",
         "|id_namespace": "Парус",
-        "|name": "Демичева Диана Юрьевна"
+        "|name": "Testing Doctor"
       }
     ],
     "интерпретация_результатов_обследования": [

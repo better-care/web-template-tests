@@ -47,7 +47,7 @@ public class IsmTransitionTest extends AbstractWebTemplateTest {
 
     @Test
     public void careflowStepBuilder() throws Exception {
-        String template = getFileContent("/res/ISPEK - MED - Medication Order.opt");
+        String template = getFileContent("/res/MED - Medication Order.opt");
 
         JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
                 template,
@@ -76,7 +76,7 @@ public class IsmTransitionTest extends AbstractWebTemplateTest {
 
     @Test
     public void careflowStepBuilderMultipleCurrentState() throws Exception {
-        String template = getFileContent("/res/ISPEK - MED - Medication Order.opt");
+        String template = getFileContent("/res/MED - Medication Order.opt");
 
         JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
                 template,
@@ -105,7 +105,7 @@ public class IsmTransitionTest extends AbstractWebTemplateTest {
 
     @Test
     public void careflowStepBuilderMultipleCurrentStateOverride() throws Exception {
-        String template = getFileContent("/res/ISPEK - MED - Medication Order.opt");
+        String template = getFileContent("/res/MED - Medication Order.opt");
 
         JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
                 template,

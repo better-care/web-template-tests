@@ -68,7 +68,7 @@ public class InstructionActionTest extends AbstractWebTemplateTest {
 
     @Test
     public void instructionDetailsWithUUID() throws Exception {
-        String template = getFileContent("/res/ISPEK - MED - Medication Order.opt");
+        String template = getFileContent("/res/MED - Medication Order.opt");
 
         Map<String, String> flatComposition = ImmutableMap.<String, String>builder()
                 .put("ctx/language", "sl")
@@ -122,7 +122,7 @@ public class InstructionActionTest extends AbstractWebTemplateTest {
 
     @Test
     public void singleInstructionDetails() throws Exception {
-        String template = getFileContent("/res/ISPEK - MED - Medication Order.opt");
+        String template = getFileContent("/res/MED - Medication Order.opt");
         Map<String, String> flatComposition = ImmutableMap.<String, String>builder()
                 .put("ctx/language", "sl")
                 .put("ctx/territory", "SI")
@@ -174,7 +174,7 @@ public class InstructionActionTest extends AbstractWebTemplateTest {
 
     @Test
     public void multipleActivities() throws Exception {
-        String template = getFileContent("/res/ISPEK - MED - Medication Order.opt");
+        String template = getFileContent("/res/MED - Medication Order.opt");
         Map<String, String> flatComposition = ImmutableMap.<String, String>builder()
                 .put("ctx/language", "sl")
                 .put("ctx/territory", "SI")
@@ -247,7 +247,7 @@ public class InstructionActionTest extends AbstractWebTemplateTest {
 
     @Test
     public void multipleActivitiesPathAndIndex() throws Exception {
-        String template = getFileContent("/res/ISPEK - MED - Medication Order.opt");
+        String template = getFileContent("/res/MED - Medication Order.opt");
 
         Map<String, String> flatComposition = ImmutableMap.<String, String>builder()
                 .put("ctx/language", "sl")
@@ -325,7 +325,7 @@ public class InstructionActionTest extends AbstractWebTemplateTest {
 
     @Test
     public void action() throws Exception {
-        String template = getFileContent("/res/ISPEK - MED - Medication Order.opt");
+        String template = getFileContent("/res/MED - Medication Order.opt");
         Map<String, String> flatComposition = ImmutableMap.<String, String>builder()
                 .put("ctx/language", "sl")
                 .put("ctx/territory", "SI")
@@ -379,7 +379,7 @@ public class InstructionActionTest extends AbstractWebTemplateTest {
 
     @Test
     public void instructionDetailsWithUUIDOnRmPath() throws Exception {
-        String template = getFileContent("/res/ISPEK - MED - Medication Order.opt");
+        String template = getFileContent("/res/MED - Medication Order.opt");
         Map<String, String> flatComposition = ImmutableMap.<String, String>builder()
                 .put("ctx/language", "sl")
                 .put("ctx/territory", "SI")
@@ -432,7 +432,7 @@ public class InstructionActionTest extends AbstractWebTemplateTest {
 
     @Test
     public void instructionDetailsWithIndex() throws Exception {
-        String template = getFileContent("/res/ISPEK - MED - Medication Order.opt");
+        String template = getFileContent("/res/MED - Medication Order.opt");
         Map<String, String> flatComposition = ImmutableMap.<String, String>builder()
                 .put("ctx/language", "sl")
                 .put("ctx/territory", "SI")
@@ -483,7 +483,7 @@ public class InstructionActionTest extends AbstractWebTemplateTest {
 
     @Test
     public void instructionDetailsWithIndexOnRmPath() throws Exception {
-        String template = getFileContent("/res/ISPEK - MED - Medication Order.opt");
+        String template = getFileContent("/res/MED - Medication Order.opt");
         Map<String, String> flatComposition = ImmutableMap.<String, String>builder()
                 .put("ctx/language", "sl")
                 .put("ctx/territory", "SI")
@@ -535,7 +535,7 @@ public class InstructionActionTest extends AbstractWebTemplateTest {
 
     @Test
     public void instructionDetailsWithExistingUidPath() throws Exception {
-        String template = getFileContent("/res/ISPEK - MED - Medication Order.opt");
+        String template = getFileContent("/res/MED - Medication Order.opt");
         Map<String, String> flatComposition = ImmutableMap.<String, String>builder()
                 .put("ctx/language", "sl")
                 .put("ctx/territory", "SI")
@@ -586,7 +586,7 @@ public class InstructionActionTest extends AbstractWebTemplateTest {
 
     @Test
     public void instructionDetailsWithExistingIndexedPath() throws Exception {
-        String template = getFileContent("/res/ISPEK - MED - Medication Order.opt");
+        String template = getFileContent("/res/MED - Medication Order.opt");
         Map<String, String> flatComposition = ImmutableMap.<String, String>builder()
                 .put("ctx/language", "sl")
                 .put("ctx/territory", "SI")
@@ -637,7 +637,7 @@ public class InstructionActionTest extends AbstractWebTemplateTest {
 
     @Test
     public void instructionDetailsWithExistingInstructionUid() throws Exception {
-        String template = getFileContent("/res/ISPEK - MED - Medication Order.opt");
+        String template = getFileContent("/res/MED - Medication Order.opt");
         Map<String, String> flatComposition = ImmutableMap.<String, String>builder()
                 .put("ctx/language", "sl")
                 .put("ctx/territory", "SI")
@@ -690,7 +690,7 @@ public class InstructionActionTest extends AbstractWebTemplateTest {
 
     @Test
     public void instructionNoTimingNarrative() throws Exception {
-        String template = getFileContent("/res/ISPEK - MED - Medication Order.opt");
+        String template = getFileContent("/res/MED - Medication Order.opt");
         Map<String, String> flatComposition = ImmutableMap.<String, String>builder()
                 .put("ctx/language", "sl")
                 .put("ctx/territory", "SI")
@@ -720,7 +720,7 @@ public class InstructionActionTest extends AbstractWebTemplateTest {
 
     @Test
     public void instructionNoTimingNarrativeCtx() throws Exception {
-        String template = getFileContent("/res/ISPEK - MED - Medication Order.opt");
+        String template = getFileContent("/res/MED - Medication Order.opt");
         Map<String, String> flatComposition = ImmutableMap.<String, String>builder()
                 .put("ctx/language", "sl")
                 .put("ctx/territory", "SI")
@@ -752,7 +752,7 @@ public class InstructionActionTest extends AbstractWebTemplateTest {
 
     @Test
     public void actionNoISMCurrentState() throws Exception {
-        String template = getFileContent("/res/ISPEK - MED - Medication Order.opt");
+        String template = getFileContent("/res/MED - Medication Order.opt");
         Map<String, String> flatComposition = ImmutableMap.<String, String>builder()
                 .put("ctx/language", "sl")
                 .put("ctx/territory", "SI")
@@ -783,7 +783,7 @@ public class InstructionActionTest extends AbstractWebTemplateTest {
 
     @Test
     public void actionNoISMCurrentStateCtx() throws Exception {
-        String template = getFileContent("/res/ISPEK - MED - Medication Order.opt");
+        String template = getFileContent("/res/MED - Medication Order.opt");
         Map<String, String> flatComposition = ImmutableMap.<String, String>builder()
                 .put("ctx/language", "sl")
                 .put("ctx/territory", "SI")
@@ -815,7 +815,7 @@ public class InstructionActionTest extends AbstractWebTemplateTest {
 
     @Test
     public void emptyActivity() throws Exception {
-        String template = getFileContent("/res/ISPEK - ZN - Restraint.opt");
+        String template = getFileContent("/res/ZN - Restraint.opt");
 
         JsonNode structuredComposition = objectMapper.readTree(getFileContent("/res/restraint.json"));
 

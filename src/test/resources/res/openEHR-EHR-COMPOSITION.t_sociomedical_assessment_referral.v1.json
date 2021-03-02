@@ -35,7 +35,7 @@
           {
             "|function": "Врач",
             "|mode": "not specified",
-            "|name": "Найманбаева Салия Апсаматовна",
+            "|name": "Testing Doctor",
             "|id": "10800379431"
           }
         ],
@@ -44,7 +44,7 @@
             "|id": "1037719010757",
             "|id_scheme": "undefined",
             "|id_namespace": "Сервис РМР/РМУ",
-            "|name": "ГБУЗ ГП №175 ДЗМ"
+            "|name": "Testing Hospital"
           }
         ],
         "подробности_контекста": [
@@ -707,7 +707,7 @@
         "|id": "14916414066",
         "|id_scheme": "undefined",
         "|id_namespace": "Парус",
-        "|name": "Найманбаева Салия Апсаматовна"
+        "|name": "Testing Doctor"
       }
     ],
     "сведения_о_врачебной_комиссии": [

@@ -27,7 +27,7 @@
     },
     "uid":{
         "@class":"OBJECT_VERSION_ID",
-        "value":"a5edc308-5cc1-4088-ab4d-29ca15308e9e::example.ethercis.com::1"
+        "value":"a5edc308-5cc1-4088-ab4d-29ca15308e9e::default::1"
     },
     "links":[
 
@@ -96,7 +96,7 @@
         "identifiers":[
             {
                 "@class":"DV_IDENTIFIER",
-                "issuer":"ETHERCIS",
+                "issuer":"Test",
                 "assigner":"dummy",
                 "id":"1234-5678",
                 "type":"dummy"

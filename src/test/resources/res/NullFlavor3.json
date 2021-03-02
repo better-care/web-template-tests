@@ -18,7 +18,7 @@
       {
         "|meaning":"Follow up to",
         "|type":"Problem",
-        "|target":"ehr://efa4c0f6-7c66-4126-9f30-6f7615813df0"
+        "|target":"ehr://123456"
       }
     ],
     "_uid":[
@@ -46,7 +46,7 @@
               {
                 "|function":"performer",
                 "|mode":"not specified",
-                "|name":"Nurse Bailey"
+                "|name":"Testing Nurse"
               }
             ],
             "any_event":[
@@ -107,7 +107,7 @@
               {
                 "|function":"performer",
                 "|mode":"not specified",
-                "|name":"Nurse Bailey"
+                "|name":"Testing Nurse"
               }
             ],
             "any_event":[

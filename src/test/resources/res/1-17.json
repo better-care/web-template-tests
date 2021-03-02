@@ -35,7 +35,7 @@
           {
             "|function": "Врач",
             "|mode": "not specified",
-            "|name": "Чикава Екатерина Львовна",
+            "|name": "Testing Nurse",
             "|id": "13012"
           }
         ],
@@ -44,7 +44,7 @@
             "|id": "1037739730951",
             "|id_scheme": "undefined",
             "|id_namespace": "Сервис РМР/РМУ",
-            "|name": "ГБУЗ ГП № 2 ДЗМ филиал № 3 (ГП № 82)"
+            "|name": "Testing Hospital"
           }
         ],
         "подробности_контекста": [
@@ -368,7 +368,7 @@
         "|id": "ECHekava",
         "|id_scheme": "undefined",
         "|id_namespace": "Парус",
-        "|name": "Чикава Екатерина Львовна"
+        "|name": "Testing Nurse"
       }
     ],
     "интерпретация_результатов_обследования": [

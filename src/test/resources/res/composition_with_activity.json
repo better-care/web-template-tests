@@ -229,14 +229,14 @@
           {
             "|id":"1037739546569",
             "|id_namespace":"Сервис РМР/РМУ",
-            "|name":"ГБУЗ г. Москвы \"Детская городская поликлиника № 145 ДЗМ\"",
+            "|name":"Testing Hospital",
             "|id_scheme":"undefined"
           }
         ],
         "_participation":[
           {
             "|id":"10495861312",
-            "|name":"Шитова Олеся Николаевна",
+            "|name":"Testing Nurse",
             "|function":"Врач отделения профилактики"
           }
         ]
@@ -251,7 +251,7 @@
     ],
     "composer":[
       {
-        "|name":"Шитова Олеся Николаевна",
+        "|name":"Testing Nurse",
         "|id":"06829407898",
         "|id_namespace":"Парус",
         "|id_scheme":"undefined"

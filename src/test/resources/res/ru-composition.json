@@ -32,7 +32,7 @@
           {
             "|function": "Оператор вакцинопрофилактики",
             "|mode": "not specified",
-            "|name": "Любчич Вероника Арнольдовна",
+            "|name": "Testing Doctor",
             "|id": "10004847"
           }
         ],
@@ -41,7 +41,7 @@
             "|id": "1027739823979",
             "|id_scheme": "undefined",
             "|id_namespace": "Сервис РМР/РМУ",
-            "|name": "ГБУЗ ГП № 107 ДЗМ филиал № 4 (ГП № 165)"
+            "|name": "Testing Hospital"
           }
         ],
         "_end_time": [
@@ -328,7 +328,7 @@
         "|id": "06965065705",
         "|id_scheme": "undefined",
         "|id_namespace": "Парус",
-        "|name": "Любчич Вероника Арнольдовна"
+        "|name": "Testing Doctor"
       }
     ],
     "проведенные_иммунизации": []

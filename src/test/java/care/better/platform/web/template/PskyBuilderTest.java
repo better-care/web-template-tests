@@ -47,9 +47,9 @@ public class PskyBuilderTest extends AbstractWebTemplateTest {
 
     @Test
     public void testDvIdentifierId() throws Exception {
-        String template = getFileContent("/res/PSKY - Generic service request.v0.xml");
+        String template = getFileContent("/res/Generic service request.v0.xml");
 
-        JsonNode structuredComposition = objectMapper.readTree(getFileContent("/res/psky1.json"));
+        JsonNode structuredComposition = objectMapper.readTree(getFileContent("/res/Generic service request.json"));
 
         JsonNode rawComposition = getCompositionConverter().convertStructuredToRaw(
                 template,

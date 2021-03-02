@@ -301,7 +301,7 @@ public class IspekBuilderTest extends AbstractWebTemplateTest {
 
     @Test
     public void perinatal() throws Exception {
-        String template = getFileContent("/res/ISPEK - MED - Perinatal history Summary.opt");
+        String template = getFileContent("/res/MED - Perinatal history Summary.opt");
         Map<String, String> flatComposition = ImmutableMap.<String, String>builder()
                 .put("ctx/time", "1.2.2012 00:01")
                 .put("ctx/category", "persistent")
@@ -364,7 +364,7 @@ public class IspekBuilderTest extends AbstractWebTemplateTest {
 
     @Test
     public void perinatal2() throws Exception {
-        String template = getFileContent("/res/ISPEK - MED - Perinatal history Summary.opt");
+        String template = getFileContent("/res/MED - Perinatal history Summary.opt");
 
         Map<String, String> flatComposition = ImmutableMap.<String, String>builder()
                 .put("perinatal_history/perinatal_history/maternal_pregnancy/maternal_age|year", "33")
@@ -406,7 +406,7 @@ public class IspekBuilderTest extends AbstractWebTemplateTest {
 
     @Test
     public void initialMedicationSafety() throws Exception {
-        String template = getFileContent("/res/ISPEK - MSE - Initial Medication Safety Report.opt");
+        String template = getFileContent("/res/MSE - Initial Medication Safety Report.opt");
 
         Map<String, String> flatComposition = ImmutableMap.<String, String>builder()
                 .put("initial_medication_safety_report/medication_safety_event/adverse_effect/reaction|code", "ac001")
@@ -468,8 +468,8 @@ public class IspekBuilderTest extends AbstractWebTemplateTest {
 
     @Test
     public void vitalsFixedflatComposition() throws Exception {
-        String template = getFileContent("/res/ISPEK - ZN - Vital Functions Encounter.opt");
-        Map<String, Object> flatComposition = objectMapper.readValue(getFileContent("/res/Ispek2.json"), new TypeReference<Map<String, Object>>() {});
+        String template = getFileContent("/res/ZN - Vital Functions Encounter.opt");
+        Map<String, Object> flatComposition = objectMapper.readValue(getFileContent("/res/Vital Functions Encounter.json"), new TypeReference<Map<String, Object>>() {});
 
         JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
                 template,
@@ -483,7 +483,7 @@ public class IspekBuilderTest extends AbstractWebTemplateTest {
 
     @Test
     public void vitalsJson() throws Exception {
-        String template = getFileContent("/res/ISPEK - ZN - Vital Functions Encounter.opt");
+        String template = getFileContent("/res/ZN - Vital Functions Encounter.opt");
 
         Map<String, Object> flatComposition = ImmutableMap.<String, Object>builder()
                 .put("vital_functions/vital_signs/blood_pressure/any_event/diastolic|magnitude", "90")
@@ -529,7 +529,7 @@ public class IspekBuilderTest extends AbstractWebTemplateTest {
     @Test
     public void simpleBodyObservation() throws Exception {
         String template = getFileContent("/res/TM - Simple Body Observation2.xml");
-        Map<String, Object> flatComposition = objectMapper.readValue(getFileContent("/res/Ispek1.json"), new TypeReference<Map<String, Object>>() {});
+        Map<String, Object> flatComposition = objectMapper.readValue(getFileContent("/res/Simple Body Observation2.json"), new TypeReference<Map<String, Object>>() {});
 
         JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
                 template,
@@ -545,7 +545,7 @@ public class IspekBuilderTest extends AbstractWebTemplateTest {
     @Test
     public void compositionUpdate() throws Exception {
         String template = getFileContent("/res/TM - Simple Body Observation2.xml");
-        Map<String, Object> flatComposition = objectMapper.readValue(getFileContent("/res/Ispek3.json"), new TypeReference<Map<String, Object>>() {});
+        Map<String, Object> flatComposition = objectMapper.readValue(getFileContent("/res/Simple Body Observation2(1).json"), new TypeReference<Map<String, Object>>() {});
         JsonNode rawComposition = getCompositionConverter().convertFlatToRaw(
                 template,
                 "en",
@@ -593,7 +593,7 @@ public class IspekBuilderTest extends AbstractWebTemplateTest {
     @Test
     public void compositionUpdateFailed() throws Exception {
         String template = getFileContent("/res/TM - Discharge Plan Encounter.xml");
-        JsonNode rawComposition = objectMapper.readTree(getFileContent("/res/CompositionPediatrics.json"));
+        JsonNode rawComposition = objectMapper.readTree(getFileContent("/res/Discharge Plan Encounter.json"));
 
         assertThat(getCompositionValidator().validate(template, rawComposition.toString())).isEmpty();
 
@@ -620,7 +620,7 @@ public class IspekBuilderTest extends AbstractWebTemplateTest {
 
     @Test
     public void activityTiming() throws Exception {
-        String template = getFileContent("/res/ISPEK - ZN - Nursing careplan Encounter.xml");
+        String template = getFileContent("/res/ZN - Nursing careplan Encounter.xml");
         JsonNode rawComposition = objectMapper.readTree(getFileContent("/res/CompositionCareplan.json"));
         JsonNode structuredComposition = getCompositionConverter().convertRawToStructured(
                 template,
@@ -634,7 +634,7 @@ public class IspekBuilderTest extends AbstractWebTemplateTest {
     @Test
     public void compositionWithInstructionsAndActionsUpdateFailed() throws Exception {
         String template = getFileContent("/res/TM - Discharge Plan Encounter.xml");
-        JsonNode rawComposition = objectMapper.readTree(getFileContent("/res/CompositionPediatrics2.json"));
+        JsonNode rawComposition = objectMapper.readTree(getFileContent("/res/Discharge Plan Encounter(1).json"));
 
         assertThat(getCompositionValidator().validate(template, rawComposition.toString())).isEmpty();
 

@@ -93,7 +93,7 @@
      "namespace":"Парус",
      "type":"ANY"
    },
-   "name":"Демичева Диана Юрьевна",
+   "name":"Testing Doctor",
    "identifiers":[
 
    ]
@@ -1715,7 +1715,7 @@
            "namespace":null,
            "type":"ANY"
          },
-         "name":"Демичева Диана Юрьевна",
+         "name":"Testing Doctor",
          "identifiers":[
 
          ]

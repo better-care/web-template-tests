@@ -35,7 +35,7 @@
           {
             "|function": "Врач",
             "|mode": "not specified",
-            "|name": "Мальсагова Хава Магаметовна",
+            "|name": "Testing Nurse",
             "|id": "8042241155"
           }
         ],
@@ -44,7 +44,7 @@
             "|id": "1037719010757",
             "|id_scheme": "undefined",
             "|id_namespace": "Сервис РМР/РМУ",
-            "|name": "ГБУЗ ГП №175 ДЗМ"
+            "|name": "Testing Hospital"
           }
         ],
         "подробности_контекста": [
@@ -334,7 +334,7 @@
         "|id": "HMalsagova",
         "|id_scheme": "undefined",
         "|id_namespace": "Парус",
-        "|name": "Мальсагова Хава Магаметовна"
+        "|name": "Testing Nurse"
       }
     ],
     "интерпретация_результатов_обследования": [

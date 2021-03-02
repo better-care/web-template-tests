@@ -48,7 +48,7 @@ public class JsonBuilderTest extends AbstractWebTemplateTest {
     @Test
     public void json() throws Exception {
         JsonNode structuredComposition = objectMapper.readTree(getFileContent("/res/JsonBuilder.json"));
-        String template = getFileContent("/res/ISPEK - ZN - Vital Functions Encounter.xml");
+        String template = getFileContent("/res/ZN - Vital Functions Encounter.xml");
 
         JsonNode rawComposition = getCompositionConverter().convertStructuredToRaw(
                 template,
@@ -65,7 +65,7 @@ public class JsonBuilderTest extends AbstractWebTemplateTest {
     @Test
     public void rawJson() throws Exception {
         JsonNode structuredComposition = objectMapper.readTree(getFileContent("/res/JsonBuilder2.json"));
-        String template = getFileContent("/res/ISPEK - ZN - Vital Functions Encounter.xml");
+        String template = getFileContent("/res/ZN - Vital Functions Encounter.xml");
 
         JsonNode rawComposition = getCompositionConverter().convertStructuredToRaw(
                 template,

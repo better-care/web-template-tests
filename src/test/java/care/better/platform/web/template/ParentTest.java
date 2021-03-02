@@ -47,7 +47,7 @@ public class ParentTest extends AbstractWebTemplateTest {
 
     @Test
     public void convertToFlat() throws Exception {
-        String template = getFileContent("/res/Slovenia RES Primary Hip Arthroplasty Report.xml");
+        String template = getFileContent("/res/RES Primary Hip Arthroplasty Report.xml");
         JsonNode structuredComposition = objectMapper.readTree(getFileContent("/res/ParentTest.json"));
 
         JsonNode rawComposition = getCompositionConverter().convertStructuredToRaw(
