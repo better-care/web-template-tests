@@ -24,14 +24,14 @@
 <dependency>
     <groupId>org.junit.jupiter</groupId>
     <artifactId>junit-jupiter-engine</artifactId>
-    <version>${jupiter.version></version>
+    <version>${jupiter.version}</version>
     <scope>test</scope>
 </dependency>
 
 <dependency>
     <groupId>org.junit.jupiter</groupId>
     <artifactId>junit-jupiter-api</artifactId>
-    <version>${jupiter.version></version>
+    <version>${jupiter.version}</version>
     <scope>test</scope>
 </dependency>
 ```
@@ -112,14 +112,14 @@ mvn clean test
 <dependency>
     <groupId>org.junit.jupiter</groupId>
     <artifactId>junit-jupiter-engine</artifactId>
-    <version>${jupiter.version></version>  <!-- Use version 5.6.3 or higher -->
+    <version>${jupiter.version}</version>  <!-- Use version 5.6.3 or higher -->
     <scope>test</scope>
 </dependency>
 
 <dependency>
     <groupId>org.junit.jupiter</groupId>
     <artifactId>junit-jupiter-api</artifactId>
-    <version>${jupiter.version></version>  <!-- Use version 5.6.3 or higher -->
+    <version>${jupiter.version}</version>  <!-- Use version 5.6.3 or higher -->
     <scope>test</scope>
 </dependency>
 
